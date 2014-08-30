@@ -1,0 +1,4 @@
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.dll
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.pdb
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb

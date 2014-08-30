@@ -1,0 +1,5 @@
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll.config
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.pdb
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.dll
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.pdb

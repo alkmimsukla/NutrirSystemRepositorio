@@ -1,0 +1,7 @@
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\bin\Debug\View.exe.config
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\bin\Debug\View.exe
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\bin\Debug\View.pdb
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\View.Properties.Resources.resources
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\View.exe
+c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\View.pdb
