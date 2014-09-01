@@ -5,3 +5,6 @@ c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\De
 c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
 c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\View.exe
 c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\Debug\View.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\View.exe.config
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.exe
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.pdb
