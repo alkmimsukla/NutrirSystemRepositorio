@@ -21,5 +21,10 @@ namespace View
         {
             
         }
+
+        private void formCadFunc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

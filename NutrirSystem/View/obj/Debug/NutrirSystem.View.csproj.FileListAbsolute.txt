@@ -8,3 +8,10 @@ c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\View\obj\De
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\View.exe.config
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.exe
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\View.exe
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\View.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\NutrirSystem.View.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formCadFunc.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.Form1.resources
