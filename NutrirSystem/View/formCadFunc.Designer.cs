@@ -36,7 +36,7 @@
             this.boxApelido = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6CRM = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.calendarDN = new System.Windows.Forms.MonthCalendar();
             this.cbBoxSexo = new System.Windows.Forms.ComboBox();
@@ -46,7 +46,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cbBoxPerfil = new System.Windows.Forms.ComboBox();
             this.bttGravar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.masktbCRM = new System.Windows.Forms.MaskedTextBox();
             this.mkBoxTel = new System.Windows.Forms.MaskedTextBox();
             this.mkBoxCel = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -125,15 +125,16 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Celular";
             // 
-            // label6
+            // label6CRM
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 255);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Email";
+            this.label6CRM.AutoSize = true;
+            this.label6CRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6CRM.Location = new System.Drawing.Point(12, 255);
+            this.label6CRM.Name = "label6CRM";
+            this.label6CRM.Size = new System.Drawing.Size(34, 13);
+            this.label6CRM.TabIndex = 11;
+            this.label6CRM.Text = "CRM";
+            this.label6CRM.Visible = false;
             // 
             // label7
             // 
@@ -203,6 +204,7 @@
             this.cbBoxPerfil.Name = "cbBoxPerfil";
             this.cbBoxPerfil.Size = new System.Drawing.Size(143, 21);
             this.cbBoxPerfil.TabIndex = 18;
+            this.cbBoxPerfil.SelectionChangeCommitted += new System.EventHandler(this.cbPerfilChange);
             // 
             // bttGravar
             // 
@@ -214,12 +216,14 @@
             this.bttGravar.Text = "Gravar";
             this.bttGravar.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // masktbCRM
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(15, 270);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(249, 20);
-            this.maskedTextBox1.TabIndex = 21;
+            this.masktbCRM.Location = new System.Drawing.Point(15, 270);
+            this.masktbCRM.Mask = "0000000";
+            this.masktbCRM.Name = "masktbCRM";
+            this.masktbCRM.Size = new System.Drawing.Size(249, 20);
+            this.masktbCRM.TabIndex = 21;
+            this.masktbCRM.Visible = false;
             // 
             // mkBoxTel
             // 
@@ -264,7 +268,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.mkBoxCel);
             this.Controls.Add(this.mkBoxTel);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.masktbCRM);
             this.Controls.Add(this.bttGravar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cbBoxPerfil);
@@ -274,7 +278,7 @@
             this.Controls.Add(this.cbBoxSexo);
             this.Controls.Add(this.calendarDN);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label6CRM);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -301,7 +305,7 @@
         private System.Windows.Forms.TextBox boxApelido;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label6CRM;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MonthCalendar calendarDN;
         private System.Windows.Forms.ComboBox cbBoxSexo;
@@ -311,7 +315,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbBoxPerfil;
         private System.Windows.Forms.Button bttGravar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox masktbCRM;
         private System.Windows.Forms.MaskedTextBox mkBoxTel;
         private System.Windows.Forms.MaskedTextBox mkBoxCel;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
