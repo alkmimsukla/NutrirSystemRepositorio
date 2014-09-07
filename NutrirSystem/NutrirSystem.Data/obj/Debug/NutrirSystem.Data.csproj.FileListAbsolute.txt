@@ -1,0 +1,5 @@
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\bin\Debug\NutrirSystem.Data.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\bin\Debug\NutrirSystem.Data.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.csprojResolveAssemblyReference.cache

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace NutrirSystem.Data
 {
-    public class Class1
+    public enum Perfil
     {
+        Secretaria = 1,
+        Nutricionista = 2,
+        Gerente = 3
     }
 }
