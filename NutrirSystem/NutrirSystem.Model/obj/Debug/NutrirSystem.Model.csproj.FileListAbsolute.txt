@@ -9,3 +9,5 @@ C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSy
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.dll
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\EntityFramework.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\EntityFramework.xml

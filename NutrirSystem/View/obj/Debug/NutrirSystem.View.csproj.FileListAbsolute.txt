@@ -33,3 +33,5 @@ C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.LoginView.resources
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\NutrirSystem.Model.dll
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\NutrirSystem.Model.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\EntityFramework.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\EntityFramework.xml
