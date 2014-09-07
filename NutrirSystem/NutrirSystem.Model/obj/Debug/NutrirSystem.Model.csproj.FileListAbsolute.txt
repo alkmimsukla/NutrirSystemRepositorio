@@ -2,3 +2,10 @@ c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSyste
 c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.pdb
 c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
 c:\users\s.alkmim\documents\visual studio 2012\Projects\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.csprojResolveAssemblyReference.cache
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.pdb

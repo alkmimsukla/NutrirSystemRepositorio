@@ -11,3 +11,5 @@ C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSy
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.csprojResolveAssemblyReference.cache
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.dll
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.pdb
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Model.dll
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Model.pdb

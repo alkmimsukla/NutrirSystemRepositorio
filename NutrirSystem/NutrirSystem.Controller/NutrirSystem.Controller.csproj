@@ -51,6 +51,10 @@
       <Project>{72547b88-5aa0-4cc2-a230-596a3fe558a9}</Project>
       <Name>NutrirSystem.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NutrirSystem.Model\NutrirSystem.Model.csproj">
+      <Project>{8fb312ad-95c7-4583-a494-2e39ccf4891c}</Project>
+      <Name>NutrirSystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

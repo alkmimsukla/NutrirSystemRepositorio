@@ -1,4 +1,5 @@
 ﻿using NutrirSystem.Data;
+using NutrirSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +10,21 @@ namespace NutrirSystem.Controller
 {
     public class LoginController
     {
-        //modelFuncionario
+        private FuncionarioModel modelFuncionario;
+
         public LoginController() 
         {
-
+            modelFuncionario = new FuncionarioModel();
         }
 
         public bool validarLoginSenha(string user, string senha)
         {
-            return false;
+            return modelFuncionario.validarLogin(user, senha);
         }
 
         public Perfil recuperarPerfil(string user)
         {
-            return Perfil.Secretaria;
+            return modelFuncionario.recuperarPerfil(user);
         }
     }
 }
