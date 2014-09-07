@@ -15,3 +15,4 @@ C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\Vie
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.Properties.Resources.resources
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.Form1.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formCadPac.resources
