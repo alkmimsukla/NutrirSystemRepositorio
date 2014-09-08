@@ -49,19 +49,21 @@ namespace View
 
         private void exibirTelaCorrespondentePerfil(Perfil perfilUsuario)
         {
+            this.Hide();
+
             if (perfilUsuario == Perfil.Secretaria)
             {
-                //exibirTelaInicialSecretaria
+                new SecretariaView().Show();
+            }
+
+            if (perfilUsuario == Perfil.Gerente)
+            {
+                new GerenteView().Show();
             }
             
             if (perfilUsuario == Perfil.Nutricionista)
             {
                 //exibirTelaInicialNutricionista
-            }
-
-            if (perfilUsuario == Perfil.Gerente)
-            {
-                //exibirTelaInicialGerente
             }
         }
 

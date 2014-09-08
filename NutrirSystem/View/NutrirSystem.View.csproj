@@ -44,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenteView.Designer.cs">
+      <DependentUpon>GerenteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecretariaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecretariaView.Designer.cs">
+      <DependentUpon>SecretariaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="formCadPac.cs">
       <SubType>Form</SubType>
     </Compile>

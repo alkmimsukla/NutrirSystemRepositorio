@@ -9,16 +9,17 @@ namespace NutrirSystem.Model
 {
     public class FuncionarioModel : ModelBD
     {
+        public FuncionarioModel()
+            : base() { }
+
         public bool validarLogin(string user, string senha)
         {
-            return false;
-            // executar consulta para validação de login
+            return banco.Funcionario.Any(item => item.usuario == user.Trim() && item.password.Trim() == senha);
         }
 
         public Perfil recuperarPerfil(string user)
         {
-            return Perfil.Secretaria;
-            // executar consulta para recuperar Perfil.
+            return (Perfil)banco.Funcionario.Where(item => item.usuario == user.Trim()).SingleOrDefault().perfil;
         }
     }
 }

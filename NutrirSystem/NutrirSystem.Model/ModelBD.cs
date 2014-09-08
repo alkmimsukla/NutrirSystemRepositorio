@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutrirSystem.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,11 @@ namespace NutrirSystem.Model
 {
     public class ModelBD
     {
-        // obj. de contexto do Banco de Dados
-        // public ModelBD();
-        //public void abrirConexao()
-        // public void fecharConexao();
-
+        protected DBNutrirSystemEntities banco;
+        
+        public ModelBD() 
+        {
+            banco = new DBNutrirSystemEntities();
+        }
     }
 }
