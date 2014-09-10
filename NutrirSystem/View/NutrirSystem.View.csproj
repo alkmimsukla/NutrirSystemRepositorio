@@ -76,6 +76,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucEndereco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucEndereco.Designer.cs">
+      <DependentUpon>ucEndereco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPessoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPessoa.Designer.cs">
+      <DependentUpon>ucPessoa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formCadPac.resx">
       <DependentUpon>formCadPac.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +106,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SecretariaView.resx">
+      <DependentUpon>SecretariaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucEndereco.resx">
+      <DependentUpon>ucEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucPessoa.resx">
+      <DependentUpon>ucPessoa.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

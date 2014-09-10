@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="FuncionarioModel.cs" />
     <Compile Include="ModelBD.cs" />
+    <Compile Include="PacienteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

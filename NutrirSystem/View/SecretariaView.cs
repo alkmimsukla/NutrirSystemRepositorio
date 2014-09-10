@@ -16,5 +16,10 @@ namespace View
         {
             InitializeComponent();
         }
+
+        private void btnCadPaciente_Click(object sender, EventArgs e)
+        {
+            new formCadPac().Show();
+        }
     }
 }
