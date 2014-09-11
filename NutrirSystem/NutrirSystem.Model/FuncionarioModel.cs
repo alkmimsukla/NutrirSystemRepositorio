@@ -71,5 +71,17 @@ namespace NutrirSystem.Model
             return (this.GravarBanco(func));
 
         }
+
+        public Funcionario buscarFuncionario(decimal cpf)
+        {
+            return banco.Funcionario.Where(item => item.cpf == cpf).SingleOrDefault();
+        }
+
+        public void excluirFuncionario(decimal cpf)
+        {
+            Funcionario removido = banco.Funcionario.Where(item => item.cpf == cpf).SingleOrDefault();
+            banco.Funcionario.Remove(removido);
+            banco.SaveChanges();
+        }
     }
 }

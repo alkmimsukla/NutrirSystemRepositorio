@@ -91,3 +91,7 @@ C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj Nutri
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\View\obj\Debug\View.UserControls.ucPessoa.resources
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\View\obj\Debug\View.removerFuncionarioView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.removerFuncionarioView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.SecretariaView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.UserControls.ucEndereco.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.UserControls.ucPessoa.resources
