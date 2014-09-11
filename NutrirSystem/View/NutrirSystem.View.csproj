@@ -50,6 +50,12 @@
     <Compile Include="GerenteView.Designer.cs">
       <DependentUpon>GerenteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="removerFuncionarioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="removerFuncionarioView.Designer.cs">
+      <DependentUpon>removerFuncionarioView.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecretariaView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="removerFuncionarioView.resx">
+      <DependentUpon>removerFuncionarioView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SecretariaView.resx">
       <DependentUpon>SecretariaView.cs</DependentUpon>
     </EmbeddedResource>
