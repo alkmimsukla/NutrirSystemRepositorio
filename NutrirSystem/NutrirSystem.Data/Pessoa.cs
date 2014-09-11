@@ -12,14 +12,8 @@ namespace NutrirSystem.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Pessoa
+    public abstract partial class Pessoa
     {
-        public Pessoa()
-        {
-            this.Funcionario = new HashSet<Funcionario>();
-            this.Paciente = new HashSet<Paciente>();
-        }
-    
         public decimal cpf { get; set; }
         public string nome { get; set; }
         public string rua { get; set; }
@@ -33,8 +27,5 @@ namespace NutrirSystem.Data
         public string telefone { get; set; }
         public string celular { get; set; }
         public string apelido { get; set; }
-    
-        public virtual ICollection<Funcionario> Funcionario { get; set; }
-        public virtual ICollection<Paciente> Paciente { get; set; }
     }
 }

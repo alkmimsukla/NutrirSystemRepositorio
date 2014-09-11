@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DBNutrirSystemModelStoreContainer" CdmEntityContainer="DBNutrirSystemEntities">
     <EntitySetMapping Name="Consulta">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Consulta">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Consulta)">
         <MappingFragment StoreEntitySet="Consulta">
           <ScalarProperty Name="idConsulta" ColumnName="idConsulta" />
           <ScalarProperty Name="statusConsulta" ColumnName="statusConsulta" />
@@ -10,14 +10,14 @@
           <ScalarProperty Name="hora" ColumnName="hora" />
           <ScalarProperty Name="tipoConsulta" ColumnName="tipoConsulta" />
           <ScalarProperty Name="Nutricionista" ColumnName="Nutricionista" />
-          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
+          <ScalarProperty Name="cpfPaciente" ColumnName="cpfPaciente" />
           <ScalarProperty Name="Pagamento" ColumnName="Pagamento" />
           <ScalarProperty Name="MedidasCorporais" ColumnName="MedidasCorporais" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Convenio">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Convenio">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Convenio)">
         <MappingFragment StoreEntitySet="Convenio">
           <ScalarProperty Name="numPlano" ColumnName="numPlano" />
           <ScalarProperty Name="nome" ColumnName="nome" />
@@ -26,26 +26,15 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Dieta">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Dieta">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Dieta)">
         <MappingFragment StoreEntitySet="Dieta">
           <ScalarProperty Name="idDieta" ColumnName="idDieta" />
-          <ScalarProperty Name="dieta1" ColumnName="dieta" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Funcionario">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Funcionario">
-        <MappingFragment StoreEntitySet="Funcionario">
-          <ScalarProperty Name="usuario" ColumnName="usuario" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="salario" ColumnName="salario" />
-          <ScalarProperty Name="perfil" ColumnName="perfil" />
-          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="dieta1" ColumnName="dieta1" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Habitos">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Habitos">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Habitos)">
         <MappingFragment StoreEntitySet="Habitos">
           <ScalarProperty Name="IdHabito" ColumnName="IdHabito" />
           <ScalarProperty Name="descricaoHabitosEsportivos" ColumnName="descricaoHabitosEsportivos" />
@@ -54,7 +43,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MedidasCorporais">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.MedidasCorporais">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.MedidasCorporais)">
         <MappingFragment StoreEntitySet="MedidasCorporais">
           <ScalarProperty Name="idMedidasCorporais" ColumnName="idMedidasCorporais" />
           <ScalarProperty Name="peso" ColumnName="peso" />
@@ -66,29 +55,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Nutricionista">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Nutricionista">
-        <MappingFragment StoreEntitySet="Nutricionista">
-          <ScalarProperty Name="crm" ColumnName="crm" />
-          <ScalarProperty Name="usuario" ColumnName="usuario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Paciente">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Paciente">
-        <MappingFragment StoreEntitySet="Paciente">
-          <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
-          <ScalarProperty Name="objetivo" ColumnName="objetivo" />
-          <ScalarProperty Name="esportesPraticados" ColumnName="esportesPraticados" />
-          <ScalarProperty Name="tipoSanguineo" ColumnName="tipoSanguineo" />
-          <ScalarProperty Name="cpf" ColumnName="cpf" />
-          <ScalarProperty Name="Dieta" ColumnName="Dieta" />
-          <ScalarProperty Name="Habitos" ColumnName="Habitos" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Pagamento">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Pagamento">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Pagamento)">
         <MappingFragment StoreEntitySet="Pagamento">
           <ScalarProperty Name="idPagamento" ColumnName="idPagamento" />
           <ScalarProperty Name="valor" ColumnName="valor" />
@@ -98,7 +66,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pessoa">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.Pessoa">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Pessoa)">
         <MappingFragment StoreEntitySet="Pessoa">
           <ScalarProperty Name="cpf" ColumnName="cpf" />
           <ScalarProperty Name="nome" ColumnName="nome" />
@@ -115,9 +83,34 @@
           <ScalarProperty Name="apelido" ColumnName="apelido" />
         </MappingFragment>
       </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Paciente)">
+        <MappingFragment StoreEntitySet="Pessoa_Paciente">
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="objetivo" ColumnName="objetivo" />
+          <ScalarProperty Name="esportesPraticados" ColumnName="esportesPraticados" />
+          <ScalarProperty Name="tipoSanguineo" ColumnName="tipoSanguineo" />
+          <ScalarProperty Name="Dieta" ColumnName="Dieta" />
+          <ScalarProperty Name="Habitos" ColumnName="Habitos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Funcionario)">
+        <MappingFragment StoreEntitySet="Pessoa_Funcionario">
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="salario" ColumnName="salario" />
+          <ScalarProperty Name="perfil" ColumnName="perfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Nutricionista)">
+        <MappingFragment StoreEntitySet="Pessoa_Nutricionista">
+          <ScalarProperty Name="cpf" ColumnName="cpf" />
+          <ScalarProperty Name="crm" ColumnName="crm" />
+        </MappingFragment>
+      </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProdutosClinica">
-      <EntityTypeMapping TypeName="DBNutrirSystemModel.ProdutosClinica">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.ProdutosClinica)">
         <MappingFragment StoreEntitySet="ProdutosClinica">
           <ScalarProperty Name="idProdutosClinica" ColumnName="idProdutosClinica" />
           <ScalarProperty Name="nome" ColumnName="nome" />
@@ -130,10 +123,10 @@
     </EntitySetMapping>
     <AssociationSetMapping Name="Dieta_Usa_ProdutoClinica" TypeName="DBNutrirSystemModel.Dieta_Usa_ProdutoClinica" StoreEntitySet="Dieta_Usa_ProdutoClinica">
       <EndProperty Name="Dieta">
-        <ScalarProperty Name="idDieta" ColumnName="idDieta" />
+        <ScalarProperty Name="idDieta" ColumnName="Dieta_idDieta" />
       </EndProperty>
       <EndProperty Name="ProdutosClinica">
-        <ScalarProperty Name="idProdutosClinica" ColumnName="idProdutosClinica" />
+        <ScalarProperty Name="idProdutosClinica" ColumnName="ProdutosClinica_idProdutosClinica" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

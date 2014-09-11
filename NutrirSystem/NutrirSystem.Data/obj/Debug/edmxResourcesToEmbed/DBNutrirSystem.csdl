@@ -4,16 +4,13 @@
     <EntitySet Name="Consulta" EntityType="DBNutrirSystemModel.Consulta" />
     <EntitySet Name="Convenio" EntityType="DBNutrirSystemModel.Convenio" />
     <EntitySet Name="Dieta" EntityType="DBNutrirSystemModel.Dieta" />
-    <EntitySet Name="Funcionario" EntityType="DBNutrirSystemModel.Funcionario" />
     <EntitySet Name="Habitos" EntityType="DBNutrirSystemModel.Habitos" />
     <EntitySet Name="MedidasCorporais" EntityType="DBNutrirSystemModel.MedidasCorporais" />
-    <EntitySet Name="Nutricionista" EntityType="DBNutrirSystemModel.Nutricionista" />
-    <EntitySet Name="Paciente" EntityType="DBNutrirSystemModel.Paciente" />
     <EntitySet Name="Pagamento" EntityType="DBNutrirSystemModel.Pagamento" />
     <EntitySet Name="Pessoa" EntityType="DBNutrirSystemModel.Pessoa" />
     <EntitySet Name="ProdutosClinica" EntityType="DBNutrirSystemModel.ProdutosClinica" />
     <AssociationSet Name="FK__Consulta__idPaci__33D4B598" Association="DBNutrirSystemModel.FK__Consulta__idPaci__33D4B598">
-      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Paciente" EntitySet="Pessoa" />
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
     <AssociationSet Name="FK__Consulta__Medida__35BCFE0A" Association="DBNutrirSystemModel.FK__Consulta__Medida__35BCFE0A">
@@ -21,7 +18,7 @@
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
     <AssociationSet Name="FK__Consulta__Nutric__36B12243" Association="DBNutrirSystemModel.FK__Consulta__Nutric__36B12243">
-      <End Role="Nutricionista" EntitySet="Nutricionista" />
+      <End Role="Nutricionista" EntitySet="Pessoa" />
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
     <AssociationSet Name="FK__Consulta__Pagame__34C8D9D1" Association="DBNutrirSystemModel.FK__Consulta__Pagame__34C8D9D1">
@@ -29,28 +26,16 @@
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
     <AssociationSet Name="FK__Convenio__Pacien__267ABA7A" Association="DBNutrirSystemModel.FK__Convenio__Pacien__267ABA7A">
-      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Paciente" EntitySet="Pessoa" />
       <End Role="Convenio" EntitySet="Convenio" />
     </AssociationSet>
     <AssociationSet Name="FK__Paciente__Dieta__21B6055D" Association="DBNutrirSystemModel.FK__Paciente__Dieta__21B6055D">
       <End Role="Dieta" EntitySet="Dieta" />
-      <End Role="Paciente" EntitySet="Paciente" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Funcionario__cpf__0519C6AF" Association="DBNutrirSystemModel.FK__Funcionario__cpf__0519C6AF">
-      <End Role="Pessoa" EntitySet="Pessoa" />
-      <End Role="Funcionario" EntitySet="Funcionario" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Nutricion__usuar__2F10007B" Association="DBNutrirSystemModel.FK__Nutricion__usuar__2F10007B">
-      <End Role="Funcionario" EntitySet="Funcionario" />
-      <End Role="Nutricionista" EntitySet="Nutricionista" />
+      <End Role="Paciente" EntitySet="Pessoa" />
     </AssociationSet>
     <AssociationSet Name="FK__Paciente__Habito__20C1E124" Association="DBNutrirSystemModel.FK__Paciente__Habito__20C1E124">
       <End Role="Habitos" EntitySet="Habitos" />
-      <End Role="Paciente" EntitySet="Paciente" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Paciente__cpf__1FCDBCEB" Association="DBNutrirSystemModel.FK__Paciente__cpf__1FCDBCEB">
-      <End Role="Pessoa" EntitySet="Pessoa" />
-      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Paciente" EntitySet="Pessoa" />
     </AssociationSet>
     <AssociationSet Name="Dieta_Usa_ProdutoClinica" Association="DBNutrirSystemModel.Dieta_Usa_ProdutoClinica">
       <End Role="Dieta" EntitySet="Dieta" />
@@ -66,8 +51,8 @@
     <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="hora" Type="Int32" Nullable="false" />
     <Property Name="tipoConsulta" Type="Int32" />
-    <Property Name="Nutricionista" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
-    <Property Name="idPaciente" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+    <Property Name="Nutricionista" Type="Decimal" Nullable="false" Precision="11" Scale="0" />
+    <Property Name="cpfPaciente" Nullable="false" Precision="11" Scale="0" Type="Decimal" />
     <Property Name="Pagamento" Type="Decimal" Precision="10" Scale="0" />
     <Property Name="MedidasCorporais" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
     <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.FK__Consulta__idPaci__33D4B598" FromRole="Consulta" ToRole="Paciente" />
@@ -81,7 +66,7 @@
     </Key>
     <Property Name="numPlano" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
     <Property Name="nome" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
-    <Property Name="Paciente" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+    <Property Name="Paciente" Type="Decimal" Nullable="false" Precision="11" Scale="0" />
     <NavigationProperty Name="Paciente1" Relationship="DBNutrirSystemModel.FK__Convenio__Pacien__267ABA7A" FromRole="Convenio" ToRole="Paciente" />
   </EntityType>
   <EntityType Name="Dieta">
@@ -93,17 +78,11 @@
     <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.FK__Paciente__Dieta__21B6055D" FromRole="Dieta" ToRole="Paciente" />
     <NavigationProperty Name="ProdutosClinica" Relationship="DBNutrirSystemModel.Dieta_Usa_ProdutoClinica" FromRole="Dieta" ToRole="ProdutosClinica" />
   </EntityType>
-  <EntityType Name="Funcionario">
-    <Key>
-      <PropertyRef Name="usuario" />
-    </Key>
+  <EntityType Name="Funcionario" BaseType="DBNutrirSystemModel.Pessoa">
     <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
     <Property Name="password" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
     <Property Name="salario" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
     <Property Name="perfil" Type="Int32" Nullable="false" />
-    <Property Name="cpf" Type="Decimal" Nullable="false" Precision="11" Scale="0" />
-    <NavigationProperty Name="Pessoa" Relationship="DBNutrirSystemModel.FK__Funcionario__cpf__0519C6AF" FromRole="Funcionario" ToRole="Pessoa" />
-    <NavigationProperty Name="Nutricionista" Relationship="DBNutrirSystemModel.FK__Nutricion__usuar__2F10007B" FromRole="Funcionario" ToRole="Nutricionista" />
   </EntityType>
   <EntityType Name="Habitos">
     <Key>
@@ -127,31 +106,20 @@
     <Property Name="glicemia" Type="Double" />
     <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.FK__Consulta__Medida__35BCFE0A" FromRole="MedidasCorporais" ToRole="Consulta" />
   </EntityType>
-  <EntityType Name="Nutricionista">
-    <Key>
-      <PropertyRef Name="crm" />
-    </Key>
+  <EntityType Name="Nutricionista" BaseType="DBNutrirSystemModel.Funcionario">
     <Property Name="crm" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
-    <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.FK__Consulta__Nutric__36B12243" FromRole="Nutricionista" ToRole="Consulta" />
-    <NavigationProperty Name="Funcionario" Relationship="DBNutrirSystemModel.FK__Nutricion__usuar__2F10007B" FromRole="Nutricionista" ToRole="Funcionario" />
   </EntityType>
-  <EntityType Name="Paciente">
-    <Key>
-      <PropertyRef Name="idPaciente" />
-    </Key>
-    <Property Name="idPaciente" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+  <EntityType Name="Paciente" BaseType="DBNutrirSystemModel.Pessoa">
     <Property Name="objetivo" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
     <Property Name="esportesPraticados" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
     <Property Name="tipoSanguineo" Type="Int32" Nullable="false" />
-    <Property Name="cpf" Type="Decimal" Nullable="false" Precision="11" Scale="0" />
     <Property Name="Dieta" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
     <Property Name="Habitos" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
     <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.FK__Consulta__idPaci__33D4B598" FromRole="Paciente" ToRole="Consulta" />
     <NavigationProperty Name="Convenio" Relationship="DBNutrirSystemModel.FK__Convenio__Pacien__267ABA7A" FromRole="Paciente" ToRole="Convenio" />
     <NavigationProperty Name="Dieta1" Relationship="DBNutrirSystemModel.FK__Paciente__Dieta__21B6055D" FromRole="Paciente" ToRole="Dieta" />
     <NavigationProperty Name="Habitos1" Relationship="DBNutrirSystemModel.FK__Paciente__Habito__20C1E124" FromRole="Paciente" ToRole="Habitos" />
-    <NavigationProperty Name="Pessoa" Relationship="DBNutrirSystemModel.FK__Paciente__cpf__1FCDBCEB" FromRole="Paciente" ToRole="Pessoa" />
   </EntityType>
   <EntityType Name="Pagamento">
     <Key>
@@ -163,7 +131,7 @@
     <Property Name="statusPagamento" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.FK__Consulta__Pagame__34C8D9D1" FromRole="Pagamento" ToRole="Consulta" />
   </EntityType>
-  <EntityType Name="Pessoa">
+  <EntityType Name="Pessoa" Abstract="true">
     <Key>
       <PropertyRef Name="cpf" />
     </Key>
@@ -180,8 +148,6 @@
     <Property Name="telefone" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
     <Property Name="celular" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
     <Property Name="apelido" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Funcionario" Relationship="DBNutrirSystemModel.FK__Funcionario__cpf__0519C6AF" FromRole="Pessoa" ToRole="Funcionario" />
-    <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.FK__Paciente__cpf__1FCDBCEB" FromRole="Pessoa" ToRole="Paciente" />
   </EntityType>
   <EntityType Name="ProdutosClinica">
     <Key>
@@ -200,10 +166,10 @@
     <End Role="Consulta" Type="DBNutrirSystemModel.Consulta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Paciente">
-        <PropertyRef Name="idPaciente" />
+        <PropertyRef Name="cpf" />
       </Principal>
       <Dependent Role="Consulta">
-        <PropertyRef Name="idPaciente" />
+        <PropertyRef Name="cpfPaciente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -224,7 +190,7 @@
     <End Role="Consulta" Type="DBNutrirSystemModel.Consulta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Nutricionista">
-        <PropertyRef Name="crm" />
+        <PropertyRef Name="cpf" />
       </Principal>
       <Dependent Role="Consulta">
         <PropertyRef Name="Nutricionista" />
@@ -248,7 +214,7 @@
     <End Role="Convenio" Type="DBNutrirSystemModel.Convenio" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Paciente">
-        <PropertyRef Name="idPaciente" />
+        <PropertyRef Name="cpf" />
       </Principal>
       <Dependent Role="Convenio">
         <PropertyRef Name="Paciente" />
@@ -267,30 +233,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Funcionario__cpf__0519C6AF">
-    <End Role="Pessoa" Type="DBNutrirSystemModel.Pessoa" Multiplicity="1" />
-    <End Role="Funcionario" Type="DBNutrirSystemModel.Funcionario" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Pessoa">
-        <PropertyRef Name="cpf" />
-      </Principal>
-      <Dependent Role="Funcionario">
-        <PropertyRef Name="cpf" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Nutricion__usuar__2F10007B">
-    <End Role="Funcionario" Type="DBNutrirSystemModel.Funcionario" Multiplicity="1" />
-    <End Role="Nutricionista" Type="DBNutrirSystemModel.Nutricionista" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Funcionario">
-        <PropertyRef Name="usuario" />
-      </Principal>
-      <Dependent Role="Nutricionista">
-        <PropertyRef Name="usuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__Paciente__Habito__20C1E124">
     <End Role="Habitos" Type="DBNutrirSystemModel.Habitos" Multiplicity="1" />
     <End Role="Paciente" Type="DBNutrirSystemModel.Paciente" Multiplicity="*" />
@@ -300,18 +242,6 @@
       </Principal>
       <Dependent Role="Paciente">
         <PropertyRef Name="Habitos" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Paciente__cpf__1FCDBCEB">
-    <End Role="Pessoa" Type="DBNutrirSystemModel.Pessoa" Multiplicity="1" />
-    <End Role="Paciente" Type="DBNutrirSystemModel.Paciente" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Pessoa">
-        <PropertyRef Name="cpf" />
-      </Principal>
-      <Dependent Role="Paciente">
-        <PropertyRef Name="cpf" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

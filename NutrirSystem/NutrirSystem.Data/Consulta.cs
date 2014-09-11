@@ -20,7 +20,7 @@ namespace NutrirSystem.Data
         public int hora { get; set; }
         public Nullable<int> tipoConsulta { get; set; }
         public decimal Nutricionista { get; set; }
-        public decimal idPaciente { get; set; }
+        public decimal cpfPaciente { get; set; }
         public Nullable<decimal> Pagamento { get; set; }
         public decimal MedidasCorporais { get; set; }
     

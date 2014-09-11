@@ -22,11 +22,11 @@
         <AssociationConnector Association="DBNutrirSystemModel.FK__Consulta__Pagame__34C8D9D1" ManuallyRouted="false" />
         <AssociationConnector Association="DBNutrirSystemModel.FK__Convenio__Pacien__267ABA7A" ManuallyRouted="false" />
         <AssociationConnector Association="DBNutrirSystemModel.FK__Paciente__Dieta__21B6055D" ManuallyRouted="false" />
-        <AssociationConnector Association="DBNutrirSystemModel.FK__Funcionario__cpf__0519C6AF" ManuallyRouted="false" />
-        <AssociationConnector Association="DBNutrirSystemModel.FK__Nutricion__usuar__2F10007B" ManuallyRouted="false" />
         <AssociationConnector Association="DBNutrirSystemModel.FK__Paciente__Habito__20C1E124" ManuallyRouted="false" />
-        <AssociationConnector Association="DBNutrirSystemModel.FK__Paciente__cpf__1FCDBCEB" ManuallyRouted="false" />
         <AssociationConnector Association="DBNutrirSystemModel.Dieta_Usa_ProdutoClinica" ManuallyRouted="false" />
+        <InheritanceConnector EntityType="DBNutrirSystemModel.Paciente" />
+        <InheritanceConnector EntityType="DBNutrirSystemModel.Funcionario" />
+        <InheritanceConnector EntityType="DBNutrirSystemModel.Nutricionista" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

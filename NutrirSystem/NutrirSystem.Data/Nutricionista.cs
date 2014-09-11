@@ -12,7 +12,7 @@ namespace NutrirSystem.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Nutricionista
+    public partial class Nutricionista : Funcionario
     {
         public Nutricionista()
         {
@@ -20,9 +20,7 @@ namespace NutrirSystem.Data
         }
     
         public decimal crm { get; set; }
-        public string usuario { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
-        public virtual Funcionario Funcionario { get; set; }
     }
 }

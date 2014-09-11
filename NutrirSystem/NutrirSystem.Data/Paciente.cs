@@ -12,7 +12,7 @@ namespace NutrirSystem.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Paciente
+    public partial class Paciente : Pessoa
     {
         public Paciente()
         {
@@ -20,11 +20,9 @@ namespace NutrirSystem.Data
             this.Convenio = new HashSet<Convenio>();
         }
     
-        public decimal idPaciente { get; set; }
         public string objetivo { get; set; }
         public string esportesPraticados { get; set; }
         public int tipoSanguineo { get; set; }
-        public decimal cpf { get; set; }
         public decimal Dieta { get; set; }
         public decimal Habitos { get; set; }
     
@@ -32,6 +30,5 @@ namespace NutrirSystem.Data
         public virtual ICollection<Convenio> Convenio { get; set; }
         public virtual Dieta Dieta1 { get; set; }
         public virtual Habitos Habitos1 { get; set; }
-        public virtual Pessoa Pessoa { get; set; }
     }
 }
