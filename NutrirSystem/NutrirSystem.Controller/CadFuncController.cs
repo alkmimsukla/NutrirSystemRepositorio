@@ -39,5 +39,14 @@ namespace NutrirSystem.Controller
             funModel.excluirFuncionario(cpf);
         }
 
+        public void alterarFuncionario(decimal cpf, string nome, string rua, decimal numero, string bairro, string cidade, string estado,
+            int sexo, string email, DateTime datan, string telefone,
+            string celular, string apelido, string usuario, string senha,
+            int pe, decimal crm = 0)
+        {
+          
+
+        }
+
     }
 }

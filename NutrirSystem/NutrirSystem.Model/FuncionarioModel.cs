@@ -112,5 +112,13 @@ namespace NutrirSystem.Model
             banco.Funcionario.Remove(removido);
             banco.SaveChanges();
         }
+
+        public void alterarFuncionario(decimal _cpf, string _nome, string _rua, decimal _numero, string _bairro, string _cidade, string _estado,
+            int _sexo, string _email, DateTime _datan, string _telefone,
+            string _celular, string _apelido, string _usuario, string _senha,
+            int _pe, decimal _crm = 0)
+        {
+ 
+        }
     }
 }
