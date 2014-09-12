@@ -27,18 +27,6 @@ C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSy
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.csprojResolveAssemblyReference.cache
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.dll
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.csprojResolveAssemblyReference.cache
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll.config
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Data.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Model.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\EntityFramework.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Data.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\EntityFramework.xml
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Model.pdb
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll.config
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.pdb
@@ -51,3 +39,15 @@ C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj Nutri
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.csprojResolveAssemblyReference.cache
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.dll
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll.config
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Controller.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Data.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Model.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\EntityFramework.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Data.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\NutrirSystem.Model.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\bin\Debug\EntityFramework.xml
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Controller\obj\Debug\NutrirSystem.Controller.pdb

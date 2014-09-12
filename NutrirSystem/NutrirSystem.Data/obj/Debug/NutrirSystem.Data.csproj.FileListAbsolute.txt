@@ -21,4 +21,3 @@ C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\Nut
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\bin\Debug\EntityFramework.xml
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.dll
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.csprojResolveAssemblyReference.cache

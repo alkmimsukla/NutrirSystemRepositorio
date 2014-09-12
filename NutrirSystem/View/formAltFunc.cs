@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public class formAltFunc : Form
+    public partial class formAltFunc : Form
     {
         CadFuncController funcionarioController;
 
