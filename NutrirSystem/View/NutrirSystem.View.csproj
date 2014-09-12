@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formAltPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAltPac.Designer.cs">
+      <DependentUpon>formAltPac.cs</DependentUpon>
+    </Compile>
     <Compile Include="formVisFunc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="UserControls\ucPessoa.Designer.cs">
       <DependentUpon>ucPessoa.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="formAltPac.resx">
+      <DependentUpon>formAltPac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formVisFunc.resx">
       <DependentUpon>formVisFunc.cs</DependentUpon>
     </EmbeddedResource>

@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="EnumPerfil.cs" />
     <Compile Include="EnumSexo.cs" />
+    <Compile Include="EnumTpSang.cs" />
     <Compile Include="Funcionario.cs">
       <DependentUpon>DBNutrirSystem.tt</DependentUpon>
     </Compile>

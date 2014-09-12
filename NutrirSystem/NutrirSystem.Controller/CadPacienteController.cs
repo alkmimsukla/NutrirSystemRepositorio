@@ -21,5 +21,34 @@ namespace NutrirSystem.Controller
             return (modelPaciente.cpfExistente(cpf));
         }
 
+
+        public Data.Paciente buscarPaciente(decimal cpf)
+        {
+            return (modelPaciente.buscarPaciente(cpf));
+        }
+
+        public void alterarPaciente(decimal cpf, string nome, string rua, decimal numero, string bairro, string cidade, string estado,
+            int sexo, string email, DateTime datan, string telefone,
+            string celular, string apelido, string obj, int tpsg, Data.Paciente pacalterado)
+        {
+            pacalterado.cpf = cpf;
+            pacalterado.nome = nome;
+            pacalterado.rua = rua;
+            pacalterado.numero = numero;
+            pacalterado.bairro = bairro;
+            pacalterado.cidade = cidade;
+            pacalterado.estado = estado;
+            pacalterado.sexo = sexo;
+            pacalterado.email = email;
+            pacalterado.dataNascimento = datan;
+            pacalterado.telefone = telefone;
+            pacalterado.celular = celular;
+            pacalterado.apelido = apelido;
+            pacalterado.objetivo = obj;
+            pacalterado.tipoSanguineo = tpsg;
+
+            modelPaciente.alterarPaciente(pacalterado);
+
+        }
     }
 }

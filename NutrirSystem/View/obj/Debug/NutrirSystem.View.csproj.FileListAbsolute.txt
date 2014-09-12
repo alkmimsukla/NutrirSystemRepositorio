@@ -87,6 +87,7 @@ C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\Vie
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\NutrirSystem.Model.pdb
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin\Debug\EntityFramework.xml
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\NutrirSystem.View.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formVisFunc.resources
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formAltFunc.resources
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formCadPac.resources
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.LoginView.resources
@@ -99,4 +100,4 @@ C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\Vie
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.exe
 C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formVisFunc.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formAltPac.resources
