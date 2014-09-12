@@ -16,7 +16,7 @@ namespace NutrirSystem.Controller
             modelPaciente = new PacienteModel();
         }
 
-        public bool cpfExistente(string cpf)
+        public bool cpfExistente(decimal cpf)
         {
             return (modelPaciente.cpfExistente(cpf));
         }

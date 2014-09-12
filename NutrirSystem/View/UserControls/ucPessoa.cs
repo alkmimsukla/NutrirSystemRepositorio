@@ -23,15 +23,26 @@ namespace View.UserControls
 
         private void mkdCPF_Leave(object sender, EventArgs e)
         {
-            if (ucPessoaController.cpfExistente(mkdCPF.Text))
+            if (mkdCPF.Text.Length < 11)
             {
-                MessageBox.Show("CPF já cadastrado na base de dados.\nFavor verificar o CPF preenchido e tentar novamente!", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Quantidade de caracteres inserida inválida.\nFavor verificar o CPF preenchido e tentar novamente!", "Quantidade Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mkdCPF.BackColor = Color.Red;
                 mkdCPF.Focus();
             }
             else
             {
-                mkdCPF.BackColor = Color.LightGreen;
+                decimal cpf = decimal.Parse(mkdCPF.Text);
+
+                if (ucPessoaController.cpfExistente(cpf))
+                {
+                    MessageBox.Show("CPF já cadastrado na base de dados.\nFavor verificar o CPF preenchido e tentar novamente!", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mkdCPF.BackColor = Color.Red;
+                    mkdCPF.Focus();
+                }
+                else
+                {
+                    mkdCPF.BackColor = Color.LightGreen;
+                }
             }
         }
 

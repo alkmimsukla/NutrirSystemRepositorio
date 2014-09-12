@@ -12,9 +12,9 @@ namespace NutrirSystem.Model
             : base() { }
 
 
-        public bool cpfExistente(string cpf)
+        public bool cpfExistente(decimal cpf)
         {
-            return banco.Pessoa.Any(_item => _item.cpf.ToString() == cpf);
+            return banco.Pessoa.Any(_item => _item.cpf == cpf);
         }   
     }
 }
