@@ -29,7 +29,6 @@ namespace NutrirSystem.Controller
             return(funModel.Gravar(cpf, nome, rua, numero, bairro, cidade, estado, sexo, email, datan, telefone, celular, apelido, usuario, senha, pe, crm));
         }
 
-
         public Data.Funcionario buscarFuncionario(decimal cpf)
         {
             return funModel.buscarFuncionario(cpf);
@@ -39,5 +38,6 @@ namespace NutrirSystem.Controller
         {
             funModel.excluirFuncionario(cpf);
         }
+
     }
 }

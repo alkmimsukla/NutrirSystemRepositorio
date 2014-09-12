@@ -27,49 +27,78 @@ namespace NutrirSystem.Model
             return (banco.Funcionario.Any(item => item.cpf == cpf));
         }
 
-        private string GravarBanco(Funcionario obj)
+        private string GravarBanco(Pessoa obj)
         {
-            return ("Funcioanario " + banco.Funcionario.Add(obj).nome + " inserida com sucesso!");
+            string retorno = "Funcionario " + banco.Pessoa.Add(obj).nome + " inserida com sucesso!";
+            int res = banco.SaveChanges();
+
+            return (retorno);
         }
 
-        public string Gravar(decimal cpf, string nome, string rua, decimal numero, string bairro, string cidade, string estado,
-            int sexo, string email, DateTime datan, string telefone,
-            string celular, string apelido, string usuario, string senha,
-            int pe, decimal crm = 0)
+        public string Gravar(decimal _cpf, string _nome, string _rua, decimal _numero, string _bairro, string _cidade, string _estado,
+            int _sexo, string _email, DateTime _datan, string _telefone,
+            string _celular, string _apelido, string _usuario, string _senha,
+            int _pe, decimal _crm = 0)
         {
+            Nutricionista nutriObj;
+            Funcionario funcObj;
 
-            Funcionario func = new Funcionario();
-
-            if (VerificarDupCPF(cpf))
+            if (!VerificarDupCPF(_cpf))
             {
-                func.cpf = cpf;
-                func.nome = nome;
-                func.rua = rua;
-                func.numero = numero;
-                func.bairro = bairro;
-                func.cidade = cidade;
-                func.estado = estado;
-                func.sexo = sexo;
-                func.email = email;
-                func.dataNascimento = datan;
-                func.telefone = telefone;
-                func.celular = celular;
-                func.apelido = apelido;
-                func.usuario = usuario;
-                func.password = senha;
-                func.perfil = pe;
-                if (pe == 2)
+                if (_pe == 2)
                 {
-                    ((Nutricionista)func).crm = crm;
+                    nutriObj = new Nutricionista()
+                    {
+                        cpf = _cpf,
+                        nome = _nome,
+                        rua = _rua,
+                        numero = _numero,
+                        bairro = _bairro,
+                        cidade = _cidade,
+                        estado = _estado,
+                        sexo = _sexo,
+                        email = _email,
+                        dataNascimento = _datan,
+                        telefone = _telefone,
+                        celular = _celular,
+                        apelido = _apelido,
+                        usuario = _usuario,
+                        password = _senha,
+                        perfil = _pe,
+                        crm = _crm
+                    };
+
+                    return (GravarBanco(nutriObj));
+                }
+                else
+                {
+                    funcObj = new Funcionario()
+                    {
+                        cpf = _cpf,
+                        nome = _nome,
+                        rua = _rua,
+                        numero = _numero,
+                        bairro = _bairro,
+                        cidade = _cidade,
+                        estado = _estado,
+                        sexo = _sexo,
+                        email = _email,
+                        dataNascimento = _datan,
+                        telefone = _telefone,
+                        celular = _celular,
+                        apelido = _apelido,
+                        usuario = _usuario,
+                        password = _senha,
+                        perfil = _pe,
+                    };
+
+                    return (GravarBanco(funcObj));
                 }
             }
             else
             {
                 return ("CPF ja existe! Cadastre um outro");
             }
-
-            return (this.GravarBanco(func));
-
         }
 
         public Funcionario buscarFuncionario(decimal cpf)

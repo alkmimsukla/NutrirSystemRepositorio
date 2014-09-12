@@ -20,12 +20,17 @@ namespace View
         {
             InitializeComponent();
 
+            campoSexoRemocao.DataSource = Enum.GetValues(typeof(Sexo));
+            campoPerfilRemocao.DataSource = Enum.GetValues(typeof(Perfil));
+
             // escondo campos CRN
             labelCRN.Hide();
             campoCRNRemocao.Hide();
 
             //escondo painel dos dados do funcionário buscado.
             panel1.Hide();
+
+            funcionarioController = new CadFuncController();
         }
 
         private void btBuscarRemocao_Click(object sender, EventArgs e)
@@ -73,7 +78,7 @@ namespace View
         {
             campoNomeRemocao.Text = funcionarioBuscado.nome;
             campoApelidoRemocao.Text = funcionarioBuscado.apelido;
-            //campoSexoRemocao.Text = funcionarioBuscado.sexo;
+            campoSexoRemocao.SelectedItem = (Sexo)funcionarioBuscado.sexo;
             campoDtNascRemocao.Text = funcionarioBuscado.dataNascimento.ToShortDateString();
             campoSalarioRemocao.Text = funcionarioBuscado.salario.ToString();
             campoRuaRemocao.Text = funcionarioBuscado.rua;
@@ -85,7 +90,7 @@ namespace View
 
             //Campos do Login
             campoUsuarioRemocao.Text = funcionarioBuscado.usuario;
-            //campoPerfilRemocao.Text = funcionarioBuscado.perfil;
+            campoPerfilRemocao.SelectedItem= (Perfil)funcionarioBuscado.perfil;
             campoSenhaRemocao.Text = funcionarioBuscado.password;
 
             // mostrando panel1
