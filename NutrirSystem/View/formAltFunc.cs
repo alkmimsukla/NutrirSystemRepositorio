@@ -15,6 +15,7 @@ namespace View
     public partial class formAltFunc : Form
     {
         CadFuncController funcionarioController;
+        Funcionario funcionario;
 
         public formAltFunc()
         {
@@ -40,6 +41,11 @@ namespace View
             if (funcionarioBuscado != null)
             {
                 preencherCamposView(funcionarioBuscado);
+                funcionario = funcionarioBuscado;
+                if (funcionarioBuscado.perfil == 2)
+                {
+                    campoCRNAlteracao.Show();
+                }
             }
 
             else
@@ -54,8 +60,18 @@ namespace View
 
             if (funcionarioExistente)
             {
-                //funcionarioController.alterarFuncionario(decimal.Parse(campoCPFAlteracao.Text.Trim()));
-                exibirMsgExclusaoSucesso();
+
+                Perfil per;
+                Sexo sex;
+
+                Enum.TryParse<Perfil>(campoPerfilAlteracao.SelectedValue.ToString(), out per);
+                Enum.TryParse<Sexo>(campoSexoAlteracao.SelectedValue.ToString(), out sex);
+
+                funcionarioController.alterarFuncionario(decimal.Parse(campoCPFAlteracao.Text.Trim()), campoNomeAlteracao.Text, campoRuaAlteracao.Text,
+                    decimal.Parse(campoNumeroAlteracao.Text.Trim()), campoBairroAlteracao.Text, campoCidadeAlteracao.Text, campoEstadoAlteracao.Text,
+                    Convert.ToInt32(sex), campoEmailAlteracao.Text, campoDtNascAlteracao.SelectionEnd, campoTelefoneAlteracao.Text, campoCelularAlteracao.Text,
+                    campoApelidoAlteracao.Text, campoUsuarioAlteracao.Text, campoSenhaAlteracao.Text, Convert.ToInt32(per), funcionario, decimal.Parse(campoCRNAlteracao.Text));
+                exibirMsgAlteracaoSucesso();
             }
         }
 
@@ -69,7 +85,7 @@ namespace View
             MessageBox.Show("Funcionário Inexistente! Busque novamente!");
         }
 
-        private void exibirMsgExclusaoSucesso()
+        private void exibirMsgAlteracaoSucesso()
         {
             MessageBox.Show("Funcionário alterado com Sucesso!");
         }
@@ -87,19 +103,28 @@ namespace View
             campoEmailAlteracao.Text = funcionarioBuscado.email;
             campoTelefoneAlteracao.Text = funcionarioBuscado.telefone;
             campoCelularAlteracao.Text = funcionarioBuscado.celular;
+            campoCidadeAlteracao.Text = funcionarioBuscado.cidade;
+            campoEstadoAlteracao.Text = funcionarioBuscado.estado;
+            campoDtNascAlteracao.TodayDate = funcionarioBuscado.dataNascimento;
 
             //Campos do Login
             campoUsuarioAlteracao.Text = funcionarioBuscado.usuario;
             campoPerfilAlteracao.SelectedItem= (Perfil)funcionarioBuscado.perfil;
             campoSenhaAlteracao.Text = funcionarioBuscado.password;
 
-            if (funcionarioBuscado.perfil != 2)
+            if (funcionarioBuscado.perfil == 2)
             {
-                campoCRNAlteracao.Visible = false;
+                campoCRNAlteracao.Text = ((Nutricionista)funcionarioBuscado).crm.ToString();
+                labelCRN.Show();
             }
 
             // mostrando panel1
             panel1.Show();
+        }
+
+        private void campoNomeAlteracao_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

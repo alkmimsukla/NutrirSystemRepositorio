@@ -113,12 +113,34 @@ namespace NutrirSystem.Model
             banco.SaveChanges();
         }
 
-        public void alterarFuncionario(decimal _cpf, string _nome, string _rua, decimal _numero, string _bairro, string _cidade, string _estado,
-            int _sexo, string _email, DateTime _datan, string _telefone,
-            string _celular, string _apelido, string _usuario, string _senha,
-            int _pe, decimal _crm = 0)
+        public void alterarFuncionario(Funcionario funcionario)
         {
- 
+            banco.Pessoa.Attach(funcionario);
+            banco.Entry(funcionario).Property(u => u.nome).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.numero).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.password).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.perfil).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.apelido).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.rua).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.bairro).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.email).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.sexo).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.estado).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.telefone).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.celular).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.salario).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.numero).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.cidade).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.usuario).IsModified = true;
+            banco.Entry(funcionario).Property(u => u.dataNascimento).IsModified = true;
+
+            if (funcionario.perfil == 2)
+            {
+                banco.Entry((Nutricionista)funcionario).Property(u => u.crm).IsModified = true;
+            }
+
+            banco.SaveChanges();
+
         }
     }
 }

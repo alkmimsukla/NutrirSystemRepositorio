@@ -42,10 +42,31 @@ namespace NutrirSystem.Controller
         public void alterarFuncionario(decimal cpf, string nome, string rua, decimal numero, string bairro, string cidade, string estado,
             int sexo, string email, DateTime datan, string telefone,
             string celular, string apelido, string usuario, string senha,
-            int pe, decimal crm = 0)
+            int pe, Data.Funcionario funcalterado, decimal crm = 0)
         {
-          
+            funcalterado.cpf = cpf;
+            funcalterado.nome = nome;
+            funcalterado.rua = rua;
+            funcalterado.numero = numero;
+            funcalterado.bairro = bairro;
+            funcalterado.cidade = cidade;
+            funcalterado.estado = estado;
+            funcalterado.sexo = sexo;
+            funcalterado.email = email;
+            funcalterado.dataNascimento = datan;
+            funcalterado.telefone = telefone;
+            funcalterado.celular = celular;
+            funcalterado.apelido = apelido;
+            funcalterado.usuario = usuario;
+            funcalterado.password = senha;
+            funcalterado.perfil = pe;
 
+            if (pe == 2)
+            {
+                ((Data.Nutricionista)funcalterado).crm = crm;
+            }
+
+            funModel.alterarFuncionario(funcalterado);
         }
 
     }

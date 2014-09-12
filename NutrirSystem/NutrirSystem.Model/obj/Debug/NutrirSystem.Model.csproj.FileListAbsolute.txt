@@ -18,13 +18,6 @@ C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj Nutri
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.csprojResolveAssemblyReference.cache
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
 C:\Users\Família\Desktop\Temp - Christian\TI 2014_2Semestre\Copia do proj NutrirSystem\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.pdb
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.csprojResolveAssemblyReference.cache
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
-C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.dll
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.pdb
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.dll
@@ -32,3 +25,10 @@ C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSy
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.csprojResolveAssemblyReference.cache
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Model.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\bin\Debug\NutrirSystem.Data.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.csprojResolveAssemblyReference.cache
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.dll
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Model\obj\Debug\NutrirSystem.Model.pdb
