@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formVisFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVisFunc.Designer.cs">
+      <DependentUpon>formVisFunc.cs</DependentUpon>
+    </Compile>
     <Compile Include="formAltFunc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="UserControls\ucPessoa.Designer.cs">
       <DependentUpon>ucPessoa.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="formVisFunc.resx">
+      <DependentUpon>formVisFunc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formAltFunc.resx">
       <DependentUpon>formAltFunc.cs</DependentUpon>
     </EmbeddedResource>
