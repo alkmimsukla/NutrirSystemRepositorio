@@ -21,5 +21,15 @@ namespace View
         {
             new formCadPac().Show();
         }
+
+        private void btnAlterarPaciente_Click(object sender, EventArgs e)
+        {
+            new formAltPac().Show();
+        }
+
+        private void btnRemoverPaciente_Click(object sender, EventArgs e)
+        {
+            new View.PacienteView.removerPacienteView().Show();
+        }
     }
 }

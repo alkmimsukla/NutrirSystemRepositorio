@@ -53,5 +53,12 @@ namespace NutrirSystem.Model
             banco.SaveChanges();
 
         }
+
+        public void cadastrarPessoa(Pessoa pessoa)
+        {
+            banco.Pessoa.Add(pessoa);
+
+            banco.SaveChanges();
+        }
     }
 }

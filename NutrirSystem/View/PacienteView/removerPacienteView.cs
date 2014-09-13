@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace View
+namespace View.PacienteView
 {
-    public partial class formCadPac : Form
+    public partial class removerPacienteView : Form
     {
-        public formCadPac()
+        public removerPacienteView()
         {
             InitializeComponent();
-
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
     }
 }

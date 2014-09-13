@@ -1,4 +1,5 @@
-﻿using NutrirSystem.Model;
+﻿using NutrirSystem.Data;
+using NutrirSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,13 @@ namespace NutrirSystem.Controller
 
             modelPaciente.alterarPaciente(pacalterado);
 
+        }
+
+        public void cadastrarPaciente(Paciente paciente)
+        {
+            Pessoa pessoa = paciente;
+
+            modelPaciente.cadastrarPessoa(pessoa);
         }
     }
 }

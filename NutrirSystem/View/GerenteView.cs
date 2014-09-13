@@ -22,5 +22,17 @@ namespace View
             formCadFunc formCad = new formCadFunc();
             formCad.Show();
         }
+
+        private void btnRemoverFuncionario_Click(object sender, EventArgs e)
+        {
+            removerFuncionarioView removerFunc = new removerFuncionarioView();
+            removerFunc.Show();
+        }
+
+        private void btnAlterarFuncionario_Click(object sender, EventArgs e)
+        {
+            formAltFunc alterarFunc = new formAltFunc();
+            alterarFunc.Show();
+        }
     }
 }

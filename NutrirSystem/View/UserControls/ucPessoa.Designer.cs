@@ -30,7 +30,7 @@
         {
             this.gpbPessoa = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtmDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblData = new System.Windows.Forms.Label();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.68745F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.919124F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.58888F));
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dtmDataNascimento, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblData, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.cmbSexo, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblSexo, 0, 1);
@@ -100,13 +100,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1187, 92);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // dtmDataNascimento
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Location = new System.Drawing.Point(427, 34);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(370, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtmDataNascimento.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtmDataNascimento.Location = new System.Drawing.Point(427, 34);
+            this.dtmDataNascimento.Name = "dtmDataNascimento";
+            this.dtmDataNascimento.Size = new System.Drawing.Size(370, 22);
+            this.dtmDataNascimento.TabIndex = 5;
             // 
             // lblData
             // 
@@ -129,6 +129,7 @@
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(112, 24);
             this.cmbSexo.TabIndex = 4;
+            this.cmbSexo.Leave += new System.EventHandler(this.cmbSexo_Leave);
             // 
             // lblSexo
             // 
@@ -195,6 +196,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(370, 22);
             this.txtNome.TabIndex = 2;
+            this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
             // 
             // label1
             // 
@@ -214,6 +216,7 @@
             this.mkdTelefone.Name = "mkdTelefone";
             this.mkdTelefone.Size = new System.Drawing.Size(112, 22);
             this.mkdTelefone.TabIndex = 7;
+            this.mkdTelefone.Leave += new System.EventHandler(this.mkdTelefone_Leave);
             // 
             // label2
             // 
@@ -274,20 +277,20 @@
         private System.Windows.Forms.GroupBox gpbPessoa;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblCPF;
-        private System.Windows.Forms.MaskedTextBox mkdCPF;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.TextBox txtApelido;
         private System.Windows.Forms.Label lblApelido;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox mkdTelefone;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox mkdCelular;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.MaskedTextBox mkdCPF;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.DateTimePicker dtmDataNascimento;
+        public System.Windows.Forms.ComboBox cmbSexo;
+        public System.Windows.Forms.TextBox txtApelido;
+        public System.Windows.Forms.MaskedTextBox mkdTelefone;
+        public System.Windows.Forms.MaskedTextBox mkdCelular;
+        public System.Windows.Forms.TextBox txtEmail;
     }
 }

@@ -46,6 +46,44 @@ namespace View.UserControls
             }
         }
 
+        private void cmbSexo_Leave(object sender, EventArgs e)
+        {
+            if ((cmbSexo.Text == "") || (cmbSexo.Text == "Selecione.."))
+            {
+                cmbSexo.BackColor = Color.Red;
+                cmbSexo.Focus();
+            }
+            else
+            {
+                cmbSexo.BackColor = Color.LightGreen;
+            }
+        }
+
+        private void mkdTelefone_Leave(object sender, EventArgs e)
+        {
+            if (mkdTelefone.Text == "")
+            {
+                mkdTelefone.BackColor = Color.Red;
+                mkdTelefone.Focus();
+            }
+            else
+            {
+                mkdTelefone.BackColor = Color.LightGreen;
+            }
+        }
+
+        private void txtNome_Leave(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                txtNome.BackColor = Color.Red;
+                txtNome.Focus();
+            }
+            else
+            {
+                txtNome.BackColor = Color.LightGreen;
+            }
+        }
 
     }
 }

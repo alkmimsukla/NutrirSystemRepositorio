@@ -44,22 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formAltPac.cs">
+    <Compile Include="PacienteView\formAltPac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAltPac.Designer.cs">
+    <Compile Include="PacienteView\formAltPac.Designer.cs">
       <DependentUpon>formAltPac.cs</DependentUpon>
     </Compile>
-    <Compile Include="formVisFunc.cs">
+    <Compile Include="FuncionarioView\formVisFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formVisFunc.Designer.cs">
+    <Compile Include="FuncionarioView\formVisFunc.Designer.cs">
       <DependentUpon>formVisFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAltFunc.cs">
+    <Compile Include="FuncionarioView\formAltFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAltFunc.Designer.cs">
+    <Compile Include="FuncionarioView\formAltFunc.Designer.cs">
       <DependentUpon>formAltFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="GerenteView.cs">
@@ -68,11 +68,17 @@
     <Compile Include="GerenteView.Designer.cs">
       <DependentUpon>GerenteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="removerFuncionarioView.cs">
+    <Compile Include="FuncionarioView\removerFuncionarioView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="removerFuncionarioView.Designer.cs">
+    <Compile Include="FuncionarioView\removerFuncionarioView.Designer.cs">
       <DependentUpon>removerFuncionarioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteView\removerPacienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacienteView\removerPacienteView.Designer.cs">
+      <DependentUpon>removerPacienteView.cs</DependentUpon>
     </Compile>
     <Compile Include="SecretariaView.cs">
       <SubType>Form</SubType>
@@ -80,10 +86,10 @@
     <Compile Include="SecretariaView.Designer.cs">
       <DependentUpon>SecretariaView.cs</DependentUpon>
     </Compile>
-    <Compile Include="formCadPac.cs">
+    <Compile Include="PacienteView\formCadPac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formCadPac.Designer.cs">
+    <Compile Include="PacienteView\formCadPac.Designer.cs">
       <DependentUpon>formCadPac.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginView.cs">
@@ -92,10 +98,10 @@
     <Compile Include="LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
-    <Compile Include="formCadFunc.cs">
+    <Compile Include="FuncionarioView\formCadFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formCadFunc.Designer.cs">
+    <Compile Include="FuncionarioView\formCadFunc.Designer.cs">
       <DependentUpon>formCadFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -112,23 +118,29 @@
     <Compile Include="UserControls\ucPessoa.Designer.cs">
       <DependentUpon>ucPessoa.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="formAltPac.resx">
+    <EmbeddedResource Include="PacienteView\formAltPac.resx">
       <DependentUpon>formAltPac.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formVisFunc.resx">
+    <EmbeddedResource Include="FuncionarioView\formVisFunc.resx">
       <DependentUpon>formVisFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formAltFunc.resx">
+    <EmbeddedResource Include="FuncionarioView\formAltFunc.resx">
       <DependentUpon>formAltFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formCadPac.resx">
+    <EmbeddedResource Include="PacienteView\formCadPac.resx">
       <DependentUpon>formCadPac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenteView.resx">
+      <DependentUpon>GerenteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formCadFunc.resx">
+    <EmbeddedResource Include="FuncionarioView\formCadFunc.resx">
       <DependentUpon>formCadFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacienteView\removerPacienteView.resx">
+      <DependentUpon>removerPacienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,7 +151,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="removerFuncionarioView.resx">
+    <EmbeddedResource Include="FuncionarioView\removerFuncionarioView.resx">
       <DependentUpon>removerFuncionarioView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SecretariaView.resx">

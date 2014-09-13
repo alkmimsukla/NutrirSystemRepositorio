@@ -203,14 +203,14 @@
         private System.Windows.Forms.GroupBox gpbEndereco;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblRua;
-        private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblBairro;
-        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblCidade;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.ComboBox cmbEstado;
+        public System.Windows.Forms.TextBox txtRua;
+        public System.Windows.Forms.TextBox txtNumero;
+        public System.Windows.Forms.TextBox txtBairro;
+        public System.Windows.Forms.TextBox txtCidade;
+        public System.Windows.Forms.ComboBox cmbEstado;
     }
 }
