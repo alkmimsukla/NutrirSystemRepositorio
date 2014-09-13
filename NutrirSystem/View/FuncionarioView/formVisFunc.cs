@@ -129,5 +129,10 @@ namespace View
         {
 
         }
+
+        private void btVoltarAlteracaoView_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

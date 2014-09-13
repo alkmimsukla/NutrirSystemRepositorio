@@ -471,6 +471,7 @@
             this.btVoltarAlteracaoView.TabIndex = 73;
             this.btVoltarAlteracaoView.Text = "Voltar";
             this.btVoltarAlteracaoView.UseVisualStyleBackColor = true;
+            this.btVoltarAlteracaoView.Click += new System.EventHandler(this.btVoltarAlteracaoView_Click);
             // 
             // formVisFunc
             // 
