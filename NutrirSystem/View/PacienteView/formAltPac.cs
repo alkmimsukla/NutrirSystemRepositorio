@@ -22,6 +22,7 @@ namespace View
             InitializeComponent();
 
             campoSexoAlteracao.DataSource = Enum.GetValues(typeof(Sexo));
+            campoTpSangAlteracao.DataSource = Enum.GetValues(typeof(TpSang));
 
             //escondo painel dos dados do funcionário buscado.
             panel1.Hide();
@@ -61,7 +62,7 @@ namespace View
                 pacienteController.alterarPaciente(decimal.Parse(campoCPFAlteracao.Text.Trim()), campoNomeAlteracao.Text, campoRuaAlteracao.Text,
                     decimal.Parse(campoNumeroAlteracao.Text.Trim()), campoBairroAlteracao.Text, campoCidadeAlteracao.Text, campoEstadoAlteracao.Text,
                     Convert.ToInt32(sex), campoEmailAlteracao.Text, campoDtNascAlteracao.SelectionEnd, campoTelefoneAlteracao.Text, campoCelularAlteracao.Text,
-                    campoApelidoAlteracao.Text,campoObjetivoAlteracao.Text, Convert.ToInt32(tps), paciente);
+                    campoApelidoAlteracao.Text,campoObjetivoAlteracao.Text, Convert.ToInt32(tps), campoEspAlteracao.Text, paciente);
                 exibirMsgAlteracaoSucesso();
             }
         }
@@ -96,8 +97,9 @@ namespace View
             campoCidadeAlteracao.Text = pacienteBuscado.cidade;
             campoEstadoAlteracao.Text = pacienteBuscado.estado;
             campoDtNascAlteracao.TodayDate = pacienteBuscado.dataNascimento;
-            campoObjetivoAlteracao.Text = paciente.objetivo;
+            campoObjetivoAlteracao.AppendText(pacienteBuscado.objetivo);
             campoTpSangAlteracao.SelectedItem = (TpSang)pacienteBuscado.tipoSanguineo;
+            campoEspAlteracao.Text = pacienteBuscado.esportesPraticados;
 
 
             // mostrando panel1

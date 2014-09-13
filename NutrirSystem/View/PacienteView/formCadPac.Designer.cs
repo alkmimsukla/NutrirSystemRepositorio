@@ -60,7 +60,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.85279F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.51051F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.11011F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 7, 6);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblConvenioChBox, 1, 0);
@@ -95,9 +95,9 @@
             // 
             this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(741, 285);
+            this.btnCancelar.Location = new System.Drawing.Point(740, 285);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 62);
+            this.btnCancelar.Size = new System.Drawing.Size(88, 62);
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.tableLayoutPanel1.SetRowSpan(this.textBox1, 2);
-            this.textBox1.Size = new System.Drawing.Size(694, 88);
+            this.textBox1.Size = new System.Drawing.Size(692, 88);
             this.textBox1.TabIndex = 13;
             // 
             // lblConvenioChBox
@@ -153,7 +153,7 @@
             this.lblNumConvenio.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNumConvenio.AutoSize = true;
             this.lblNumConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumConvenio.Location = new System.Drawing.Point(679, 15);
+            this.lblNumConvenio.Location = new System.Drawing.Point(678, 15);
             this.lblNumConvenio.Name = "lblNumConvenio";
             this.lblNumConvenio.Size = new System.Drawing.Size(56, 16);
             this.lblNumConvenio.TabIndex = 3;
@@ -172,9 +172,9 @@
             // txtNumConvenio
             // 
             this.txtNumConvenio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNumConvenio.Location = new System.Drawing.Point(741, 13);
+            this.txtNumConvenio.Location = new System.Drawing.Point(740, 13);
             this.txtNumConvenio.Name = "txtNumConvenio";
-            this.txtNumConvenio.Size = new System.Drawing.Size(89, 20);
+            this.txtNumConvenio.Size = new System.Drawing.Size(88, 20);
             this.txtNumConvenio.TabIndex = 5;
             this.txtNumConvenio.Leave += new System.EventHandler(this.txtNumConvenio_Leave);
             // 
@@ -230,14 +230,14 @@
             this.txtObjetivo.Multiline = true;
             this.txtObjetivo.Name = "txtObjetivo";
             this.tableLayoutPanel1.SetRowSpan(this.txtObjetivo, 2);
-            this.txtObjetivo.Size = new System.Drawing.Size(694, 88);
+            this.txtObjetivo.Size = new System.Drawing.Size(692, 88);
             this.txtObjetivo.TabIndex = 10;
             // 
             // btnCadastrarPaciente
             // 
             this.btnCadastrarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCadastrarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarPaciente.Location = new System.Drawing.Point(836, 285);
+            this.btnCadastrarPaciente.Location = new System.Drawing.Point(834, 285);
             this.btnCadastrarPaciente.Name = "btnCadastrarPaciente";
             this.btnCadastrarPaciente.Size = new System.Drawing.Size(85, 62);
             this.btnCadastrarPaciente.TabIndex = 11;

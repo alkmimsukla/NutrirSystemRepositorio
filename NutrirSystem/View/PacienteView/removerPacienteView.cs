@@ -22,6 +22,9 @@ namespace View.PacienteView
 
             controllerPaciente = new CadPacienteController();
 
+            cmbTipoSanguineo.DataSource = Enum.GetValues(typeof(TpSang));
+            ucPessoa1.cmbSexo.DataSource = Enum.GetValues(typeof(Sexo));
+
             esconderMostrarCamposDoPacienteRecuperado(true);
         }
 
@@ -80,7 +83,6 @@ namespace View.PacienteView
             txtObjetivo.Text = paciente.objetivo;
             textBox1.Text = paciente.esportesPraticados;
 
-            cmbTipoSanguineo.SelectedText = ((TpSang)paciente.tipoSanguineo).ToString();
             cmbTipoSanguineo.SelectedItem = (TpSang)paciente.tipoSanguineo;
 
             if (paciente.Convenio != null && paciente.Convenio.Count() != 0)
@@ -181,6 +183,11 @@ namespace View.PacienteView
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ucPessoa1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

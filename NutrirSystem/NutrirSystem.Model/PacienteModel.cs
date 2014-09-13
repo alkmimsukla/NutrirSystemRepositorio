@@ -49,6 +49,7 @@ namespace NutrirSystem.Model
             banco.Entry(paciente).Property(u => u.dataNascimento).IsModified = true;
             banco.Entry(paciente).Property(u => u.objetivo).IsModified = true;
             banco.Entry(paciente).Property(u => u.tipoSanguineo).IsModified = true;
+            banco.Entry(paciente).Property(u => u.esportesPraticados).IsModified = true;
 
             banco.SaveChanges();
 

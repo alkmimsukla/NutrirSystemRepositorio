@@ -95,7 +95,7 @@ namespace View
             campoNomeAlteracao.Text = funcionarioBuscado.nome;
             campoApelidoAlteracao.Text = funcionarioBuscado.apelido;
             campoSexoAlteracao.SelectedItem = (Sexo)funcionarioBuscado.sexo;
-            campoDtNascAlteracao.Text = funcionarioBuscado.dataNascimento.ToShortDateString();
+            campoDataNa.Text = funcionarioBuscado.dataNascimento.ToShortDateString();
             campoSalarioAlteracao.Text = funcionarioBuscado.salario.ToString();
             campoRuaAlteracao.Text = funcionarioBuscado.rua;
             campoNumeroAlteracao.Text = funcionarioBuscado.numero.ToString();
@@ -105,7 +105,6 @@ namespace View
             campoCelularAlteracao.Text = funcionarioBuscado.celular;
             campoCidadeAlteracao.Text = funcionarioBuscado.cidade;
             campoEstadoAlteracao.Text = funcionarioBuscado.estado;
-            campoDtNascAlteracao.TodayDate = funcionarioBuscado.dataNascimento;
 
             //Campos do Login
             campoUsuarioAlteracao.Text = funcionarioBuscado.usuario;

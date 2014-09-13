@@ -63,11 +63,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btBuscarAlteracao = new System.Windows.Forms.Button();
             this.btVoltarAlteracaoView = new System.Windows.Forms.Button();
+            this.campoEspAlteracao = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.campoEspAlteracao);
             this.panel1.Controls.Add(this.lbObjetivos);
             this.panel1.Controls.Add(this.campoObjetivoAlteracao);
             this.panel1.Controls.Add(this.label9);
@@ -106,7 +110,7 @@
             // 
             this.lbObjetivos.AutoSize = true;
             this.lbObjetivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbObjetivos.Location = new System.Drawing.Point(278, 225);
+            this.lbObjetivos.Location = new System.Drawing.Point(19, 227);
             this.lbObjetivos.Name = "lbObjetivos";
             this.lbObjetivos.Size = new System.Drawing.Size(54, 13);
             this.lbObjetivos.TabIndex = 81;
@@ -114,7 +118,7 @@
             // 
             // campoObjetivoAlteracao
             // 
-            this.campoObjetivoAlteracao.Location = new System.Drawing.Point(281, 245);
+            this.campoObjetivoAlteracao.Location = new System.Drawing.Point(22, 247);
             this.campoObjetivoAlteracao.Multiline = true;
             this.campoObjetivoAlteracao.Name = "campoObjetivoAlteracao";
             this.campoObjetivoAlteracao.Size = new System.Drawing.Size(211, 103);
@@ -124,7 +128,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 271);
+            this.label9.Location = new System.Drawing.Point(456, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 13);
             this.label9.TabIndex = 79;
@@ -133,7 +137,7 @@
             // campoTpSangAlteracao
             // 
             this.campoTpSangAlteracao.FormattingEnabled = true;
-            this.campoTpSangAlteracao.Location = new System.Drawing.Point(18, 287);
+            this.campoTpSangAlteracao.Location = new System.Drawing.Point(459, 266);
             this.campoTpSangAlteracao.Name = "campoTpSangAlteracao";
             this.campoTpSangAlteracao.Size = new System.Drawing.Size(121, 21);
             this.campoTpSangAlteracao.TabIndex = 78;
@@ -182,7 +186,7 @@
             // btExcluirAlteracao
             // 
             this.btExcluirAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExcluirAlteracao.Location = new System.Drawing.Point(556, 306);
+            this.btExcluirAlteracao.Location = new System.Drawing.Point(573, 308);
             this.btExcluirAlteracao.Name = "btExcluirAlteracao";
             this.btExcluirAlteracao.Size = new System.Drawing.Size(101, 42);
             this.btExcluirAlteracao.TabIndex = 72;
@@ -278,7 +282,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(18, 228);
+            this.label8.Location = new System.Drawing.Point(459, 207);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 49;
@@ -287,7 +291,7 @@
             // campoSexoAlteracao
             // 
             this.campoSexoAlteracao.FormattingEnabled = true;
-            this.campoSexoAlteracao.Location = new System.Drawing.Point(18, 244);
+            this.campoSexoAlteracao.Location = new System.Drawing.Point(459, 223);
             this.campoSexoAlteracao.Name = "campoSexoAlteracao";
             this.campoSexoAlteracao.Size = new System.Drawing.Size(103, 21);
             this.campoSexoAlteracao.TabIndex = 48;
@@ -404,6 +408,24 @@
             this.btVoltarAlteracaoView.Text = "Voltar";
             this.btVoltarAlteracaoView.UseVisualStyleBackColor = true;
             // 
+            // campoEspAlteracao
+            // 
+            this.campoEspAlteracao.Location = new System.Drawing.Point(239, 247);
+            this.campoEspAlteracao.Multiline = true;
+            this.campoEspAlteracao.Name = "campoEspAlteracao";
+            this.campoEspAlteracao.Size = new System.Drawing.Size(211, 103);
+            this.campoEspAlteracao.TabIndex = 82;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(239, 231);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 13);
+            this.label10.TabIndex = 83;
+            this.label10.Text = "Esporte Praticado";
+            // 
             // formAltPac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,5 +484,7 @@
         private System.Windows.Forms.ComboBox campoTpSangAlteracao;
         private System.Windows.Forms.Label lbObjetivos;
         private System.Windows.Forms.TextBox campoObjetivoAlteracao;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox campoEspAlteracao;
     }
 }

@@ -24,6 +24,7 @@ namespace View
             txtNomeConvenio.Hide();
             lblNumConvenio.Hide();
             txtNumConvenio.Hide();
+            cmbTipoSanguineo.DataSource = Enum.GetValues(typeof(TpSang));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

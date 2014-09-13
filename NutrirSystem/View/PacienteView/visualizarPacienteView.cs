@@ -19,6 +19,10 @@ namespace View.PacienteView
         public visualizarPacienteView()
         {
             InitializeComponent();
+
+            campoSexoAlteracao.DataSource = Enum.GetValues(typeof(Sexo));
+            campoTpSangAlteracao.DataSource = Enum.GetValues(typeof(TpSang));
+
             pacienteController = new CadPacienteController();
 
             //escondendo painel.
@@ -60,7 +64,6 @@ namespace View.PacienteView
             campoCelularAlteracao.Text = pacienteBuscado.celular;
             campoCidadeAlteracao.Text = pacienteBuscado.cidade;
             campoEstadoAlteracao.Text = pacienteBuscado.estado;
-            campoDtNascAlteracao.TodayDate = pacienteBuscado.dataNascimento;
             campoObjetivoAlteracao.Text = pacienteBuscado.objetivo;
             campoTpSangAlteracao.SelectedItem = (TpSang)pacienteBuscado.tipoSanguineo;
             textBoxesportesPraticados.Text = pacienteBuscado.esportesPraticados;

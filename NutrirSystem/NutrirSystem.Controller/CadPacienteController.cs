@@ -30,7 +30,7 @@ namespace NutrirSystem.Controller
 
         public void alterarPaciente(decimal cpf, string nome, string rua, decimal numero, string bairro, string cidade, string estado,
             int sexo, string email, DateTime datan, string telefone,
-            string celular, string apelido, string obj, int tpsg, Data.Paciente pacalterado)
+            string celular, string apelido, string obj, int tpsg, string esporte, Data.Paciente pacalterado)
         {
             pacalterado.cpf = cpf;
             pacalterado.nome = nome;
@@ -47,6 +47,7 @@ namespace NutrirSystem.Controller
             pacalterado.apelido = apelido;
             pacalterado.objetivo = obj;
             pacalterado.tipoSanguineo = tpsg;
+            pacalterado.esportesPraticados = esporte;
 
             modelPaciente.alterarPaciente(pacalterado);
 

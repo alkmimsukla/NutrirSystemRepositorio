@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.campoDtNascAlteracao = new System.Windows.Forms.MonthCalendar();
             this.label18 = new System.Windows.Forms.Label();
             this.campoEstadoAlteracao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -69,13 +68,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btBuscarAlteracao = new System.Windows.Forms.Button();
             this.btVoltarAlteracaoView = new System.Windows.Forms.Button();
+            this.campoDataNa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.campoDtNascAlteracao);
+            this.panel1.Controls.Add(this.campoDataNa);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.campoEstadoAlteracao);
             this.panel1.Controls.Add(this.label17);
@@ -108,12 +108,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 370);
             this.panel1.TabIndex = 0;
-            // 
-            // campoDtNascAlteracao
-            // 
-            this.campoDtNascAlteracao.Location = new System.Drawing.Point(447, 33);
-            this.campoDtNascAlteracao.Name = "campoDtNascAlteracao";
-            this.campoDtNascAlteracao.TabIndex = 77;
             // 
             // label18
             // 
@@ -473,6 +467,13 @@
             this.btVoltarAlteracaoView.UseVisualStyleBackColor = true;
             this.btVoltarAlteracaoView.Click += new System.EventHandler(this.btVoltarAlteracaoView_Click);
             // 
+            // campoDataNa
+            // 
+            this.campoDataNa.Location = new System.Drawing.Point(447, 32);
+            this.campoDataNa.Name = "campoDataNa";
+            this.campoDataNa.Size = new System.Drawing.Size(119, 20);
+            this.campoDataNa.TabIndex = 77;
+            // 
             // formVisFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +538,6 @@
         private System.Windows.Forms.TextBox campoCidadeAlteracao;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox campoEstadoAlteracao;
-        private System.Windows.Forms.MonthCalendar campoDtNascAlteracao;
+        private System.Windows.Forms.TextBox campoDataNa;
     }
 }

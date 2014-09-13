@@ -111,3 +111,6 @@ C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.GerenteView.resources
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PacienteView.removerPacienteView.resources
 C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PacienteView.visualizarPacienteView.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.GerenteView.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PacienteView.removerPacienteView.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PacienteView.visualizarPacienteView.resources

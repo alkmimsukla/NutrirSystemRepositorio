@@ -105,7 +105,7 @@ namespace View
             campoCelularAlteracao.Text = funcionarioBuscado.celular;
             campoCidadeAlteracao.Text = funcionarioBuscado.cidade;
             campoEstadoAlteracao.Text = funcionarioBuscado.estado;
-            campoDtNascAlteracao.TodayDate = funcionarioBuscado.dataNascimento;
+            campoDtNascAlteracao.SetDate(funcionarioBuscado.dataNascimento);
 
             //Campos do Login
             campoUsuarioAlteracao.Text = funcionarioBuscado.usuario;

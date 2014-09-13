@@ -37,7 +37,6 @@
             this.campoObjetivoAlteracao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.campoTpSangAlteracao = new System.Windows.Forms.ComboBox();
-            this.campoDtNascAlteracao = new System.Windows.Forms.MonthCalendar();
             this.label18 = new System.Windows.Forms.Label();
             this.campoEstadoAlteracao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.btVoltarVisualizacao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.campoCPFVisualizacao = new System.Windows.Forms.TextBox();
+            this.campoDtNascAlteracao = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,13 +89,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.campoDtNascAlteracao);
             this.panel1.Controls.Add(this.labelEsportesPraticados);
             this.panel1.Controls.Add(this.textBoxesportesPraticados);
             this.panel1.Controls.Add(this.lbObjetivos);
             this.panel1.Controls.Add(this.campoObjetivoAlteracao);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.campoTpSangAlteracao);
-            this.panel1.Controls.Add(this.campoDtNascAlteracao);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.campoEstadoAlteracao);
             this.panel1.Controls.Add(this.label17);
@@ -179,12 +179,6 @@
             this.campoTpSangAlteracao.Name = "campoTpSangAlteracao";
             this.campoTpSangAlteracao.Size = new System.Drawing.Size(121, 21);
             this.campoTpSangAlteracao.TabIndex = 78;
-            // 
-            // campoDtNascAlteracao
-            // 
-            this.campoDtNascAlteracao.Location = new System.Drawing.Point(447, 33);
-            this.campoDtNascAlteracao.Name = "campoDtNascAlteracao";
-            this.campoDtNascAlteracao.TabIndex = 77;
             // 
             // label18
             // 
@@ -415,6 +409,13 @@
             this.campoCPFVisualizacao.TabIndex = 43;
             this.campoCPFVisualizacao.KeyUp += new System.Windows.Forms.KeyEventHandler(this.campoCPFVisualizacao_KeyUp);
             // 
+            // campoDtNascAlteracao
+            // 
+            this.campoDtNascAlteracao.Location = new System.Drawing.Point(447, 32);
+            this.campoDtNascAlteracao.Name = "campoDtNascAlteracao";
+            this.campoDtNascAlteracao.Size = new System.Drawing.Size(119, 20);
+            this.campoDtNascAlteracao.TabIndex = 84;
+            // 
             // visualizarPacienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,7 +445,6 @@
         private System.Windows.Forms.TextBox campoObjetivoAlteracao;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox campoTpSangAlteracao;
-        private System.Windows.Forms.MonthCalendar campoDtNascAlteracao;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox campoEstadoAlteracao;
         private System.Windows.Forms.Label label17;
@@ -473,6 +473,7 @@
         private System.Windows.Forms.TextBox campoCPFVisualizacao;
         private System.Windows.Forms.Label labelEsportesPraticados;
         private System.Windows.Forms.TextBox textBoxesportesPraticados;
+        private System.Windows.Forms.TextBox campoDtNascAlteracao;
 
     }
 }
