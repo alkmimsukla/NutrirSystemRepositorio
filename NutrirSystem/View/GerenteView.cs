@@ -34,5 +34,10 @@ namespace View
             formAltFunc alterarFunc = new formAltFunc();
             alterarFunc.Show();
         }
+
+        private void btSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

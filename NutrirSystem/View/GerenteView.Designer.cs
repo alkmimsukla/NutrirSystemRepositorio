@@ -31,6 +31,7 @@
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.btnRemoverFuncionario = new System.Windows.Forms.Button();
             this.btnAlterarFuncionario = new System.Windows.Forms.Button();
+            this.btSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrarFuncionario
@@ -63,11 +64,22 @@
             this.btnAlterarFuncionario.UseVisualStyleBackColor = true;
             this.btnAlterarFuncionario.Click += new System.EventHandler(this.btnAlterarFuncionario_Click);
             // 
+            // btSair
+            // 
+            this.btSair.Location = new System.Drawing.Point(30, 394);
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(103, 43);
+            this.btSair.TabIndex = 3;
+            this.btSair.Text = "SAIR";
+            this.btSair.UseVisualStyleBackColor = true;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
+            // 
             // GerenteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 470);
+            this.Controls.Add(this.btSair);
             this.Controls.Add(this.btnAlterarFuncionario);
             this.Controls.Add(this.btnRemoverFuncionario);
             this.Controls.Add(this.btnCadastrarFuncionario);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Button btnCadastrarFuncionario;
         private System.Windows.Forms.Button btnRemoverFuncionario;
         private System.Windows.Forms.Button btnAlterarFuncionario;
+        private System.Windows.Forms.Button btSair;
     }
 }

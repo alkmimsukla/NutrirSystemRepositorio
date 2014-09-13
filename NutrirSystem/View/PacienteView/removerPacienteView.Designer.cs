@@ -58,23 +58,24 @@
             // 
             this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(702, 231);
+            this.btnCancelar.Location = new System.Drawing.Point(696, 231);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(83, 49);
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // textBox1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 6);
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(130, 79);
+            this.textBox1.Location = new System.Drawing.Point(129, 79);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.tableLayoutPanel1.SetRowSpan(this.textBox1, 2);
-            this.textBox1.Size = new System.Drawing.Size(656, 70);
+            this.textBox1.Size = new System.Drawing.Size(650, 70);
             this.textBox1.TabIndex = 13;
             // 
             // lblConvenioChBox
@@ -82,7 +83,7 @@
             this.lblConvenioChBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblConvenioChBox.AutoSize = true;
             this.lblConvenioChBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConvenioChBox.Location = new System.Drawing.Point(52, 3);
+            this.lblConvenioChBox.Location = new System.Drawing.Point(51, 3);
             this.lblConvenioChBox.Name = "lblConvenioChBox";
             this.lblConvenioChBox.Size = new System.Drawing.Size(72, 32);
             this.lblConvenioChBox.TabIndex = 0;
@@ -92,7 +93,7 @@
             // 
             this.chbConvenio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chbConvenio.AutoSize = true;
-            this.chbConvenio.Location = new System.Drawing.Point(173, 12);
+            this.chbConvenio.Location = new System.Drawing.Point(171, 12);
             this.chbConvenio.Name = "chbConvenio";
             this.chbConvenio.Size = new System.Drawing.Size(15, 14);
             this.chbConvenio.TabIndex = 1;
@@ -103,7 +104,7 @@
             this.lblConvenio.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblConvenio.AutoSize = true;
             this.lblConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConvenio.Location = new System.Drawing.Point(273, 3);
+            this.lblConvenio.Location = new System.Drawing.Point(270, 3);
             this.lblConvenio.Name = "lblConvenio";
             this.lblConvenio.Size = new System.Drawing.Size(65, 32);
             this.lblConvenio.TabIndex = 2;
@@ -114,7 +115,7 @@
             this.lblNumConvenio.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNumConvenio.AutoSize = true;
             this.lblNumConvenio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumConvenio.Location = new System.Drawing.Point(640, 11);
+            this.lblNumConvenio.Location = new System.Drawing.Point(634, 11);
             this.lblNumConvenio.Name = "lblNumConvenio";
             this.lblNumConvenio.Size = new System.Drawing.Size(56, 16);
             this.lblNumConvenio.TabIndex = 3;
@@ -124,7 +125,7 @@
             // 
             this.txtNomeConvenio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tableLayoutPanel1.SetColumnSpan(this.txtNomeConvenio, 2);
-            this.txtNomeConvenio.Location = new System.Drawing.Point(344, 9);
+            this.txtNomeConvenio.Location = new System.Drawing.Point(341, 9);
             this.txtNomeConvenio.Name = "txtNomeConvenio";
             this.txtNomeConvenio.Size = new System.Drawing.Size(200, 20);
             this.txtNomeConvenio.TabIndex = 4;
@@ -132,9 +133,9 @@
             // txtNumConvenio
             // 
             this.txtNumConvenio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNumConvenio.Location = new System.Drawing.Point(702, 9);
+            this.txtNumConvenio.Location = new System.Drawing.Point(696, 9);
             this.txtNumConvenio.Name = "txtNumConvenio";
-            this.txtNumConvenio.Size = new System.Drawing.Size(84, 20);
+            this.txtNumConvenio.Size = new System.Drawing.Size(83, 20);
             this.txtNumConvenio.TabIndex = 5;
             // 
             // label1
@@ -142,7 +143,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 41);
+            this.label1.Location = new System.Drawing.Point(50, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 32);
             this.label1.TabIndex = 7;
@@ -162,9 +163,9 @@
             "O-",
             "AB+",
             "AB-"});
-            this.cmbTipoSanguineo.Location = new System.Drawing.Point(130, 45);
+            this.cmbTipoSanguineo.Location = new System.Drawing.Point(129, 45);
             this.cmbTipoSanguineo.Name = "cmbTipoSanguineo";
-            this.cmbTipoSanguineo.Size = new System.Drawing.Size(101, 24);
+            this.cmbTipoSanguineo.Size = new System.Drawing.Size(100, 24);
             this.cmbTipoSanguineo.TabIndex = 8;
             this.cmbTipoSanguineo.Text = "Selecione..";
             // 
@@ -173,7 +174,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 163);
+            this.label2.Location = new System.Drawing.Point(65, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 9;
@@ -184,20 +185,20 @@
             this.tableLayoutPanel1.SetColumnSpan(this.txtObjetivo, 6);
             this.txtObjetivo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObjetivo.Location = new System.Drawing.Point(130, 155);
+            this.txtObjetivo.Location = new System.Drawing.Point(129, 155);
             this.txtObjetivo.Multiline = true;
             this.txtObjetivo.Name = "txtObjetivo";
             this.tableLayoutPanel1.SetRowSpan(this.txtObjetivo, 2);
-            this.txtObjetivo.Size = new System.Drawing.Size(656, 70);
+            this.txtObjetivo.Size = new System.Drawing.Size(650, 70);
             this.txtObjetivo.TabIndex = 10;
             // 
             // btnRemoverPaciente
             // 
             this.btnRemoverPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRemoverPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverPaciente.Location = new System.Drawing.Point(792, 231);
+            this.btnRemoverPaciente.Location = new System.Drawing.Point(785, 231);
             this.btnRemoverPaciente.Name = "btnRemoverPaciente";
-            this.btnRemoverPaciente.Size = new System.Drawing.Size(80, 49);
+            this.btnRemoverPaciente.Size = new System.Drawing.Size(79, 49);
             this.btnRemoverPaciente.TabIndex = 11;
             this.btnRemoverPaciente.Text = "Remover";
             this.btnRemoverPaciente.UseVisualStyleBackColor = true;
@@ -208,7 +209,7 @@
             this.lblEsportes.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEsportes.AutoSize = true;
             this.lblEsportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEsportes.Location = new System.Drawing.Point(51, 79);
+            this.lblEsportes.Location = new System.Drawing.Point(50, 79);
             this.lblEsportes.Name = "lblEsportes";
             this.lblEsportes.Size = new System.Drawing.Size(73, 32);
             this.lblEsportes.TabIndex = 12;
@@ -226,7 +227,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.85279F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.51051F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.11011F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 7, 6);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblConvenioChBox, 1, 0);

@@ -57,13 +57,13 @@ namespace View.PacienteView
 
         private void preencherCamposView(Paciente paciente)
         {
+            esconderMostrarCamposDoPacienteRecuperado(false);
+
             ucPessoa1.mkdCPF.Text = paciente.cpf.ToString();
             ucPessoa1.txtNome.Text = paciente.nome;
             ucPessoa1.txtApelido.Text = paciente.apelido;
 
-            Sexo sexo;
-            sexo = (Sexo)paciente.sexo;
-            ucPessoa1.cmbSexo.SelectedItem = sexo;
+            ucPessoa1.cmbSexo.SelectedItem = (Sexo)paciente.sexo;
 
             ucPessoa1.dtmDataNascimento.Text = paciente.dataNascimento.ToShortDateString();
             ucPessoa1.txtEmail.Text = paciente.email;
@@ -95,8 +95,7 @@ namespace View.PacienteView
                 esconderCamposConvenio();
             }
 
-            esconderMostrarCamposDoPacienteRecuperado(false);
-
+            bloquearCamposPacienteRecuperado();            
         }
 
         private void esconderCamposConvenio()
@@ -177,6 +176,11 @@ namespace View.PacienteView
             txtNomeConvenio.ReadOnly = true;
             txtNumConvenio.ReadOnly = true;
             ucPessoa1.cmbSexo.Enabled = false;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

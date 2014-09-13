@@ -20,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             controllerLogin = new LoginController();
+            campoSenha.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)

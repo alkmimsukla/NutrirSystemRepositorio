@@ -31,5 +31,10 @@ namespace View
         {
             new View.PacienteView.removerPacienteView().Show();
         }
+
+        private void btSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

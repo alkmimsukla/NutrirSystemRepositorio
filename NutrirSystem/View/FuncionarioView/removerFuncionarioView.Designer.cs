@@ -411,6 +411,7 @@
             this.campoCPFRemocao.Size = new System.Drawing.Size(135, 20);
             this.campoCPFRemocao.TabIndex = 38;
             this.campoCPFRemocao.TextChanged += new System.EventHandler(this.campoCPFRemocao_TextChanged);
+            this.campoCPFRemocao.KeyUp += new System.Windows.Forms.KeyEventHandler(this.campoCPFRemocao_KeyUp);
             // 
             // label16
             // 
@@ -441,6 +442,7 @@
             this.btVoltarRemocaoView.TabIndex = 73;
             this.btVoltarRemocaoView.Text = "Voltar";
             this.btVoltarRemocaoView.UseVisualStyleBackColor = true;
+            this.btVoltarRemocaoView.Click += new System.EventHandler(this.btVoltarRemocaoView_Click);
             // 
             // removerFuncionarioView
             // 
@@ -454,7 +456,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.campoCPFRemocao);
             this.Name = "removerFuncionarioView";
-            this.Text = "removerFuncionarioView";
+            this.Text = "Remover Funcionário - Gerente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

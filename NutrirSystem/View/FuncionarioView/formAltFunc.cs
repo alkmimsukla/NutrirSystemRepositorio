@@ -122,9 +122,37 @@ namespace View
             panel1.Show();
         }
 
+        private void validarFormatoCPF()
+        {
+            string cpfDigitado = campoCPFAlteracao.Text;
+            decimal convertido = 9760; // numero qualquer 
+            decimal.TryParse(cpfDigitado, out convertido);
+
+            if (convertido == 0)
+            {
+                exibirMsgCPFFormatoInvalido();
+                campoCPFAlteracao.Text = "";
+            }
+        }
+
+        private void exibirMsgCPFFormatoInvalido()
+        {
+            MessageBox.Show("Campo CPF deve ser númerico! Tente novamente!");
+        }
+
         private void campoNomeAlteracao_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void campoCPFAlteracao_KeyUp(object sender, KeyEventArgs e)
+        {
+            validarFormatoCPF();
+        }
+
+        private void btVoltarAlteracaoView_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.campoDtNascAlteracao = new System.Windows.Forms.MonthCalendar();
+            this.label18 = new System.Windows.Forms.Label();
+            this.campoEstadoAlteracao = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.campoCidadeAlteracao = new System.Windows.Forms.TextBox();
             this.btExcluirAlteracao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,11 +70,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btBuscarAlteracao = new System.Windows.Forms.Button();
             this.btVoltarAlteracaoView = new System.Windows.Forms.Button();
-            this.campoCidadeAlteracao = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.campoEstadoAlteracao = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.campoDtNascAlteracao = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +110,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 370);
             this.panel1.TabIndex = 0;
+            // 
+            // campoDtNascAlteracao
+            // 
+            this.campoDtNascAlteracao.Location = new System.Drawing.Point(447, 33);
+            this.campoDtNascAlteracao.Name = "campoDtNascAlteracao";
+            this.campoDtNascAlteracao.TabIndex = 77;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(164, 228);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 13);
+            this.label18.TabIndex = 76;
+            this.label18.Text = "Estado";
+            // 
+            // campoEstadoAlteracao
+            // 
+            this.campoEstadoAlteracao.Location = new System.Drawing.Point(167, 244);
+            this.campoEstadoAlteracao.Name = "campoEstadoAlteracao";
+            this.campoEstadoAlteracao.Size = new System.Drawing.Size(100, 20);
+            this.campoEstadoAlteracao.TabIndex = 75;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(278, 145);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 13);
+            this.label17.TabIndex = 74;
+            this.label17.Text = "Cidade";
+            // 
+            // campoCidadeAlteracao
+            // 
+            this.campoCidadeAlteracao.Location = new System.Drawing.Point(281, 161);
+            this.campoCidadeAlteracao.Name = "campoCidadeAlteracao";
+            this.campoCidadeAlteracao.Size = new System.Drawing.Size(143, 20);
+            this.campoCidadeAlteracao.TabIndex = 73;
             // 
             // btExcluirAlteracao
             // 
@@ -414,6 +454,7 @@
             this.campoCPFAlteracao.Size = new System.Drawing.Size(135, 20);
             this.campoCPFAlteracao.TabIndex = 38;
             this.campoCPFAlteracao.TextChanged += new System.EventHandler(this.campoCPFAlteracao_TextChanged);
+            this.campoCPFAlteracao.KeyUp += new System.Windows.Forms.KeyEventHandler(this.campoCPFAlteracao_KeyUp);
             // 
             // label16
             // 
@@ -444,46 +485,7 @@
             this.btVoltarAlteracaoView.TabIndex = 73;
             this.btVoltarAlteracaoView.Text = "Voltar";
             this.btVoltarAlteracaoView.UseVisualStyleBackColor = true;
-            // 
-            // campoCidadeAlteracao
-            // 
-            this.campoCidadeAlteracao.Location = new System.Drawing.Point(281, 161);
-            this.campoCidadeAlteracao.Name = "campoCidadeAlteracao";
-            this.campoCidadeAlteracao.Size = new System.Drawing.Size(143, 20);
-            this.campoCidadeAlteracao.TabIndex = 73;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(278, 145);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 13);
-            this.label17.TabIndex = 74;
-            this.label17.Text = "Cidade";
-            // 
-            // campoEstadoAlteracao
-            // 
-            this.campoEstadoAlteracao.Location = new System.Drawing.Point(167, 244);
-            this.campoEstadoAlteracao.Name = "campoEstadoAlteracao";
-            this.campoEstadoAlteracao.Size = new System.Drawing.Size(100, 20);
-            this.campoEstadoAlteracao.TabIndex = 75;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(164, 228);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 13);
-            this.label18.TabIndex = 76;
-            this.label18.Text = "Estado";
-            // 
-            // campoDtNascAlteracao
-            // 
-            this.campoDtNascAlteracao.Location = new System.Drawing.Point(447, 33);
-            this.campoDtNascAlteracao.Name = "campoDtNascAlteracao";
-            this.campoDtNascAlteracao.TabIndex = 77;
+            this.btVoltarAlteracaoView.Click += new System.EventHandler(this.btVoltarAlteracaoView_Click);
             // 
             // formAltFunc
             // 

@@ -31,6 +31,7 @@
             this.btnCadPaciente = new System.Windows.Forms.Button();
             this.btnAlterarPaciente = new System.Windows.Forms.Button();
             this.btnRemoverPaciente = new System.Windows.Forms.Button();
+            this.btSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadPaciente
@@ -63,11 +64,22 @@
             this.btnRemoverPaciente.UseVisualStyleBackColor = true;
             this.btnRemoverPaciente.Click += new System.EventHandler(this.btnRemoverPaciente_Click);
             // 
+            // btSair
+            // 
+            this.btSair.Location = new System.Drawing.Point(21, 353);
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(102, 41);
+            this.btSair.TabIndex = 3;
+            this.btSair.Text = "SAIR";
+            this.btSair.UseVisualStyleBackColor = true;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
+            // 
             // SecretariaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 422);
+            this.Controls.Add(this.btSair);
             this.Controls.Add(this.btnRemoverPaciente);
             this.Controls.Add(this.btnAlterarPaciente);
             this.Controls.Add(this.btnCadPaciente);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Button btnCadPaciente;
         private System.Windows.Forms.Button btnAlterarPaciente;
         private System.Windows.Forms.Button btnRemoverPaciente;
+        private System.Windows.Forms.Button btSair;
     }
 }

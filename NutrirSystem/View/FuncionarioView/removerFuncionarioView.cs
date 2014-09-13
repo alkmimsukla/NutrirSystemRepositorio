@@ -64,6 +64,24 @@ namespace View
             panel1.Hide();
         }
 
+        private void validarFormatoCPF()
+        {
+            string cpfDigitado = campoCPFRemocao.Text;
+            decimal convertido = 9760; // numero qualquer 
+            decimal.TryParse(cpfDigitado, out convertido);
+
+            if (convertido == 0)
+            {
+                exibirMsgCPFFormatoInvalido();
+                campoCPFRemocao.Text = "";
+            }
+        }
+
+        private void exibirMsgCPFFormatoInvalido()
+        {
+            MessageBox.Show("Campo CPF deve ser númerico! Tente novamente!");
+        }
+
         private void exibirMsgFuncionarioInexistente()
         {
             MessageBox.Show("Funcionário Inexistente! Busque novamente!");
@@ -90,11 +108,43 @@ namespace View
 
             //Campos do Login
             campoUsuarioRemocao.Text = funcionarioBuscado.usuario;
-            campoPerfilRemocao.SelectedItem= (Perfil)funcionarioBuscado.perfil;
+            campoPerfilRemocao.SelectedItem = (Perfil)funcionarioBuscado.perfil;
             campoSenhaRemocao.Text = funcionarioBuscado.password;
 
             // mostrando panel1
             panel1.Show();
+
+            bloquearCamposTela();
+        }
+
+        private void btVoltarRemocaoView_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bloquearCamposTela()
+        {
+            campoNomeRemocao.ReadOnly = true;
+            campoApelidoRemocao.ReadOnly = true;
+            campoSexoRemocao.Enabled = false;
+            campoDtNascRemocao.ReadOnly = true;
+            campoSalarioRemocao.ReadOnly = true;
+            campoRuaRemocao.ReadOnly = true;
+            campoNumeroRemocao.ReadOnly = true;
+            campoBairroRemocao.ReadOnly = true;
+            campoEmailRemocao.ReadOnly = true;
+            campoTelefoneRemocao.ReadOnly = true;
+            campoCelularRemocao.ReadOnly = true;
+
+            //Campos do Login
+            campoUsuarioRemocao.ReadOnly = true;
+            campoPerfilRemocao.Enabled = false;
+            campoSenhaRemocao.ReadOnly = true;
+        }
+
+        private void campoCPFRemocao_KeyUp(object sender, KeyEventArgs e)
+        {
+            validarFormatoCPF();
         }
     }
 }
