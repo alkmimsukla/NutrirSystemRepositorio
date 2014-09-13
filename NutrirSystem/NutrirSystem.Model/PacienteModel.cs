@@ -60,5 +60,12 @@ namespace NutrirSystem.Model
 
             banco.SaveChanges();
         }
+
+        public void excluirPaciente(decimal cpf)
+        {
+            Pessoa removido = banco.Pessoa.Where(item => item.cpf == cpf).SingleOrDefault();
+            banco.Pessoa.Remove(removido);
+            banco.SaveChanges();
+        }
     }
 }

@@ -105,3 +105,8 @@ C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.exe
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.pdb
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PacienteView.removerPacienteView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formAltPac.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formVisFunc.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.formAltFunc.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.GerenteView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PacienteView.removerPacienteView.resources

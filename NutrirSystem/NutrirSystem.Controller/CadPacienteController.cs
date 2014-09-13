@@ -58,5 +58,10 @@ namespace NutrirSystem.Controller
 
             modelPaciente.cadastrarPessoa(pessoa);
         }
+
+        public void excluirPaciente(decimal cpf)
+        {
+            modelPaciente.excluirPaciente(cpf);
+        }
     }
 }
