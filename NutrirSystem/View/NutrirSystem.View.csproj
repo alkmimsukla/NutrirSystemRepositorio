@@ -80,6 +80,12 @@
     <Compile Include="PacienteView\removerPacienteView.Designer.cs">
       <DependentUpon>removerPacienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="PacienteView\visualizarPacienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacienteView\visualizarPacienteView.Designer.cs">
+      <DependentUpon>visualizarPacienteView.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecretariaView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PacienteView\removerPacienteView.resx">
       <DependentUpon>removerPacienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacienteView\visualizarPacienteView.resx">
+      <DependentUpon>visualizarPacienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

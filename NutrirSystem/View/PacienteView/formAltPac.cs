@@ -109,6 +109,11 @@ namespace View
 
         }
 
+        private void formAltPac_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

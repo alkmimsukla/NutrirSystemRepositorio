@@ -32,6 +32,7 @@
             this.btnAlterarPaciente = new System.Windows.Forms.Button();
             this.btnRemoverPaciente = new System.Windows.Forms.Button();
             this.btSair = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadPaciente
@@ -74,11 +75,22 @@
             this.btSair.UseVisualStyleBackColor = true;
             this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(349, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 73);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Visualizar Paciente";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SecretariaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 422);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btSair);
             this.Controls.Add(this.btnRemoverPaciente);
             this.Controls.Add(this.btnAlterarPaciente);
@@ -86,6 +98,7 @@
             this.Name = "SecretariaView";
             this.Text = "NutrirSystem - Secretária";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.SecretariaView_Load);
             this.ResumeLayout(false);
 
         }
@@ -96,5 +109,6 @@
         private System.Windows.Forms.Button btnAlterarPaciente;
         private System.Windows.Forms.Button btnRemoverPaciente;
         private System.Windows.Forms.Button btSair;
+        private System.Windows.Forms.Button button1;
     }
 }

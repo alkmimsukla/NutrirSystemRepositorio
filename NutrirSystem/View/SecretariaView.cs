@@ -36,5 +36,15 @@ namespace View
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new View.PacienteView.visualizarPacienteView().Show();
+        }
+
+        private void SecretariaView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

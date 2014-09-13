@@ -1,6 +1,6 @@
-﻿namespace View
+﻿namespace View.PacienteView
 {
-    partial class formAltPac
+    partial class visualizarPacienteView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btBuscarPacienteVisualizar = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelEsportesPraticados = new System.Windows.Forms.Label();
+            this.textBoxesportesPraticados = new System.Windows.Forms.TextBox();
             this.lbObjetivos = new System.Windows.Forms.Label();
             this.campoObjetivoAlteracao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -38,7 +42,6 @@
             this.campoEstadoAlteracao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.campoCidadeAlteracao = new System.Windows.Forms.TextBox();
-            this.btExcluirAlteracao = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.campoEmailAlteracao = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,16 +61,36 @@
             this.campoApelidoAlteracao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.campoNomeAlteracao = new System.Windows.Forms.TextBox();
+            this.btVoltarVisualizacao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.campoCPFAlteracao = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btBuscarAlteracao = new System.Windows.Forms.Button();
-            this.btVoltarAlteracaoView = new System.Windows.Forms.Button();
+            this.campoCPFVisualizacao = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btBuscarPacienteVisualizar
+            // 
+            this.btBuscarPacienteVisualizar.Location = new System.Drawing.Point(389, 64);
+            this.btBuscarPacienteVisualizar.Name = "btBuscarPacienteVisualizar";
+            this.btBuscarPacienteVisualizar.Size = new System.Drawing.Size(75, 23);
+            this.btBuscarPacienteVisualizar.TabIndex = 46;
+            this.btBuscarPacienteVisualizar.Text = "Buscar";
+            this.btBuscarPacienteVisualizar.UseVisualStyleBackColor = true;
+            this.btBuscarPacienteVisualizar.Click += new System.EventHandler(this.btBuscarAlteracao_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(188, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(219, 13);
+            this.label16.TabIndex = 45;
+            this.label16.Text = "Digite o CPF do Paciente para alterar";
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelEsportesPraticados);
+            this.panel1.Controls.Add(this.textBoxesportesPraticados);
             this.panel1.Controls.Add(this.lbObjetivos);
             this.panel1.Controls.Add(this.campoObjetivoAlteracao);
             this.panel1.Controls.Add(this.label9);
@@ -77,7 +100,6 @@
             this.panel1.Controls.Add(this.campoEstadoAlteracao);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.campoCidadeAlteracao);
-            this.panel1.Controls.Add(this.btExcluirAlteracao);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.campoEmailAlteracao);
             this.panel1.Controls.Add(this.label13);
@@ -97,10 +119,29 @@
             this.panel1.Controls.Add(this.campoApelidoAlteracao);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.campoNomeAlteracao);
-            this.panel1.Location = new System.Drawing.Point(12, 94);
+            this.panel1.Location = new System.Drawing.Point(12, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(695, 370);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(841, 337);
+            this.panel1.TabIndex = 42;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // labelEsportesPraticados
+            // 
+            this.labelEsportesPraticados.AutoSize = true;
+            this.labelEsportesPraticados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEsportesPraticados.Location = new System.Drawing.Point(558, 226);
+            this.labelEsportesPraticados.Name = "labelEsportesPraticados";
+            this.labelEsportesPraticados.Size = new System.Drawing.Size(120, 13);
+            this.labelEsportesPraticados.TabIndex = 83;
+            this.labelEsportesPraticados.Text = "Esportes Praticados";
+            // 
+            // textBoxesportesPraticados
+            // 
+            this.textBoxesportesPraticados.Location = new System.Drawing.Point(561, 245);
+            this.textBoxesportesPraticados.Multiline = true;
+            this.textBoxesportesPraticados.Name = "textBoxesportesPraticados";
+            this.textBoxesportesPraticados.Size = new System.Drawing.Size(222, 64);
+            this.textBoxesportesPraticados.TabIndex = 82;
             // 
             // lbObjetivos
             // 
@@ -117,8 +158,9 @@
             this.campoObjetivoAlteracao.Location = new System.Drawing.Point(281, 245);
             this.campoObjetivoAlteracao.Multiline = true;
             this.campoObjetivoAlteracao.Name = "campoObjetivoAlteracao";
-            this.campoObjetivoAlteracao.Size = new System.Drawing.Size(211, 103);
+            this.campoObjetivoAlteracao.Size = new System.Drawing.Size(212, 63);
             this.campoObjetivoAlteracao.TabIndex = 80;
+            this.campoObjetivoAlteracao.TextChanged += new System.EventHandler(this.campoObjetivoAlteracao_TextChanged);
             // 
             // label9
             // 
@@ -137,7 +179,6 @@
             this.campoTpSangAlteracao.Name = "campoTpSangAlteracao";
             this.campoTpSangAlteracao.Size = new System.Drawing.Size(121, 21);
             this.campoTpSangAlteracao.TabIndex = 78;
-            this.campoTpSangAlteracao.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // campoDtNascAlteracao
             // 
@@ -178,17 +219,6 @@
             this.campoCidadeAlteracao.Name = "campoCidadeAlteracao";
             this.campoCidadeAlteracao.Size = new System.Drawing.Size(143, 20);
             this.campoCidadeAlteracao.TabIndex = 73;
-            // 
-            // btExcluirAlteracao
-            // 
-            this.btExcluirAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExcluirAlteracao.Location = new System.Drawing.Point(556, 306);
-            this.btExcluirAlteracao.Name = "btExcluirAlteracao";
-            this.btExcluirAlteracao.Size = new System.Drawing.Size(101, 42);
-            this.btExcluirAlteracao.TabIndex = 72;
-            this.btExcluirAlteracao.Text = "Alterar";
-            this.btExcluirAlteracao.UseVisualStyleBackColor = true;
-            this.btExcluirAlteracao.Click += new System.EventHandler(this.btAlterar_Click);
             // 
             // label15
             // 
@@ -356,68 +386,48 @@
             this.campoNomeAlteracao.Size = new System.Drawing.Size(246, 20);
             this.campoNomeAlteracao.TabIndex = 40;
             // 
+            // btVoltarVisualizacao
+            // 
+            this.btVoltarVisualizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVoltarVisualizacao.Location = new System.Drawing.Point(671, 444);
+            this.btVoltarVisualizacao.Name = "btVoltarVisualizacao";
+            this.btVoltarVisualizacao.Size = new System.Drawing.Size(101, 42);
+            this.btVoltarVisualizacao.TabIndex = 72;
+            this.btVoltarVisualizacao.Text = "Voltar";
+            this.btVoltarVisualizacao.UseVisualStyleBackColor = true;
+            this.btVoltarVisualizacao.Click += new System.EventHandler(this.btVoltarVisualizacao_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 40);
+            this.label1.Location = new System.Drawing.Point(188, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 39;
+            this.label1.TabIndex = 44;
             this.label1.Text = "CPF";
             // 
-            // campoCPFAlteracao
+            // campoCPFVisualizacao
             // 
-            this.campoCPFAlteracao.Location = new System.Drawing.Point(91, 56);
-            this.campoCPFAlteracao.Name = "campoCPFAlteracao";
-            this.campoCPFAlteracao.Size = new System.Drawing.Size(135, 20);
-            this.campoCPFAlteracao.TabIndex = 38;
-            this.campoCPFAlteracao.TextChanged += new System.EventHandler(this.campoCPFAlteracao_TextChanged);
+            this.campoCPFVisualizacao.Location = new System.Drawing.Point(187, 67);
+            this.campoCPFVisualizacao.Name = "campoCPFVisualizacao";
+            this.campoCPFVisualizacao.Size = new System.Drawing.Size(135, 20);
+            this.campoCPFVisualizacao.TabIndex = 43;
+            this.campoCPFVisualizacao.KeyUp += new System.Windows.Forms.KeyEventHandler(this.campoCPFVisualizacao_KeyUp);
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(92, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(219, 13);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "Digite o CPF do Paciente para alterar";
-            // 
-            // btBuscarAlteracao
-            // 
-            this.btBuscarAlteracao.Location = new System.Drawing.Point(293, 53);
-            this.btBuscarAlteracao.Name = "btBuscarAlteracao";
-            this.btBuscarAlteracao.Size = new System.Drawing.Size(75, 23);
-            this.btBuscarAlteracao.TabIndex = 41;
-            this.btBuscarAlteracao.Text = "Buscar";
-            this.btBuscarAlteracao.UseVisualStyleBackColor = true;
-            this.btBuscarAlteracao.Click += new System.EventHandler(this.btBuscarAlteracao_Click);
-            // 
-            // btVoltarAlteracaoView
-            // 
-            this.btVoltarAlteracaoView.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btVoltarAlteracaoView.Location = new System.Drawing.Point(568, 470);
-            this.btVoltarAlteracaoView.Name = "btVoltarAlteracaoView";
-            this.btVoltarAlteracaoView.Size = new System.Drawing.Size(101, 42);
-            this.btVoltarAlteracaoView.TabIndex = 73;
-            this.btVoltarAlteracaoView.Text = "Voltar";
-            this.btVoltarAlteracaoView.UseVisualStyleBackColor = true;
-            // 
-            // formAltPac
+            // visualizarPacienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 534);
-            this.Controls.Add(this.btVoltarAlteracaoView);
-            this.Controls.Add(this.btBuscarAlteracao);
+            this.ClientSize = new System.Drawing.Size(911, 498);
+            this.Controls.Add(this.btBuscarPacienteVisualizar);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.campoCPFAlteracao);
-            this.Name = "formAltPac";
-            this.Text = "Alterar Dados Paciente";
-            this.Load += new System.EventHandler(this.formAltPac_Load);
+            this.Controls.Add(this.campoCPFVisualizacao);
+            this.Controls.Add(this.btVoltarVisualizacao);
+            this.Name = "visualizarPacienteView";
+            this.Text = "Visualizar Paciente - Secretária";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -427,7 +437,19 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btBuscarPacienteVisualizar;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbObjetivos;
+        private System.Windows.Forms.TextBox campoObjetivoAlteracao;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox campoTpSangAlteracao;
+        private System.Windows.Forms.MonthCalendar campoDtNascAlteracao;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox campoEstadoAlteracao;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox campoCidadeAlteracao;
+        private System.Windows.Forms.Button btVoltarVisualizacao;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox campoEmailAlteracao;
         private System.Windows.Forms.Label label13;
@@ -448,19 +470,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox campoNomeAlteracao;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox campoCPFAlteracao;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btBuscarAlteracao;
-        private System.Windows.Forms.Button btExcluirAlteracao;
-        private System.Windows.Forms.Button btVoltarAlteracaoView;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox campoCidadeAlteracao;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox campoEstadoAlteracao;
-        private System.Windows.Forms.MonthCalendar campoDtNascAlteracao;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox campoTpSangAlteracao;
-        private System.Windows.Forms.Label lbObjetivos;
-        private System.Windows.Forms.TextBox campoObjetivoAlteracao;
+        private System.Windows.Forms.TextBox campoCPFVisualizacao;
+        private System.Windows.Forms.Label labelEsportesPraticados;
+        private System.Windows.Forms.TextBox textBoxesportesPraticados;
+
     }
 }
