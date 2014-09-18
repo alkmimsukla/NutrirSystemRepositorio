@@ -21,3 +21,4 @@ C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSy
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\bin\Debug\EntityFramework.xml
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.dll
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.pdb
+C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\obj\Debug\NutrirSystem.Data.csprojResolveAssemblyReference.cache

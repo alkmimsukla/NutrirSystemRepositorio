@@ -59,7 +59,9 @@ namespace View
             paciente.estado = ucEndereco1.cmbEstado.Text;
 
             paciente.Dieta1 = new Dieta();
+            paciente.Dieta1.dieta1 = " ";
             paciente.Habitos1 = new Habitos();
+            paciente.Habitos1.descricaoHabitosAlimentares = " ";
 
             paciente.objetivo = txtObjetivo.Text;
             paciente.esportesPraticados = txtObjetivo.Text;
