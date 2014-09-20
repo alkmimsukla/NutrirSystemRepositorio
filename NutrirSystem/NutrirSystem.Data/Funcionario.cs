@@ -14,9 +14,17 @@ namespace NutrirSystem.Data
     
     public partial class Funcionario : Pessoa
     {
+        public Funcionario()
+        {
+            this.Consulta = new HashSet<Consulta>();
+        }
+    
         public string usuario { get; set; }
         public string password { get; set; }
         public decimal salario { get; set; }
         public int perfil { get; set; }
+        public Nullable<decimal> CRN { get; set; }
+    
+        public virtual ICollection<Consulta> Consulta { get; set; }
     }
 }

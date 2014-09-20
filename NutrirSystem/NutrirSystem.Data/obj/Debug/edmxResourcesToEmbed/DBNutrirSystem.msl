@@ -6,13 +6,12 @@
         <MappingFragment StoreEntitySet="Consulta">
           <ScalarProperty Name="idConsulta" ColumnName="idConsulta" />
           <ScalarProperty Name="statusConsulta" ColumnName="statusConsulta" />
-          <ScalarProperty Name="data" ColumnName="data" />
-          <ScalarProperty Name="hora" ColumnName="hora" />
           <ScalarProperty Name="tipoConsulta" ColumnName="tipoConsulta" />
-          <ScalarProperty Name="Nutricionista" ColumnName="Nutricionista" />
-          <ScalarProperty Name="cpfPaciente" ColumnName="cpfPaciente" />
-          <ScalarProperty Name="Pagamento" ColumnName="Pagamento" />
-          <ScalarProperty Name="MedidasCorporais" ColumnName="MedidasCorporais" />
+          <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+          <ScalarProperty Name="MedidasCorporais_idMedidasCorporais" ColumnName="MedidasCorporais_idMedidasCorporais" />
+          <ScalarProperty Name="MedidasCorporais_idMedidasCorporais1" ColumnName="MedidasCorporais_idMedidasCorporais1" />
+          <ScalarProperty Name="Paciente_cpf" ColumnName="Paciente_cpf" />
+          <ScalarProperty Name="Funcionario_cpf" ColumnName="Funcionario_cpf" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -21,7 +20,6 @@
         <MappingFragment StoreEntitySet="Convenio">
           <ScalarProperty Name="numPlano" ColumnName="numPlano" />
           <ScalarProperty Name="nome" ColumnName="nome" />
-          <ScalarProperty Name="Paciente" ColumnName="Paciente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -29,16 +27,7 @@
       <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Dieta)">
         <MappingFragment StoreEntitySet="Dieta">
           <ScalarProperty Name="idDieta" ColumnName="idDieta" />
-          <ScalarProperty Name="dieta1" ColumnName="dieta1" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Habitos">
-      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Habitos)">
-        <MappingFragment StoreEntitySet="Habitos">
-          <ScalarProperty Name="IdHabito" ColumnName="IdHabito" />
-          <ScalarProperty Name="descricaoHabitosEsportivos" ColumnName="descricaoHabitosEsportivos" />
-          <ScalarProperty Name="descricaoHabitosAlimentares" ColumnName="descricaoHabitosAlimentares" />
+          <ScalarProperty Name="dieta" ColumnName="dieta" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -62,6 +51,7 @@
           <ScalarProperty Name="valor" ColumnName="valor" />
           <ScalarProperty Name="formaPagamento" ColumnName="formaPagamento" />
           <ScalarProperty Name="statusPagamento" ColumnName="statusPagamento" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -89,8 +79,8 @@
           <ScalarProperty Name="objetivo" ColumnName="objetivo" />
           <ScalarProperty Name="esportesPraticados" ColumnName="esportesPraticados" />
           <ScalarProperty Name="tipoSanguineo" ColumnName="tipoSanguineo" />
-          <ScalarProperty Name="Dieta" ColumnName="Dieta" />
-          <ScalarProperty Name="Habitos" ColumnName="Habitos" />
+          <ScalarProperty Name="descHabitosEsp" ColumnName="descHabitosEsp" />
+          <ScalarProperty Name="descHabitosAli" ColumnName="descHabitosAli" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Funcionario)">
@@ -100,12 +90,7 @@
           <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="salario" ColumnName="salario" />
           <ScalarProperty Name="perfil" ColumnName="perfil" />
-        </MappingFragment>
-      </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Nutricionista)">
-        <MappingFragment StoreEntitySet="Pessoa_Nutricionista">
-          <ScalarProperty Name="cpf" ColumnName="cpf" />
-          <ScalarProperty Name="crm" ColumnName="crm" />
+          <ScalarProperty Name="CRN" ColumnName="CRN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -121,6 +106,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CartaoCreditoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.CartaoCredito)">
+        <MappingFragment StoreEntitySet="CartaoCreditoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Bandeira" ColumnName="Bandeira" />
+          <ScalarProperty Name="Titular" ColumnName="Titular" />
+          <ScalarProperty Name="numParc" ColumnName="numParc" />
+          <ScalarProperty Name="valorParc" ColumnName="valorParc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="Dieta_Usa_ProdutoClinica" TypeName="DBNutrirSystemModel.Dieta_Usa_ProdutoClinica" StoreEntitySet="Dieta_Usa_ProdutoClinica">
       <EndProperty Name="Dieta">
         <ScalarProperty Name="idDieta" ColumnName="Dieta_idDieta" />
@@ -128,6 +124,40 @@
       <EndProperty Name="ProdutosClinica">
         <ScalarProperty Name="idProdutosClinica" ColumnName="ProdutosClinica_idProdutosClinica" />
       </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CartaoCreditoPagamento" TypeName="DBNutrirSystemModel.CartaoCreditoPagamento" StoreEntitySet="CartaoCreditoSet">
+      <EndProperty Name="Pagamento">
+        <ScalarProperty Name="idPagamento" ColumnName="Pagamento_idPagamento" />
+      </EndProperty>
+      <EndProperty Name="CartaoCredito">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PagamentoConsulta" TypeName="DBNutrirSystemModel.PagamentoConsulta" StoreEntitySet="Pagamento">
+      <EndProperty Name="Consulta">
+        <ScalarProperty Name="idConsulta" ColumnName="Consulta_idConsulta" />
+      </EndProperty>
+      <EndProperty Name="Pagamento">
+        <ScalarProperty Name="idPagamento" ColumnName="idPagamento" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PacienteDieta" TypeName="DBNutrirSystemModel.PacienteDieta" StoreEntitySet="Pessoa_Paciente">
+      <EndProperty Name="Dieta">
+        <ScalarProperty Name="idDieta" ColumnName="Dieta_idDieta" />
+      </EndProperty>
+      <EndProperty Name="Paciente">
+        <ScalarProperty Name="cpf" ColumnName="cpf" />
+      </EndProperty>
+      <Condition ColumnName="Dieta_idDieta" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PacienteConvenio" TypeName="DBNutrirSystemModel.PacienteConvenio" StoreEntitySet="Pessoa_Paciente">
+      <EndProperty Name="Convenio">
+        <ScalarProperty Name="numPlano" ColumnName="Convenio_numPlano" />
+      </EndProperty>
+      <EndProperty Name="Paciente">
+        <ScalarProperty Name="cpf" ColumnName="cpf" />
+      </EndProperty>
+      <Condition ColumnName="Convenio_numPlano" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

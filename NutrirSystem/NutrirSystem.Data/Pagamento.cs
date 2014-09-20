@@ -14,16 +14,13 @@ namespace NutrirSystem.Data
     
     public partial class Pagamento
     {
-        public Pagamento()
-        {
-            this.Consulta = new HashSet<Consulta>();
-        }
-    
         public decimal idPagamento { get; set; }
         public decimal valor { get; set; }
         public int formaPagamento { get; set; }
         public int statusPagamento { get; set; }
+        public System.DateTime Data { get; set; }
     
-        public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual CartaoCredito CartaoCredito { get; set; }
+        public virtual Consulta Consulta { get; set; }
     }
 }

@@ -113,7 +113,7 @@ namespace View
 
             if (funcionarioBuscado.perfil == 2)
             {
-                campoCRNAlteracao.Text = ((Nutricionista)funcionarioBuscado).crm.ToString();
+                campoCRNAlteracao.Text = funcionarioBuscado.CRN.ToString();
                 labelCRN.Show();
             }
 

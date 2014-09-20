@@ -16,17 +16,16 @@ namespace NutrirSystem.Data
     {
         public decimal idConsulta { get; set; }
         public Nullable<int> statusConsulta { get; set; }
-        public System.DateTime data { get; set; }
-        public int hora { get; set; }
         public Nullable<int> tipoConsulta { get; set; }
-        public decimal Nutricionista { get; set; }
-        public decimal cpfPaciente { get; set; }
-        public Nullable<decimal> Pagamento { get; set; }
-        public decimal MedidasCorporais { get; set; }
+        public System.DateTime DataHora { get; set; }
+        public decimal MedidasCorporais_idMedidasCorporais { get; set; }
+        public decimal MedidasCorporais_idMedidasCorporais1 { get; set; }
+        public decimal Paciente_cpf { get; set; }
+        public decimal Funcionario_cpf { get; set; }
     
+        public virtual MedidasCorporais MedidasCorporais { get; set; }
         public virtual Paciente Paciente { get; set; }
-        public virtual MedidasCorporais MedidasCorporais1 { get; set; }
-        public virtual Nutricionista Nutricionista1 { get; set; }
-        public virtual Pagamento Pagamento1 { get; set; }
+        public virtual Funcionario Funcionario { get; set; }
+        public virtual Pagamento Pagamento { get; set; }
     }
 }

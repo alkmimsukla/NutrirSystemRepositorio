@@ -40,14 +40,12 @@ namespace NutrirSystem.Model
             string _celular, string _apelido, string _usuario, string _senha,
             int _pe, decimal _crm = 0)
         {
-            Nutricionista nutriObj;
             Funcionario funcObj;
 
             if (!VerificarDupCPF(_cpf))
             {
-                if (_pe == 2)
-                {
-                    nutriObj = new Nutricionista()
+                    
+                funcObj = new Funcionario()
                     {
                         cpf = _cpf,
                         nome = _nome,
@@ -65,35 +63,14 @@ namespace NutrirSystem.Model
                         usuario = _usuario,
                         password = _senha,
                         perfil = _pe,
-                        crm = _crm
                     };
 
-                    return (GravarBanco(nutriObj));
-                }
-                else
+                if(_pe == 2)
                 {
-                    funcObj = new Funcionario()
-                    {
-                        cpf = _cpf,
-                        nome = _nome,
-                        rua = _rua,
-                        numero = _numero,
-                        bairro = _bairro,
-                        cidade = _cidade,
-                        estado = _estado,
-                        sexo = _sexo,
-                        email = _email,
-                        dataNascimento = _datan,
-                        telefone = _telefone,
-                        celular = _celular,
-                        apelido = _apelido,
-                        usuario = _usuario,
-                        password = _senha,
-                        perfil = _pe,
-                    };
+                    funcObj.CRN = +_crm;
+                }
 
                     return (GravarBanco(funcObj));
-                }
             }
             else
             {
@@ -136,7 +113,7 @@ namespace NutrirSystem.Model
 
             if (funcionario.perfil == 2)
             {
-                banco.Entry((Nutricionista)funcionario).Property(u => u.crm).IsModified = true;
+                banco.Entry(funcionario).Property(u => u.CRN).IsModified = true;
             }
 
             banco.SaveChanges();

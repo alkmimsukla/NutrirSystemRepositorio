@@ -12,15 +12,14 @@ namespace NutrirSystem.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Nutricionista : Funcionario
+    public partial class CartaoCredito
     {
-        public Nutricionista()
-        {
-            this.Consulta = new HashSet<Consulta>();
-        }
+        public decimal Id { get; set; }
+        public int Bandeira { get; set; }
+        public string Titular { get; set; }
+        public decimal numParc { get; set; }
+        public decimal valorParc { get; set; }
     
-        public decimal crm { get; set; }
-    
-        public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual Pagamento Pagamento { get; set; }
     }
 }

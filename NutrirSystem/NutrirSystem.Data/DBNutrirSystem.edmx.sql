@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/11/2014 01:37:28
+-- Date Created: 09/20/2014 02:15:05
 -- Generated from EDMX file: C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\DBNutrirSystem.edmx
 -- --------------------------------------------------
 
@@ -17,41 +17,38 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK__Consulta__idPaci__33D4B598]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK__Consulta__idPaci__33D4B598];
-GO
-IF OBJECT_ID(N'[dbo].[FK__Consulta__Medida__35BCFE0A]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK__Consulta__Medida__35BCFE0A];
-GO
-IF OBJECT_ID(N'[dbo].[FK__Consulta__Nutric__36B12243]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK__Consulta__Nutric__36B12243];
-GO
-IF OBJECT_ID(N'[dbo].[FK__Consulta__Pagame__34C8D9D1]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK__Consulta__Pagame__34C8D9D1];
-GO
-IF OBJECT_ID(N'[dbo].[FK__Convenio__Pacien__267ABA7A]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Convenio] DROP CONSTRAINT [FK__Convenio__Pacien__267ABA7A];
-GO
-IF OBJECT_ID(N'[dbo].[FK__Paciente__Dieta__21B6055D]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Pessoa_Paciente] DROP CONSTRAINT [FK__Paciente__Dieta__21B6055D];
-GO
-IF OBJECT_ID(N'[dbo].[FK__Paciente__Habito__20C1E124]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Pessoa_Paciente] DROP CONSTRAINT [FK__Paciente__Habito__20C1E124];
-GO
 IF OBJECT_ID(N'[dbo].[FK_Dieta_Usa_ProdutoClinica_Dieta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Dieta_Usa_ProdutoClinica] DROP CONSTRAINT [FK_Dieta_Usa_ProdutoClinica_Dieta];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Dieta_Usa_ProdutoClinica_ProdutosClinica]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Dieta_Usa_ProdutoClinica] DROP CONSTRAINT [FK_Dieta_Usa_ProdutoClinica_ProdutosClinica];
 GO
+IF OBJECT_ID(N'[dbo].[FK_MedidasCorporaisConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_MedidasCorporaisConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ConsultaPaciente]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_ConsultaPaciente];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FuncionarioConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_FuncionarioConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CartaoCreditoPagamento]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CartaoCreditoSet] DROP CONSTRAINT [FK_CartaoCreditoPagamento];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PagamentoConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Pagamento] DROP CONSTRAINT [FK_PagamentoConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PacienteDieta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Pessoa_Paciente] DROP CONSTRAINT [FK_PacienteDieta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PacienteConvenio]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Pessoa_Paciente] DROP CONSTRAINT [FK_PacienteConvenio];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Paciente_inherits_Pessoa]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Pessoa_Paciente] DROP CONSTRAINT [FK_Paciente_inherits_Pessoa];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Funcionario_inherits_Pessoa]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Pessoa_Funcionario] DROP CONSTRAINT [FK_Funcionario_inherits_Pessoa];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Nutricionista_inherits_Funcionario]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Pessoa_Nutricionista] DROP CONSTRAINT [FK_Nutricionista_inherits_Funcionario];
 GO
 
 -- --------------------------------------------------
@@ -67,9 +64,6 @@ GO
 IF OBJECT_ID(N'[dbo].[Dieta]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Dieta];
 GO
-IF OBJECT_ID(N'[dbo].[Habitos]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Habitos];
-GO
 IF OBJECT_ID(N'[dbo].[MedidasCorporais]', 'U') IS NOT NULL
     DROP TABLE [dbo].[MedidasCorporais];
 GO
@@ -82,14 +76,14 @@ GO
 IF OBJECT_ID(N'[dbo].[ProdutosClinica]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ProdutosClinica];
 GO
+IF OBJECT_ID(N'[dbo].[CartaoCreditoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CartaoCreditoSet];
+GO
 IF OBJECT_ID(N'[dbo].[Pessoa_Paciente]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Pessoa_Paciente];
 GO
 IF OBJECT_ID(N'[dbo].[Pessoa_Funcionario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Pessoa_Funcionario];
-GO
-IF OBJECT_ID(N'[dbo].[Pessoa_Nutricionista]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Pessoa_Nutricionista];
 GO
 IF OBJECT_ID(N'[dbo].[Dieta_Usa_ProdutoClinica]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Dieta_Usa_ProdutoClinica];
@@ -103,36 +97,26 @@ GO
 CREATE TABLE [dbo].[Consulta] (
     [idConsulta] decimal(5,0)  NOT NULL,
     [statusConsulta] int  NULL,
-    [data] datetime  NOT NULL,
-    [hora] int  NOT NULL,
     [tipoConsulta] int  NULL,
-    [Nutricionista] decimal(11,0)  NOT NULL,
-    [cpfPaciente] decimal(11,0)  NOT NULL,
-    [Pagamento] decimal(10,0)  NULL,
-    [MedidasCorporais] decimal(5,0)  NOT NULL
+    [DataHora] datetime  NOT NULL,
+    [MedidasCorporais_idMedidasCorporais] decimal(5,0)  NOT NULL,
+    [MedidasCorporais_idMedidasCorporais1] decimal(5,0)  NOT NULL,
+    [Paciente_cpf] decimal(11,0)  NOT NULL,
+    [Funcionario_cpf] decimal(11,0)  NOT NULL
 );
 GO
 
 -- Creating table 'Convenio'
 CREATE TABLE [dbo].[Convenio] (
     [numPlano] decimal(5,0)  NOT NULL,
-    [nome] varchar(80)  NOT NULL,
-    [Paciente] decimal(11,0)  NOT NULL
+    [nome] varchar(80)  NOT NULL
 );
 GO
 
 -- Creating table 'Dieta'
 CREATE TABLE [dbo].[Dieta] (
     [idDieta] decimal(10,0)  NOT NULL,
-    [dieta1] varchar(80)  NOT NULL
-);
-GO
-
--- Creating table 'Habitos'
-CREATE TABLE [dbo].[Habitos] (
-    [IdHabito] decimal(5,0)  NOT NULL,
-    [descricaoHabitosEsportivos] varchar(80)  NULL,
-    [descricaoHabitosAlimentares] varchar(80)  NOT NULL
+    [dieta] varchar(500)  NOT NULL
 );
 GO
 
@@ -153,7 +137,9 @@ CREATE TABLE [dbo].[Pagamento] (
     [idPagamento] decimal(10,0)  NOT NULL,
     [valor] decimal(5,0)  NOT NULL,
     [formaPagamento] int  NOT NULL,
-    [statusPagamento] int  NOT NULL
+    [statusPagamento] int  NOT NULL,
+    [Data] datetime  NOT NULL,
+    [Consulta_idConsulta] decimal(5,0)  NOT NULL
 );
 GO
 
@@ -186,14 +172,27 @@ CREATE TABLE [dbo].[ProdutosClinica] (
 );
 GO
 
+-- Creating table 'CartaoCreditoSet'
+CREATE TABLE [dbo].[CartaoCreditoSet] (
+    [Id] decimal(18,0) IDENTITY(1,1) NOT NULL,
+    [Bandeira] int  NOT NULL,
+    [Titular] nvarchar(max)  NOT NULL,
+    [numParc] decimal(18,0)  NOT NULL,
+    [valorParc] decimal(18,0)  NOT NULL,
+    [Pagamento_idPagamento] decimal(10,0)  NOT NULL
+);
+GO
+
 -- Creating table 'Pessoa_Paciente'
 CREATE TABLE [dbo].[Pessoa_Paciente] (
-    [objetivo] varchar(80)  NOT NULL,
+    [objetivo] varchar(500)  NOT NULL,
     [esportesPraticados] varchar(80)  NULL,
     [tipoSanguineo] int  NOT NULL,
-    [Dieta] decimal(10,0)  NOT NULL,
-    [Habitos] decimal(5,0)  NOT NULL,
-    [cpf] decimal(11,0)  NOT NULL
+    [descHabitosEsp] varchar(300)  NULL,
+    [descHabitosAli] varchar(300)  NULL,
+    [cpf] decimal(11,0)  NOT NULL,
+    [Dieta_idDieta] decimal(10,0)  NULL,
+    [Convenio_numPlano] decimal(5,0)  NULL
 );
 GO
 
@@ -203,13 +202,7 @@ CREATE TABLE [dbo].[Pessoa_Funcionario] (
     [password] varchar(80)  NOT NULL,
     [salario] decimal(12,0)  NOT NULL,
     [perfil] int  NOT NULL,
-    [cpf] decimal(11,0)  NOT NULL
-);
-GO
-
--- Creating table 'Pessoa_Nutricionista'
-CREATE TABLE [dbo].[Pessoa_Nutricionista] (
-    [crm] decimal(5,0)  NOT NULL,
+    [CRN] decimal(18,0)  NULL,
     [cpf] decimal(11,0)  NOT NULL
 );
 GO
@@ -243,12 +236,6 @@ ADD CONSTRAINT [PK_Dieta]
     PRIMARY KEY CLUSTERED ([idDieta] ASC);
 GO
 
--- Creating primary key on [IdHabito] in table 'Habitos'
-ALTER TABLE [dbo].[Habitos]
-ADD CONSTRAINT [PK_Habitos]
-    PRIMARY KEY CLUSTERED ([IdHabito] ASC);
-GO
-
 -- Creating primary key on [idMedidasCorporais] in table 'MedidasCorporais'
 ALTER TABLE [dbo].[MedidasCorporais]
 ADD CONSTRAINT [PK_MedidasCorporais]
@@ -273,6 +260,12 @@ ADD CONSTRAINT [PK_ProdutosClinica]
     PRIMARY KEY CLUSTERED ([idProdutosClinica] ASC);
 GO
 
+-- Creating primary key on [Id] in table 'CartaoCreditoSet'
+ALTER TABLE [dbo].[CartaoCreditoSet]
+ADD CONSTRAINT [PK_CartaoCreditoSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
 -- Creating primary key on [cpf] in table 'Pessoa_Paciente'
 ALTER TABLE [dbo].[Pessoa_Paciente]
 ADD CONSTRAINT [PK_Pessoa_Paciente]
@@ -285,12 +278,6 @@ ADD CONSTRAINT [PK_Pessoa_Funcionario]
     PRIMARY KEY CLUSTERED ([cpf] ASC);
 GO
 
--- Creating primary key on [cpf] in table 'Pessoa_Nutricionista'
-ALTER TABLE [dbo].[Pessoa_Nutricionista]
-ADD CONSTRAINT [PK_Pessoa_Nutricionista]
-    PRIMARY KEY CLUSTERED ([cpf] ASC);
-GO
-
 -- Creating primary key on [Dieta_idDieta], [ProdutosClinica_idProdutosClinica] in table 'Dieta_Usa_ProdutoClinica'
 ALTER TABLE [dbo].[Dieta_Usa_ProdutoClinica]
 ADD CONSTRAINT [PK_Dieta_Usa_ProdutoClinica]
@@ -300,104 +287,6 @@ GO
 -- --------------------------------------------------
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
-
--- Creating foreign key on [cpfPaciente] in table 'Consulta'
-ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK__Consulta__idPaci__33D4B598]
-    FOREIGN KEY ([cpfPaciente])
-    REFERENCES [dbo].[Pessoa_Paciente]
-        ([cpf])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Consulta__idPaci__33D4B598'
-CREATE INDEX [IX_FK__Consulta__idPaci__33D4B598]
-ON [dbo].[Consulta]
-    ([cpfPaciente]);
-GO
-
--- Creating foreign key on [MedidasCorporais] in table 'Consulta'
-ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK__Consulta__Medida__35BCFE0A]
-    FOREIGN KEY ([MedidasCorporais])
-    REFERENCES [dbo].[MedidasCorporais]
-        ([idMedidasCorporais])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Consulta__Medida__35BCFE0A'
-CREATE INDEX [IX_FK__Consulta__Medida__35BCFE0A]
-ON [dbo].[Consulta]
-    ([MedidasCorporais]);
-GO
-
--- Creating foreign key on [Nutricionista] in table 'Consulta'
-ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK__Consulta__Nutric__36B12243]
-    FOREIGN KEY ([Nutricionista])
-    REFERENCES [dbo].[Pessoa_Nutricionista]
-        ([cpf])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Consulta__Nutric__36B12243'
-CREATE INDEX [IX_FK__Consulta__Nutric__36B12243]
-ON [dbo].[Consulta]
-    ([Nutricionista]);
-GO
-
--- Creating foreign key on [Pagamento] in table 'Consulta'
-ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK__Consulta__Pagame__34C8D9D1]
-    FOREIGN KEY ([Pagamento])
-    REFERENCES [dbo].[Pagamento]
-        ([idPagamento])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Consulta__Pagame__34C8D9D1'
-CREATE INDEX [IX_FK__Consulta__Pagame__34C8D9D1]
-ON [dbo].[Consulta]
-    ([Pagamento]);
-GO
-
--- Creating foreign key on [Paciente] in table 'Convenio'
-ALTER TABLE [dbo].[Convenio]
-ADD CONSTRAINT [FK__Convenio__Pacien__267ABA7A]
-    FOREIGN KEY ([Paciente])
-    REFERENCES [dbo].[Pessoa_Paciente]
-        ([cpf])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Convenio__Pacien__267ABA7A'
-CREATE INDEX [IX_FK__Convenio__Pacien__267ABA7A]
-ON [dbo].[Convenio]
-    ([Paciente]);
-GO
-
--- Creating foreign key on [Dieta] in table 'Pessoa_Paciente'
-ALTER TABLE [dbo].[Pessoa_Paciente]
-ADD CONSTRAINT [FK__Paciente__Dieta__21B6055D]
-    FOREIGN KEY ([Dieta])
-    REFERENCES [dbo].[Dieta]
-        ([idDieta])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Paciente__Dieta__21B6055D'
-CREATE INDEX [IX_FK__Paciente__Dieta__21B6055D]
-ON [dbo].[Pessoa_Paciente]
-    ([Dieta]);
-GO
-
--- Creating foreign key on [Habitos] in table 'Pessoa_Paciente'
-ALTER TABLE [dbo].[Pessoa_Paciente]
-ADD CONSTRAINT [FK__Paciente__Habito__20C1E124]
-    FOREIGN KEY ([Habitos])
-    REFERENCES [dbo].[Habitos]
-        ([IdHabito])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK__Paciente__Habito__20C1E124'
-CREATE INDEX [IX_FK__Paciente__Habito__20C1E124]
-ON [dbo].[Pessoa_Paciente]
-    ([Habitos]);
-GO
 
 -- Creating foreign key on [Dieta_idDieta] in table 'Dieta_Usa_ProdutoClinica'
 ALTER TABLE [dbo].[Dieta_Usa_ProdutoClinica]
@@ -422,6 +311,104 @@ ON [dbo].[Dieta_Usa_ProdutoClinica]
     ([ProdutosClinica_idProdutosClinica]);
 GO
 
+-- Creating foreign key on [MedidasCorporais_idMedidasCorporais1] in table 'Consulta'
+ALTER TABLE [dbo].[Consulta]
+ADD CONSTRAINT [FK_MedidasCorporaisConsulta]
+    FOREIGN KEY ([MedidasCorporais_idMedidasCorporais1])
+    REFERENCES [dbo].[MedidasCorporais]
+        ([idMedidasCorporais])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MedidasCorporaisConsulta'
+CREATE INDEX [IX_FK_MedidasCorporaisConsulta]
+ON [dbo].[Consulta]
+    ([MedidasCorporais_idMedidasCorporais1]);
+GO
+
+-- Creating foreign key on [Paciente_cpf] in table 'Consulta'
+ALTER TABLE [dbo].[Consulta]
+ADD CONSTRAINT [FK_ConsultaPaciente]
+    FOREIGN KEY ([Paciente_cpf])
+    REFERENCES [dbo].[Pessoa_Paciente]
+        ([cpf])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ConsultaPaciente'
+CREATE INDEX [IX_FK_ConsultaPaciente]
+ON [dbo].[Consulta]
+    ([Paciente_cpf]);
+GO
+
+-- Creating foreign key on [Funcionario_cpf] in table 'Consulta'
+ALTER TABLE [dbo].[Consulta]
+ADD CONSTRAINT [FK_FuncionarioConsulta]
+    FOREIGN KEY ([Funcionario_cpf])
+    REFERENCES [dbo].[Pessoa_Funcionario]
+        ([cpf])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_FuncionarioConsulta'
+CREATE INDEX [IX_FK_FuncionarioConsulta]
+ON [dbo].[Consulta]
+    ([Funcionario_cpf]);
+GO
+
+-- Creating foreign key on [Pagamento_idPagamento] in table 'CartaoCreditoSet'
+ALTER TABLE [dbo].[CartaoCreditoSet]
+ADD CONSTRAINT [FK_CartaoCreditoPagamento]
+    FOREIGN KEY ([Pagamento_idPagamento])
+    REFERENCES [dbo].[Pagamento]
+        ([idPagamento])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CartaoCreditoPagamento'
+CREATE INDEX [IX_FK_CartaoCreditoPagamento]
+ON [dbo].[CartaoCreditoSet]
+    ([Pagamento_idPagamento]);
+GO
+
+-- Creating foreign key on [Consulta_idConsulta] in table 'Pagamento'
+ALTER TABLE [dbo].[Pagamento]
+ADD CONSTRAINT [FK_PagamentoConsulta]
+    FOREIGN KEY ([Consulta_idConsulta])
+    REFERENCES [dbo].[Consulta]
+        ([idConsulta])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PagamentoConsulta'
+CREATE INDEX [IX_FK_PagamentoConsulta]
+ON [dbo].[Pagamento]
+    ([Consulta_idConsulta]);
+GO
+
+-- Creating foreign key on [Dieta_idDieta] in table 'Pessoa_Paciente'
+ALTER TABLE [dbo].[Pessoa_Paciente]
+ADD CONSTRAINT [FK_PacienteDieta]
+    FOREIGN KEY ([Dieta_idDieta])
+    REFERENCES [dbo].[Dieta]
+        ([idDieta])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PacienteDieta'
+CREATE INDEX [IX_FK_PacienteDieta]
+ON [dbo].[Pessoa_Paciente]
+    ([Dieta_idDieta]);
+GO
+
+-- Creating foreign key on [Convenio_numPlano] in table 'Pessoa_Paciente'
+ALTER TABLE [dbo].[Pessoa_Paciente]
+ADD CONSTRAINT [FK_PacienteConvenio]
+    FOREIGN KEY ([Convenio_numPlano])
+    REFERENCES [dbo].[Convenio]
+        ([numPlano])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PacienteConvenio'
+CREATE INDEX [IX_FK_PacienteConvenio]
+ON [dbo].[Pessoa_Paciente]
+    ([Convenio_numPlano]);
+GO
+
 -- Creating foreign key on [cpf] in table 'Pessoa_Paciente'
 ALTER TABLE [dbo].[Pessoa_Paciente]
 ADD CONSTRAINT [FK_Paciente_inherits_Pessoa]
@@ -436,15 +423,6 @@ ALTER TABLE [dbo].[Pessoa_Funcionario]
 ADD CONSTRAINT [FK_Funcionario_inherits_Pessoa]
     FOREIGN KEY ([cpf])
     REFERENCES [dbo].[Pessoa]
-        ([cpf])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
-GO
-
--- Creating foreign key on [cpf] in table 'Pessoa_Nutricionista'
-ALTER TABLE [dbo].[Pessoa_Nutricionista]
-ADD CONSTRAINT [FK_Nutricionista_inherits_Funcionario]
-    FOREIGN KEY ([cpf])
-    REFERENCES [dbo].[Pessoa_Funcionario]
         ([cpf])
     ON DELETE CASCADE ON UPDATE NO ACTION;
 GO

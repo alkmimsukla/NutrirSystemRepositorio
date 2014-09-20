@@ -28,11 +28,11 @@ namespace NutrirSystem.Data
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<Convenio> Convenio { get; set; }
         public DbSet<Dieta> Dieta { get; set; }
-        public DbSet<Habitos> Habitos { get; set; }
         public DbSet<MedidasCorporais> MedidasCorporais { get; set; }
         public DbSet<Pagamento> Pagamento { get; set; }
         public DbSet<Pessoa> Pessoa { get; set; }
         public DbSet<ProdutosClinica> ProdutosClinica { get; set; }
+        public DbSet<CartaoCredito> CartaoCreditoSet { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
     }
 }

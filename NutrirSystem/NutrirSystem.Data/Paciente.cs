@@ -17,18 +17,16 @@ namespace NutrirSystem.Data
         public Paciente()
         {
             this.Consulta = new HashSet<Consulta>();
-            this.Convenio = new HashSet<Convenio>();
         }
     
         public string objetivo { get; set; }
         public string esportesPraticados { get; set; }
         public int tipoSanguineo { get; set; }
-        public decimal Dieta { get; set; }
-        public decimal Habitos { get; set; }
+        public string descHabitosEsp { get; set; }
+        public string descHabitosAli { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
-        public virtual ICollection<Convenio> Convenio { get; set; }
-        public virtual Dieta Dieta1 { get; set; }
-        public virtual Habitos Habitos1 { get; set; }
+        public virtual Dieta Dieta { get; set; }
+        public virtual Convenio Convenio { get; set; }
     }
 }

@@ -85,12 +85,12 @@ namespace View.PacienteView
 
             cmbTipoSanguineo.SelectedItem = (TpSang)paciente.tipoSanguineo;
 
-            if (paciente.Convenio != null && paciente.Convenio.Count() != 0)
+            if (paciente.Convenio != null)
             {
                 mostrarCamposConvenio();
 
-                txtNomeConvenio.Text = paciente.Convenio.SingleOrDefault().nome;
-                txtNumConvenio.Text = paciente.Convenio.SingleOrDefault().numPlano.ToString();
+                txtNomeConvenio.Text = paciente.Convenio.nome;
+                txtNumConvenio.Text = paciente.Convenio.numPlano.ToString();
             }
             else
             {

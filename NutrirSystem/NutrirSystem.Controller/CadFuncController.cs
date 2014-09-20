@@ -63,7 +63,7 @@ namespace NutrirSystem.Controller
 
             if (pe == 2)
             {
-                ((Data.Nutricionista)funcalterado).crm = crm;
+                funcalterado.CRN = crm;
             }
 
             funModel.alterarFuncionario(funcalterado);

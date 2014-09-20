@@ -58,11 +58,6 @@ namespace NutrirSystem.Model
         public void cadastrarPessoa(Pessoa pessoa)
         {
 
-            banco.Dieta.Add(((Paciente)pessoa).Dieta1);
-            banco.Habitos.Add(((Paciente)pessoa).Habitos1);
-
-            banco.SaveChanges();
-
             banco.Pessoa.Add(pessoa);
 
             banco.SaveChanges();

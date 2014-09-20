@@ -16,14 +16,14 @@ namespace NutrirSystem.Data
     {
         public Dieta()
         {
-            this.Paciente = new HashSet<Paciente>();
             this.ProdutosClinica = new HashSet<ProdutosClinica>();
+            this.Paciente = new HashSet<Paciente>();
         }
     
         public decimal idDieta { get; set; }
-        public string dieta1 { get; set; }
+        public string dieta { get; set; }
     
-        public virtual ICollection<Paciente> Paciente { get; set; }
         public virtual ICollection<ProdutosClinica> ProdutosClinica { get; set; }
+        public virtual ICollection<Paciente> Paciente { get; set; }
     }
 }
