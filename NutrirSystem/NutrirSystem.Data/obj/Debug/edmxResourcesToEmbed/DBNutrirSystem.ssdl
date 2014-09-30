@@ -20,10 +20,6 @@
       <End Role="ProdutosClinica" EntitySet="ProdutosClinica" />
       <End Role="Dieta_Usa_ProdutoClinica" EntitySet="Dieta_Usa_ProdutoClinica" />
     </AssociationSet>
-    <AssociationSet Name="MedidasCorporaisConsulta" Association="DBNutrirSystemModel.Store.MedidasCorporaisConsulta">
-      <End Role="MedidasCorporais" EntitySet="MedidasCorporais" />
-      <End Role="Consulta" EntitySet="Consulta" />
-    </AssociationSet>
     <AssociationSet Name="ConsultaPaciente" Association="DBNutrirSystemModel.Store.ConsultaPaciente">
       <End Role="Consulta" EntitySet="Consulta" />
       <End Role="Paciente" EntitySet="Pessoa_Paciente" />
@@ -48,6 +44,10 @@
       <End Role="Paciente" EntitySet="Pessoa_Paciente" />
       <End Role="Convenio" EntitySet="Convenio" />
     </AssociationSet>
+    <AssociationSet Name="ConsultaMedidasCorporais" Association="DBNutrirSystemModel.Store.ConsultaMedidasCorporais">
+      <End Role="Consulta" EntitySet="Consulta" />
+      <End Role="MedidasCorporais" EntitySet="MedidasCorporais" />
+    </AssociationSet>
     <AssociationSet Name="FK_Paciente_inherits_Pessoa" Association="DBNutrirSystemModel.Store.FK_Paciente_inherits_Pessoa">
       <End Role="Pessoa" EntitySet="Pessoa" />
       <End Role="Paciente" EntitySet="Pessoa_Paciente" />
@@ -65,10 +65,9 @@
     <Property Name="statusConsulta" Type="int" Nullable="true" />
     <Property Name="tipoConsulta" Type="int" Nullable="true" />
     <Property Name="DataHora" Type="datetime" Nullable="false" />
-    <Property Name="MedidasCorporais_idMedidasCorporais" Type="decimal" Nullable="false" Precision="5" Scale="0" />
-    <Property Name="MedidasCorporais_idMedidasCorporais1" Type="decimal" Nullable="false" Precision="5" Scale="0" />
     <Property Name="Paciente_cpf" Type="decimal" Nullable="false" Precision="11" Scale="0" />
     <Property Name="Funcionario_cpf" Type="decimal" Nullable="false" Precision="11" Scale="0" />
+    <Property Name="MedidasCorporais_idMedidasCorporais" Type="decimal" Nullable="false" Precision="5" Scale="0" />
   </EntityType>
   <EntityType Name="Convenio">
     <Key>
@@ -179,18 +178,6 @@
     <Property Name="Dieta_idDieta" Type="decimal" Nullable="false" Precision="10" Scale="0" />
     <Property Name="ProdutosClinica_idProdutosClinica" Type="decimal" Nullable="false" Precision="10" Scale="0" />
   </EntityType>
-  <Association Name="MedidasCorporaisConsulta">
-    <End Role="MedidasCorporais" Type="DBNutrirSystemModel.Store.MedidasCorporais" Multiplicity="1" />
-    <End Role="Consulta" Type="DBNutrirSystemModel.Store.Consulta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MedidasCorporais">
-        <PropertyRef Name="idMedidasCorporais" />
-      </Principal>
-      <Dependent Role="Consulta">
-        <PropertyRef Name="MedidasCorporais_idMedidasCorporais1" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="ConsultaPaciente">
     <End Role="Consulta" Type="DBNutrirSystemModel.Store.Consulta" Multiplicity="*" />
     <End Role="Paciente" Type="DBNutrirSystemModel.Store.Pessoa_Paciente" Multiplicity="1" />
@@ -260,6 +247,18 @@
       </Principal>
       <Dependent Role="Paciente">
         <PropertyRef Name="Convenio_numPlano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ConsultaMedidasCorporais">
+    <End Role="Consulta" Type="DBNutrirSystemModel.Store.Consulta" Multiplicity="*" />
+    <End Role="MedidasCorporais" Type="DBNutrirSystemModel.Store.MedidasCorporais" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="MedidasCorporais">
+        <PropertyRef Name="idMedidasCorporais" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="MedidasCorporais_idMedidasCorporais" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

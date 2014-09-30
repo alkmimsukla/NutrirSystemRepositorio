@@ -104,6 +104,12 @@
     <Compile Include="ProdutosView\visualizarProduto.Designer.cs">
       <DependentUpon>visualizarProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Relatorios\formRelatorioClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\formRelatorioClientes.Designer.cs">
+      <DependentUpon>formRelatorioClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecretariaView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </Compile>
     <EmbeddedResource Include="FuncionarioView\removerFuncionarioView.resx">
       <DependentUpon>removerFuncionarioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\formRelatorioClientes.resx">
+      <DependentUpon>formRelatorioClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SecretariaView.resx">
       <DependentUpon>SecretariaView.cs</DependentUpon>

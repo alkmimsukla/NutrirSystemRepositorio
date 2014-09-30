@@ -67,6 +67,7 @@ namespace View
                 convenio = new Convenio();
                 convenio.nome = txtNomeConvenio.Text;
                 convenio.numPlano = decimal.Parse(txtNumConvenio.Text);
+                paciente.Convenio = convenio;
             }
             else
             {

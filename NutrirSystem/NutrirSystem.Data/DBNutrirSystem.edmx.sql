@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/20/2014 02:15:05
+-- Date Created: 09/30/2014 13:17:09
 -- Generated from EDMX file: C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\NutrirSystem.Data\DBNutrirSystem.edmx
 -- --------------------------------------------------
 
@@ -99,10 +99,9 @@ CREATE TABLE [dbo].[Consulta] (
     [statusConsulta] int  NULL,
     [tipoConsulta] int  NULL,
     [DataHora] datetime  NOT NULL,
-    [MedidasCorporais_idMedidasCorporais] decimal(5,0)  NOT NULL,
-    [MedidasCorporais_idMedidasCorporais1] decimal(5,0)  NOT NULL,
     [Paciente_cpf] decimal(11,0)  NOT NULL,
-    [Funcionario_cpf] decimal(11,0)  NOT NULL
+    [Funcionario_cpf] decimal(11,0)  NOT NULL,
+    [MedidasCorporais_idMedidasCorporais] decimal(5,0)  NOT NULL
 );
 GO
 
@@ -311,20 +310,6 @@ ON [dbo].[Dieta_Usa_ProdutoClinica]
     ([ProdutosClinica_idProdutosClinica]);
 GO
 
--- Creating foreign key on [MedidasCorporais_idMedidasCorporais1] in table 'Consulta'
-ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK_MedidasCorporaisConsulta]
-    FOREIGN KEY ([MedidasCorporais_idMedidasCorporais1])
-    REFERENCES [dbo].[MedidasCorporais]
-        ([idMedidasCorporais])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_MedidasCorporaisConsulta'
-CREATE INDEX [IX_FK_MedidasCorporaisConsulta]
-ON [dbo].[Consulta]
-    ([MedidasCorporais_idMedidasCorporais1]);
-GO
-
 -- Creating foreign key on [Paciente_cpf] in table 'Consulta'
 ALTER TABLE [dbo].[Consulta]
 ADD CONSTRAINT [FK_ConsultaPaciente]
@@ -407,6 +392,20 @@ ADD CONSTRAINT [FK_PacienteConvenio]
 CREATE INDEX [IX_FK_PacienteConvenio]
 ON [dbo].[Pessoa_Paciente]
     ([Convenio_numPlano]);
+GO
+
+-- Creating foreign key on [MedidasCorporais_idMedidasCorporais] in table 'Consulta'
+ALTER TABLE [dbo].[Consulta]
+ADD CONSTRAINT [FK_ConsultaMedidasCorporais]
+    FOREIGN KEY ([MedidasCorporais_idMedidasCorporais])
+    REFERENCES [dbo].[MedidasCorporais]
+        ([idMedidasCorporais])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ConsultaMedidasCorporais'
+CREATE INDEX [IX_FK_ConsultaMedidasCorporais]
+ON [dbo].[Consulta]
+    ([MedidasCorporais_idMedidasCorporais]);
 GO
 
 -- Creating foreign key on [cpf] in table 'Pessoa_Paciente'

@@ -14,11 +14,6 @@ namespace NutrirSystem.Data
     
     public partial class MedidasCorporais
     {
-        public MedidasCorporais()
-        {
-            this.Consulta = new HashSet<Consulta>();
-        }
-    
         public decimal idMedidasCorporais { get; set; }
         public Nullable<double> peso { get; set; }
         public Nullable<double> imc { get; set; }
@@ -26,7 +21,5 @@ namespace NutrirSystem.Data
         public Nullable<double> massaMagra { get; set; }
         public Nullable<double> percGordura { get; set; }
         public Nullable<double> glicemia { get; set; }
-    
-        public virtual ICollection<Consulta> Consulta { get; set; }
     }
 }

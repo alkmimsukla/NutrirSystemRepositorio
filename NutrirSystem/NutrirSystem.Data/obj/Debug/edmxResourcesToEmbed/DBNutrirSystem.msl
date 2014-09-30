@@ -8,10 +8,9 @@
           <ScalarProperty Name="statusConsulta" ColumnName="statusConsulta" />
           <ScalarProperty Name="tipoConsulta" ColumnName="tipoConsulta" />
           <ScalarProperty Name="DataHora" ColumnName="DataHora" />
-          <ScalarProperty Name="MedidasCorporais_idMedidasCorporais" ColumnName="MedidasCorporais_idMedidasCorporais" />
-          <ScalarProperty Name="MedidasCorporais_idMedidasCorporais1" ColumnName="MedidasCorporais_idMedidasCorporais1" />
           <ScalarProperty Name="Paciente_cpf" ColumnName="Paciente_cpf" />
           <ScalarProperty Name="Funcionario_cpf" ColumnName="Funcionario_cpf" />
+          <ScalarProperty Name="MedidasCorporais_idMedidasCorporais" ColumnName="MedidasCorporais_idMedidasCorporais" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

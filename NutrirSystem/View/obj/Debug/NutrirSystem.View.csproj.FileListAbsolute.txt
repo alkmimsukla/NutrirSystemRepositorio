@@ -118,3 +118,7 @@ C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\NutrirSystem.View.csproj.GenerateResource.Cache
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.exe
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.pdb
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.cadastrarProdutoView.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.excluirProdutoView.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.visualizarProduto.resources
+C:\Users\Lucas Corrêa\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.Relatorios.formRelatorioClientes.resources
