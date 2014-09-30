@@ -86,6 +86,24 @@
     <Compile Include="PacienteView\visualizarPacienteView.Designer.cs">
       <DependentUpon>visualizarPacienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdutosView\cadastrarProdutoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosView\cadastrarProdutoView.Designer.cs">
+      <DependentUpon>cadastrarProdutoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosView\excluirProdutoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosView\excluirProdutoView.Designer.cs">
+      <DependentUpon>excluirProdutoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutosView\visualizarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosView\visualizarProduto.Designer.cs">
+      <DependentUpon>visualizarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecretariaView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PacienteView\visualizarPacienteView.resx">
       <DependentUpon>visualizarPacienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosView\cadastrarProdutoView.resx">
+      <DependentUpon>cadastrarProdutoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosView\excluirProdutoView.resx">
+      <DependentUpon>excluirProdutoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosView\visualizarProduto.resx">
+      <DependentUpon>visualizarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

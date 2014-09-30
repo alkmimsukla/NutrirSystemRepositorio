@@ -42,6 +42,7 @@
     <Compile Include="CadFuncController.cs" />
     <Compile Include="CadPacienteController.cs" />
     <Compile Include="LoginController.cs" />
+    <Compile Include="ProdutosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
