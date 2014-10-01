@@ -70,11 +70,11 @@ namespace View
 
             if (chbConvenio.Checked)
             {
-                paciente.Convenio = convController.RetonarConvenio(((Convenio)cbConvenio.SelectedItem).numPlano);
+                paciente.Convenio_numPlano = ((Convenio)cbConvenio.SelectedItem).numPlano;
             }
             else
             {
-                paciente.Convenio = null;
+                paciente.Convenio_numPlano = default(decimal?);
             }
 
             cadPacienteControl.cadastrarPaciente(paciente);

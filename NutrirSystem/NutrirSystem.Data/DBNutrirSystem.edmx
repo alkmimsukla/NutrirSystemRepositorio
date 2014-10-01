@@ -41,10 +41,6 @@
       <End Role="Pagamento" EntitySet="Pagamento" />
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
-    <AssociationSet Name="PacienteDieta" Association="DBNutrirSystemModel.Store.PacienteDieta">
-      <End Role="Paciente" EntitySet="Pessoa_Paciente" />
-      <End Role="Dieta" EntitySet="Dieta" />
-    </AssociationSet>
     <AssociationSet Name="PacienteConvenio" Association="DBNutrirSystemModel.Store.PacienteConvenio">
       <End Role="Paciente" EntitySet="Pessoa_Paciente" />
       <End Role="Convenio" EntitySet="Convenio" />
@@ -52,6 +48,14 @@
     <AssociationSet Name="ConsultaMedidasCorporais" Association="DBNutrirSystemModel.Store.ConsultaMedidasCorporais">
       <End Role="Consulta" EntitySet="Consulta" />
       <End Role="MedidasCorporais" EntitySet="MedidasCorporais" />
+    </AssociationSet>
+    <AssociationSet Name="ConvenioPaciente" Association="DBNutrirSystemModel.Store.ConvenioPaciente">
+      <End Role="Convenio" EntitySet="Convenio" />
+      <End Role="Paciente" EntitySet="Pessoa_Paciente" />
+    </AssociationSet>
+    <AssociationSet Name="DietaPaciente" Association="DBNutrirSystemModel.Store.DietaPaciente">
+      <End Role="Dieta" EntitySet="Dieta" />
+      <End Role="Paciente" EntitySet="Pessoa_Paciente" />
     </AssociationSet>
     <AssociationSet Name="FK_Paciente_inherits_Pessoa" Association="DBNutrirSystemModel.Store.FK_Paciente_inherits_Pessoa">
       <End Role="Pessoa" EntitySet="Pessoa" />
@@ -160,9 +164,10 @@
     <Property Name="tipoSanguineo" Type="int" Nullable="false" />
     <Property Name="descHabitosEsp" Type="varchar" Nullable="true" MaxLength="300" />
     <Property Name="descHabitosAli" Type="varchar" Nullable="true" MaxLength="300" />
+    <Property Name="Convenio_numPlano" Type="decimal" Nullable="true" Precision="5" Scale="0" />
+    <Property Name="Dieta_idDieta" Type="decimal" Nullable="true" Precision="10" Scale="0" />
     <Property Name="cpf" Type="decimal" Nullable="false" Precision="11" Scale="0" />
-    <Property Name="Dieta_idDieta" Type="decimal" Precision="10" Scale="0" Nullable="true" />
-    <Property Name="Convenio_numPlano" Type="decimal" Precision="5" Scale="0" Nullable="true" />
+    <Property Name="PacienteConvenio_Paciente_numPlano" Type="decimal" Precision="5" Scale="0" Nullable="true" />
   </EntityType>
   <EntityType Name="Pessoa_Funcionario">
     <Key>
@@ -231,18 +236,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="PacienteDieta">
-    <End Role="Paciente" Type="DBNutrirSystemModel.Store.Pessoa_Paciente" Multiplicity="*" />
-    <End Role="Dieta" Type="DBNutrirSystemModel.Store.Dieta" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Dieta">
-        <PropertyRef Name="idDieta" />
-      </Principal>
-      <Dependent Role="Paciente">
-        <PropertyRef Name="Dieta_idDieta" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="PacienteConvenio">
     <End Role="Paciente" Type="DBNutrirSystemModel.Store.Pessoa_Paciente" Multiplicity="*" />
     <End Role="Convenio" Type="DBNutrirSystemModel.Store.Convenio" Multiplicity="0..1" />
@@ -251,7 +244,7 @@
         <PropertyRef Name="numPlano" />
       </Principal>
       <Dependent Role="Paciente">
-        <PropertyRef Name="Convenio_numPlano" />
+        <PropertyRef Name="PacienteConvenio_Paciente_numPlano" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -264,6 +257,30 @@
       </Principal>
       <Dependent Role="Consulta">
         <PropertyRef Name="MedidasCorporais_idMedidasCorporais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ConvenioPaciente">
+    <End Role="Convenio" Type="DBNutrirSystemModel.Store.Convenio" Multiplicity="0..1" />
+    <End Role="Paciente" Type="DBNutrirSystemModel.Store.Pessoa_Paciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Convenio">
+        <PropertyRef Name="numPlano" />
+      </Principal>
+      <Dependent Role="Paciente">
+        <PropertyRef Name="Convenio_numPlano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DietaPaciente">
+    <End Role="Dieta" Type="DBNutrirSystemModel.Store.Dieta" Multiplicity="0..1" />
+    <End Role="Paciente" Type="DBNutrirSystemModel.Store.Pessoa_Paciente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dieta">
+        <PropertyRef Name="idDieta" />
+      </Principal>
+      <Dependent Role="Paciente">
+        <PropertyRef Name="Dieta_idDieta" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -352,10 +369,6 @@
             <End Role="Pagamento" EntitySet="Pagamento" />
             <End Role="Consulta" EntitySet="Consulta" />
           </AssociationSet>
-          <AssociationSet Name="PacienteDieta" Association="DBNutrirSystemModel.PacienteDieta">
-            <End Role="Paciente" EntitySet="Pessoa" />
-            <End Role="Dieta" EntitySet="Dieta" />
-          </AssociationSet>
           <AssociationSet Name="PacienteConvenio" Association="DBNutrirSystemModel.PacienteConvenio">
             <End Role="Paciente" EntitySet="Pessoa" />
             <End Role="Convenio" EntitySet="Convenio" />
@@ -363,6 +376,14 @@
           <AssociationSet Name="ConsultaMedidasCorporais" Association="DBNutrirSystemModel.ConsultaMedidasCorporais">
             <End Role="Consulta" EntitySet="Consulta" />
             <End Role="MedidasCorporais" EntitySet="MedidasCorporais" />
+          </AssociationSet>
+          <AssociationSet Name="ConvenioPaciente" Association="DBNutrirSystemModel.ConvenioPaciente">
+            <End Role="Convenio" EntitySet="Convenio" />
+            <End Role="Paciente" EntitySet="Pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="DietaPaciente" Association="DBNutrirSystemModel.DietaPaciente">
+            <End Role="Dieta" EntitySet="Dieta" />
+            <End Role="Paciente" EntitySet="Pessoa" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="Consulta">
@@ -387,7 +408,6 @@
           </Key>
           <Property Name="numPlano" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
           <Property Name="nome" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.PacienteConvenio" FromRole="Convenio" ToRole="Paciente" />
         </EntityType>
         <EntityType Name="Dieta">
           <Key>
@@ -396,7 +416,7 @@
           <Property Name="idDieta" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
           <Property Name="dieta" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="ProdutosClinica" Relationship="DBNutrirSystemModel.Dieta_Usa_ProdutoClinica" FromRole="Dieta" ToRole="ProdutosClinica" />
-          <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.PacienteDieta" FromRole="Dieta" ToRole="Paciente" />
+          <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.DietaPaciente" FromRole="Dieta" ToRole="Paciente" />
         </EntityType>
         <EntityType Name="Funcionario" BaseType="DBNutrirSystemModel.Pessoa">
           <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
@@ -425,8 +445,8 @@
           <Property Type="String" Name="descHabitosEsp" Nullable="true" MaxLength="300" Unicode="false" FixedLength="false" />
           <Property Type="String" Name="descHabitosAli" Nullable="true" MaxLength="300" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.ConsultaPaciente" FromRole="Paciente" ToRole="Consulta" />
-          <NavigationProperty Name="Dieta" Relationship="DBNutrirSystemModel.PacienteDieta" FromRole="Paciente" ToRole="Dieta" />
-          <NavigationProperty Name="Convenio" Relationship="DBNutrirSystemModel.PacienteConvenio" FromRole="Paciente" ToRole="Convenio" />
+          <Property Type="Decimal" Name="Convenio_numPlano" Nullable="true" Precision="5" Scale="0" />
+          <Property Type="Decimal" Name="Dieta_idDieta" Nullable="true" Precision="10" Scale="0" />
         </EntityType>
         <EntityType Name="Pagamento">
           <Key>
@@ -517,10 +537,6 @@
           <End Type="DBNutrirSystemModel.Pagamento" Role="Pagamento" Multiplicity="1" />
           <End Type="DBNutrirSystemModel.Consulta" Role="Consulta" Multiplicity="1" />
         </Association>
-        <Association Name="PacienteDieta">
-          <End Type="DBNutrirSystemModel.Paciente" Role="Paciente" Multiplicity="*" />
-          <End Type="DBNutrirSystemModel.Dieta" Role="Dieta" Multiplicity="0..1" />
-        </Association>
         <Association Name="PacienteConvenio">
           <End Type="DBNutrirSystemModel.Paciente" Role="Paciente" Multiplicity="*" />
           <End Type="DBNutrirSystemModel.Convenio" Role="Convenio" Multiplicity="0..1" />
@@ -534,6 +550,30 @@
             </Principal>
             <Dependent Role="Consulta">
               <PropertyRef Name="MedidasCorporais_idMedidasCorporais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ConvenioPaciente">
+          <End Type="DBNutrirSystemModel.Convenio" Role="Convenio" Multiplicity="0..1" />
+          <End Type="DBNutrirSystemModel.Paciente" Role="Paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Convenio">
+              <PropertyRef Name="numPlano" />
+            </Principal>
+            <Dependent Role="Paciente">
+              <PropertyRef Name="Convenio_numPlano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DietaPaciente">
+          <End Type="DBNutrirSystemModel.Dieta" Role="Dieta" Multiplicity="0..1" />
+          <End Type="DBNutrirSystemModel.Paciente" Role="Paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dieta">
+              <PropertyRef Name="idDieta" />
+            </Principal>
+            <Dependent Role="Paciente">
+              <PropertyRef Name="Dieta_idDieta" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -622,6 +662,8 @@
           <ScalarProperty Name="tipoSanguineo" ColumnName="tipoSanguineo" />
           <ScalarProperty Name="descHabitosEsp" ColumnName="descHabitosEsp" />
           <ScalarProperty Name="descHabitosAli" ColumnName="descHabitosAli" />
+          <ScalarProperty Name="Convenio_numPlano" ColumnName="Convenio_numPlano" />
+          <ScalarProperty Name="Dieta_idDieta" ColumnName="Dieta_idDieta" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Funcionario)">
@@ -682,23 +724,14 @@
         <ScalarProperty Name="idPagamento" ColumnName="idPagamento" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PacienteDieta" TypeName="DBNutrirSystemModel.PacienteDieta" StoreEntitySet="Pessoa_Paciente">
-      <EndProperty Name="Dieta">
-        <ScalarProperty Name="idDieta" ColumnName="Dieta_idDieta" />
-      </EndProperty>
-      <EndProperty Name="Paciente">
-        <ScalarProperty Name="cpf" ColumnName="cpf" />
-      </EndProperty>
-      <Condition ColumnName="Dieta_idDieta" IsNull="false" />
-    </AssociationSetMapping>
     <AssociationSetMapping Name="PacienteConvenio" TypeName="DBNutrirSystemModel.PacienteConvenio" StoreEntitySet="Pessoa_Paciente">
       <EndProperty Name="Convenio">
-        <ScalarProperty Name="numPlano" ColumnName="Convenio_numPlano" />
+        <ScalarProperty Name="numPlano" ColumnName="PacienteConvenio_Paciente_numPlano" />
       </EndProperty>
       <EndProperty Name="Paciente">
         <ScalarProperty Name="cpf" ColumnName="cpf" />
       </EndProperty>
-      <Condition ColumnName="Convenio_numPlano" IsNull="false" />
+      <Condition ColumnName="PacienteConvenio_Paciente_numPlano" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>

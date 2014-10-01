@@ -80,6 +80,8 @@
           <ScalarProperty Name="tipoSanguineo" ColumnName="tipoSanguineo" />
           <ScalarProperty Name="descHabitosEsp" ColumnName="descHabitosEsp" />
           <ScalarProperty Name="descHabitosAli" ColumnName="descHabitosAli" />
+          <ScalarProperty Name="Convenio_numPlano" ColumnName="Convenio_numPlano" />
+          <ScalarProperty Name="Dieta_idDieta" ColumnName="Dieta_idDieta" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(DBNutrirSystemModel.Funcionario)">
@@ -140,23 +142,14 @@
         <ScalarProperty Name="idPagamento" ColumnName="idPagamento" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PacienteDieta" TypeName="DBNutrirSystemModel.PacienteDieta" StoreEntitySet="Pessoa_Paciente">
-      <EndProperty Name="Dieta">
-        <ScalarProperty Name="idDieta" ColumnName="Dieta_idDieta" />
-      </EndProperty>
-      <EndProperty Name="Paciente">
-        <ScalarProperty Name="cpf" ColumnName="cpf" />
-      </EndProperty>
-      <Condition ColumnName="Dieta_idDieta" IsNull="false" />
-    </AssociationSetMapping>
     <AssociationSetMapping Name="PacienteConvenio" TypeName="DBNutrirSystemModel.PacienteConvenio" StoreEntitySet="Pessoa_Paciente">
       <EndProperty Name="Convenio">
-        <ScalarProperty Name="numPlano" ColumnName="Convenio_numPlano" />
+        <ScalarProperty Name="numPlano" ColumnName="PacienteConvenio_Paciente_numPlano" />
       </EndProperty>
       <EndProperty Name="Paciente">
         <ScalarProperty Name="cpf" ColumnName="cpf" />
       </EndProperty>
-      <Condition ColumnName="Convenio_numPlano" IsNull="false" />
+      <Condition ColumnName="PacienteConvenio_Paciente_numPlano" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -55,6 +55,7 @@
     <Compile Include="Convenio.cs">
       <DependentUpon>DBNutrirSystem.tt</DependentUpon>
     </Compile>
+    <Compile Include="ConvenioCopy.cs" />
     <Compile Include="DBNutrirSystem.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

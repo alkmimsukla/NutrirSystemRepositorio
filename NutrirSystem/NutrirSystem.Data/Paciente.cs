@@ -24,9 +24,9 @@ namespace NutrirSystem.Data
         public int tipoSanguineo { get; set; }
         public string descHabitosEsp { get; set; }
         public string descHabitosAli { get; set; }
+        public Nullable<decimal> Convenio_numPlano { get; set; }
+        public Nullable<decimal> Dieta_idDieta { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
-        public virtual Dieta Dieta { get; set; }
-        public virtual Convenio Convenio { get; set; }
     }
 }

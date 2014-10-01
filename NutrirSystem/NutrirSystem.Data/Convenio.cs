@@ -14,14 +14,7 @@ namespace NutrirSystem.Data
     
     public partial class Convenio
     {
-        public Convenio()
-        {
-            this.Paciente = new HashSet<Paciente>();
-        }
-    
         public decimal numPlano { get; set; }
         public string nome { get; set; }
-    
-        public virtual ICollection<Paciente> Paciente { get; set; }
     }
 }
