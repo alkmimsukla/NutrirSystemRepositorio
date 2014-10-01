@@ -55,17 +55,8 @@ namespace NutrirSystem.Model
 
         }
 
-        public void cadastrarPessoa(Pessoa pessoa)
+        public void cadastrarPessoa(Paciente pessoa)
         {
-            ConvenioModel cm = new ConvenioModel();
-
-            Paciente pa = ((Paciente)pessoa);
-
-            if (pa.Convenio != null && !cm.VerifConv(pa.Convenio.numPlano))
-            {
-                banco.Convenio.Add(pa.Convenio);
-                banco.SaveChanges();
-            }
 
             banco.Pessoa.Add(pessoa);
 

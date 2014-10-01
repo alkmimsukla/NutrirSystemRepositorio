@@ -15,16 +15,22 @@ namespace View
     public partial class formCadPac : Form
     {
         CadPacienteController cadPacienteControl;
+        ConvenioController convController;
 
         public formCadPac()
         {
             InitializeComponent();
 
+            convController = new ConvenioController();
+
             lblConvenio.Hide();
-            txtNomeConvenio.Hide();
-            lblNumConvenio.Hide();
-            txtNumConvenio.Hide();
+            cbConvenio.Hide();
             cmbTipoSanguineo.DataSource = Enum.GetValues(typeof(TpSang));
+            
+            //Carrega Combox Convenio do banco.
+            cbConvenio.DataSource = convController.RetonarListConvenios();
+            cbConvenio.DisplayMember = "nome";
+            cbConvenio.ValueMember = "nome";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -64,10 +70,7 @@ namespace View
 
             if (chbConvenio.Checked)
             {
-                convenio = new Convenio();
-                convenio.nome = txtNomeConvenio.Text;
-                convenio.numPlano = decimal.Parse(txtNumConvenio.Text);
-                paciente.Convenio = convenio;
+                paciente.Convenio = convController.RetonarConvenio(((Convenio)cbConvenio.SelectedItem).numPlano);
             }
             else
             {
@@ -82,48 +85,42 @@ namespace View
             if (chbConvenio.Checked)
             {
                 lblConvenio.Show();
-                txtNomeConvenio.Show();
-                lblNumConvenio.Show();
-                txtNumConvenio.Show();
+                cbConvenio.Show();
 
-                txtNomeConvenio.Enabled = true;
-                txtNumConvenio.Enabled = true;
+                cbConvenio.Enabled = true;
             }
             else
             {
                 lblConvenio.Hide();
-                txtNomeConvenio.Hide();
-                lblNumConvenio.Hide();
-                txtNumConvenio.Hide();
+                cbConvenio.Hide();
 
-                txtNomeConvenio.Enabled = false;
-                txtNumConvenio.Enabled = false;
+                cbConvenio.Enabled = false;
             }
         }
 
         private void txtNomeConvenio_Leave(object sender, EventArgs e)
         {
-            if (txtNomeConvenio.Text == "")
+            if (cbConvenio.Text == "")
             {
-                txtNomeConvenio.BackColor = Color.Red;
-                txtNomeConvenio.Focus();
+                cbConvenio.BackColor = Color.Red;
+                cbConvenio.Focus();
             }
             else
             {
-                txtNomeConvenio.BackColor = Color.LightGreen;
+                cbConvenio.BackColor = Color.LightGreen;
             }
         }
 
         private void txtNumConvenio_Leave(object sender, EventArgs e)
         {
-            if (txtNumConvenio.Text == "")
+            if (cbConvenio.SelectedItem == null)
             {
-                txtNumConvenio.BackColor = Color.Red;
-                txtNumConvenio.Focus();
+                cbConvenio.BackColor = Color.Red;
+                cbConvenio.Focus();
             }
             else
             {
-                txtNumConvenio.BackColor = Color.LightGreen;
+                cbConvenio.BackColor = Color.LightGreen;
             }
         }
 
