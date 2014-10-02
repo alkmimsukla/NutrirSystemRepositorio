@@ -28,5 +28,10 @@ namespace NutrirSystem.Data
         public Nullable<decimal> Dieta_idDieta { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
+
+        public int idade()
+        {
+            return (DateTime.Now.Subtract(this.dataNascimento).Days/365);
+        }
     }
 }

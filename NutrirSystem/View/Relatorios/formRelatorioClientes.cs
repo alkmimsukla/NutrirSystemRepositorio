@@ -14,9 +14,10 @@ namespace View.Relatorios
 {
     public partial class formRelatorioClientes : Form
     {
-        RelatorioController Controller_RelCli;
-        CadFuncController Controller_Func;
-        ConvenioController Conv_Controller;
+        private RelatorioController Controller_RelCli;
+        private CadFuncController Controller_Func;
+        private ConvenioController Conv_Controller;
+        private bool[] filtros;
 
         public formRelatorioClientes()
         {
@@ -37,22 +38,90 @@ namespace View.Relatorios
             cbConvenio.DataSource = Conv_Controller.RetonarListConvenios();
             cbConvenio.DisplayMember = "nome";
             cbConvenio.ValueMember = "nome";
-            
-            Controller_RelCli.EmitirReCli(1235456, 1, "10-25", 2255);
+
+            filtros = new bool[4];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Sexo sexo;
             Enum.TryParse<Sexo>(cbSexo.SelectedText, out sexo);
 
-            List<Paciente> list = 
-            Controller_RelCli.EmitirReCli(((Funcionario)cbNutri.SelectedItem).cpf, (int)sexo, ((Convenio)cbConvenio.SelectedItem).numPlano);
+            List<Paciente> list = Controller_RelCli.EmitirReCli(
+                filtros,
+                ((Funcionario)cbNutri.SelectedItem).cpf,
+                (int)sexo,
+                fxetariaMin.ToString() + "-" + fxetariaMin.ToString(),
+                ((Convenio)cbConvenio.SelectedItem).numPlano);
 
             var listGrad = new BindingList<Paciente>(list);
             var source = new BindingSource(listGrad, null);
 
             gradRel.DataSource = source;
+
+        }
+
+        private void chbNutri_CheckedChanged(object sender, EventArgs e)
+        {
+
+            CheckBox chb = (CheckBox)sender;
+
+            if (chb.Name == "chbNutri")
+            {
+                if (chb.Checked)
+                {
+                    cbNutri.Hide();
+                    filtros[0] = false;
+                }
+                else
+                {
+                    cbNutri.Show();
+                    filtros[0] = true;
+                }
+                 
+            }
+            else if (chb.Name == "chbGen")
+            {
+                if (chb.Checked)
+                {
+                    cbSexo.Hide();
+                    filtros[1] = false;
+                }
+                else
+                {
+                    cbSexo.Show();
+                    filtros[1] = true;
+                }
+            }
+            else if (chb.Name == "chbIdade")
+            {
+                if (chb.Checked)
+                {
+                    fxetariaMax.Hide();
+                    fxetariaMin.Hide();
+                    filtros[2] = false;
+                }
+                else
+                {
+                    fxetariaMax.Show();
+                    fxetariaMin.Show();
+                    filtros[2] = true;
+                }
+            }
+            else if (chb.Name == "chbConv")
+            {
+                if (chb.Checked)
+                {
+                    cbConvenio.Hide();
+                    filtros[3] = false;
+                }
+                else
+                {
+                    cbConvenio.Show();
+                    filtros[3] = true;
+                }
+            }
         }
     }
 }

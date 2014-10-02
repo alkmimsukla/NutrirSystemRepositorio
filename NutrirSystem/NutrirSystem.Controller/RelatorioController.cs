@@ -17,14 +17,10 @@ namespace NutrirSystem.Controller
             this.relatModel = new RelatorioModel();
         }
 
-        public IEnumerable<Consulta> EmitirReCli(Decimal cpf, int sexo, string faixaetaria, Decimal convenio)
+        public List<Paciente> EmitirReCli(bool[] filtros, Decimal cpf, int sexo, string faixaetaria, Decimal convenio)
         {
-            return (this.relatModel.EmitirReCli(cpf, sexo, faixaetaria, convenio));
-        }
 
-        public List<Paciente> EmitirReCli(Decimal cpf, int sexo, Decimal convenio)
-        {
-            return (this.relatModel.EmitirReCli(cpf, sexo, convenio).ToList());
+            return (this.relatModel.EmitirReCli(filtros, cpf, sexo, faixaetaria, convenio));
         }
 
         public List<Funcionario> RetornaListaNutricionista()
@@ -32,5 +28,10 @@ namespace NutrirSystem.Controller
             return (this.relatModel.RetornarListaNutricionista());
         }
 
+
+        public List<Paciente> RetornarListaClientes()
+        {
+            return(this.relatModel.RetornarListaCliente());
+        }
     }
 }
