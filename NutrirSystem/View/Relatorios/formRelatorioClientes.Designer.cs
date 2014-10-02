@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbNutri = new System.Windows.Forms.ComboBox();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbConvenio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,21 +47,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.gradRel)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbNutri
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(29, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbNutri.FormattingEnabled = true;
+            this.cbNutri.Location = new System.Drawing.Point(29, 63);
+            this.cbNutri.Name = "cbNutri";
+            this.cbNutri.Size = new System.Drawing.Size(146, 21);
+            this.cbNutri.TabIndex = 0;
             // 
-            // comboBox2
+            // cbSexo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(29, 100);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(146, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Location = new System.Drawing.Point(29, 100);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(146, 21);
+            this.cbSexo.TabIndex = 1;
             // 
             // numericUpDown1
             // 
@@ -77,13 +77,13 @@
             this.numericUpDown2.Size = new System.Drawing.Size(54, 20);
             this.numericUpDown2.TabIndex = 3;
             // 
-            // comboBox3
+            // cbConvenio
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(29, 177);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(146, 21);
-            this.comboBox3.TabIndex = 4;
+            this.cbConvenio.FormattingEnabled = true;
+            this.cbConvenio.Location = new System.Drawing.Point(29, 177);
+            this.cbConvenio.Name = "cbConvenio";
+            this.cbConvenio.Size = new System.Drawing.Size(146, 21);
+            this.cbConvenio.TabIndex = 4;
             // 
             // label1
             // 
@@ -147,6 +147,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Gerar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -179,11 +180,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbConvenio);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbSexo);
+            this.Controls.Add(this.cbNutri);
             this.Name = "formRelatorioClientes";
             this.Text = "Relatório Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -196,11 +197,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbNutri;
+        private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbConvenio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

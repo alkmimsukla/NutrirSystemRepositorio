@@ -22,6 +22,15 @@ namespace NutrirSystem.Controller
             return (this.relatModel.EmitirReCli(cpf, sexo, faixaetaria, convenio));
         }
 
+        public List<Paciente> EmitirReCli(Decimal cpf, int sexo, Decimal convenio)
+        {
+            return (this.relatModel.EmitirReCli(cpf, sexo, convenio).ToList());
+        }
+
+        public List<Funcionario> RetornaListaNutricionista()
+        { 
+            return (this.relatModel.RetornarListaNutricionista());
+        }
 
     }
 }

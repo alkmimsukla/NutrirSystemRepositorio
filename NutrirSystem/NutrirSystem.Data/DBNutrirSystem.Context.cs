@@ -34,5 +34,6 @@ namespace NutrirSystem.Data
         public DbSet<ProdutosClinica> ProdutosClinica { get; set; }
         public DbSet<CartaoCredito> CartaoCreditoSet { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<Paciente> Paciente { get; set; }
     }
 }

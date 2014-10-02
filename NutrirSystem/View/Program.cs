@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.PacienteView;
+using View.Relatorios;
 
 
 namespace View
@@ -18,7 +19,7 @@ namespace View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formCadPac());
+            Application.Run(new formRelatorioClientes());
         }
     }
 }
