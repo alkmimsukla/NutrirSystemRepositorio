@@ -23,12 +23,21 @@ namespace NutrirSystem.Model
             {
                 listaConsultas = (from C in listaConsultas where C.Funcionario_cpf == cpf select C).ToList();
 
-                List<Paciente> listao = new List<Paciente>();
+                List<Paciente> lista_aux = new List<Paciente>();
 
                 foreach (Consulta item in listaConsultas)
                 {
-                    listaPacientes = (from P in listaPacientes where P.cpf == item.Paciente_cpf select P).ToList();
+                    try
+                    {
+                        lista_aux.Add((from P in listaPacientes where P.cpf == item.Paciente_cpf select P).Single());
+                    }
+                    catch (System.ArgumentNullException)
+                    { 
+                    
+                    }
                 }
+
+                listaPacientes = lista_aux;
 
             }
             if (filtros[1] == true)
@@ -41,10 +50,11 @@ namespace NutrirSystem.Model
                 int idademin = int.Parse(splitfx[0]);
                 int idademax = int.Parse(splitfx[1]);
 
-        //                public int idade()
-        //{
-        //    return (DateTime.Now.Subtract(this.dataNascimento).Days/365);
-        //}
+                        //Implementar metodo na classe Paciente em casos de refatoração do entity
+                        //public int idade()
+                        //{
+                        //    return (DateTime.Now.Subtract(this.dataNascimento).Days/365);
+                        //}
 
                 listaPacientes = (from P in listaPacientes where P.idade()>=idademin && P.idade() <= idademax select P).ToList();
             }

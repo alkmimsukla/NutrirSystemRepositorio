@@ -161,13 +161,14 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // gradRel
             // 
             this.gradRel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gradRel.Location = new System.Drawing.Point(240, 47);
+            this.gradRel.Location = new System.Drawing.Point(209, 47);
             this.gradRel.Name = "gradRel";
-            this.gradRel.Size = new System.Drawing.Size(526, 263);
+            this.gradRel.Size = new System.Drawing.Size(606, 263);
             this.gradRel.TabIndex = 13;
             // 
             // chbNutri
@@ -218,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 332);
+            this.ClientSize = new System.Drawing.Size(827, 351);
             this.Controls.Add(this.chbConv);
             this.Controls.Add(this.chbIdade);
             this.Controls.Add(this.chbGen);

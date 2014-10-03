@@ -39,20 +39,20 @@ namespace View.Relatorios
             cbConvenio.DisplayMember = "nome";
             cbConvenio.ValueMember = "nome";
 
-            filtros = new bool[4];
+            filtros = new bool[4] {true, true, true, true };
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
             Sexo sexo;
-            Enum.TryParse<Sexo>(cbSexo.SelectedText, out sexo);
+            Enum.TryParse<Sexo>(cbSexo.SelectedValue.ToString(), out sexo);
 
             List<Paciente> list = Controller_RelCli.EmitirReCli(
                 filtros,
                 ((Funcionario)cbNutri.SelectedItem).cpf,
                 (int)sexo,
-                fxetariaMin.ToString() + "-" + fxetariaMin.ToString(),
+                fxetariaMin.Value.ToString() + "-" + fxetariaMin.Value.ToString(),
                 ((Convenio)cbConvenio.SelectedItem).numPlano);
 
             var listGrad = new BindingList<Paciente>(list);
@@ -122,6 +122,11 @@ namespace View.Relatorios
                     filtros[3] = true;
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

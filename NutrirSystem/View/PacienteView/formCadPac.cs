@@ -48,7 +48,6 @@ namespace View
             cadPacienteControl = new CadPacienteController();
 
             Paciente paciente = new Paciente();
-            Convenio convenio;
 
             paciente.cpf = decimal.Parse(ucPessoa1.mkdCPF.Text);
             paciente.nome = ucPessoa1.txtNome.Text;
