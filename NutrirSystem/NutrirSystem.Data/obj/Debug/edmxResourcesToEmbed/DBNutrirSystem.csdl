@@ -53,7 +53,7 @@
     <Property Name="idConsulta" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
     <Property Name="statusConsulta" Type="Int32" />
     <Property Name="tipoConsulta" Type="Int32" />
-    <Property Type="DateTime" Name="DataHora" Nullable="false" />
+    <Property Type="DateTime" Name="DataHora" Nullable="false" Precision="3" />
     <NavigationProperty Name="Paciente" Relationship="DBNutrirSystemModel.ConsultaPaciente" FromRole="Consulta" ToRole="Paciente" />
     <Property Type="Decimal" Name="Paciente_cpf" Nullable="false" Precision="11" Scale="0" />
     <NavigationProperty Name="Funcionario" Relationship="DBNutrirSystemModel.FuncionarioConsulta" FromRole="Consulta" ToRole="Funcionario" />
@@ -83,7 +83,7 @@
     <Property Name="password" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
     <Property Name="salario" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
     <Property Name="perfil" Type="Int32" Nullable="false" />
-    <Property Type="Decimal" Name="CRN" Nullable="true" />
+    <Property Type="Decimal" Name="CRN" Nullable="true" Precision="18" Scale="0" />
     <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.FuncionarioConsulta" FromRole="Funcionario" ToRole="Consulta" />
   </EntityType>
   <EntityType Name="MedidasCorporais">
@@ -116,7 +116,7 @@
     <Property Name="valor" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
     <Property Name="formaPagamento" Type="Int32" Nullable="false" />
     <Property Name="statusPagamento" Type="Int32" Nullable="false" />
-    <Property Type="DateTime" Name="Data" Nullable="false" />
+    <Property Type="DateTime" Name="Data" Nullable="false" Precision="3" />
     <NavigationProperty Name="CartaoCredito" Relationship="DBNutrirSystemModel.CartaoCreditoPagamento" FromRole="Pagamento" ToRole="CartaoCredito" />
     <NavigationProperty Name="Consulta" Relationship="DBNutrirSystemModel.PagamentoConsulta" FromRole="Pagamento" ToRole="Consulta" />
   </EntityType>
@@ -158,11 +158,11 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Decimal" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Decimal" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Precision="18" Scale="0" />
     <Property Type="Int32" Name="Bandeira" Nullable="false" />
-    <Property Type="String" Name="Titular" Nullable="false" />
-    <Property Type="Decimal" Name="numParc" Nullable="false" />
-    <Property Type="Decimal" Name="valorParc" Nullable="false" />
+    <Property Type="String" Name="Titular" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Decimal" Name="numParc" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="valorParc" Nullable="false" Precision="18" Scale="0" />
     <NavigationProperty Name="Pagamento" Relationship="DBNutrirSystemModel.CartaoCreditoPagamento" FromRole="CartaoCredito" ToRole="Pagamento" />
   </EntityType>
   <Association Name="ConsultaPaciente">

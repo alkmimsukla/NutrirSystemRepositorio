@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFibra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtSodio = new System.Windows.Forms.TextBox();
+            this.txtGordura = new System.Windows.Forms.TextBox();
+            this.btnExcluirProduto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCarboidratos = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.btnPesquisarProduto = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtFibra);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.txtSodio);
+            this.panel1.Controls.Add(this.txtGordura);
+            this.panel1.Controls.Add(this.btnExcluirProduto);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtCarboidratos);
             this.panel1.Location = new System.Drawing.Point(50, 107);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(399, 280);
             this.panel1.TabIndex = 16;
             // 
-            // textBox2
+            // txtFibra
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtFibra.Location = new System.Drawing.Point(137, 24);
+            this.txtFibra.Name = "txtFibra";
+            this.txtFibra.Size = new System.Drawing.Size(100, 20);
+            this.txtFibra.TabIndex = 3;
             // 
             // label2
             // 
@@ -87,28 +87,28 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Gordura";
             // 
-            // textBox3
+            // txtSodio
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 63);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtSodio.Location = new System.Drawing.Point(137, 63);
+            this.txtSodio.Name = "txtSodio";
+            this.txtSodio.Size = new System.Drawing.Size(100, 20);
+            this.txtSodio.TabIndex = 5;
             // 
-            // textBox5
+            // txtGordura
             // 
-            this.textBox5.Location = new System.Drawing.Point(137, 133);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtGordura.Location = new System.Drawing.Point(137, 133);
+            this.txtGordura.Name = "txtGordura";
+            this.txtGordura.Size = new System.Drawing.Size(100, 20);
+            this.txtGordura.TabIndex = 9;
             // 
-            // button1
+            // btnExcluirProduto
             // 
-            this.button1.Location = new System.Drawing.Point(137, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Excluir Produto";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExcluirProduto.Location = new System.Drawing.Point(137, 210);
+            this.btnExcluirProduto.Name = "btnExcluirProduto";
+            this.btnExcluirProduto.Size = new System.Drawing.Size(95, 23);
+            this.btnExcluirProduto.TabIndex = 0;
+            this.btnExcluirProduto.Text = "Excluir Produto";
+            this.btnExcluirProduto.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -128,12 +128,12 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Carboidratos";
             // 
-            // textBox4
+            // txtCarboidratos
             // 
-            this.textBox4.Location = new System.Drawing.Point(137, 98);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtCarboidratos.Location = new System.Drawing.Point(137, 98);
+            this.txtCarboidratos.Name = "txtCarboidratos";
+            this.txtCarboidratos.Size = new System.Drawing.Size(100, 20);
+            this.txtCarboidratos.TabIndex = 7;
             // 
             // label6
             // 
@@ -153,42 +153,42 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Digite o nome do Produto para exclusão";
             // 
-            // textBox1
+            // txtNomeProduto
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtNomeProduto.Location = new System.Drawing.Point(148, 53);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeProduto.TabIndex = 13;
             // 
-            // button2
+            // btnPesquisarProduto
             // 
-            this.button2.Location = new System.Drawing.Point(276, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Pesquisar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPesquisarProduto.Location = new System.Drawing.Point(276, 50);
+            this.btnPesquisarProduto.Name = "btnPesquisarProduto";
+            this.btnPesquisarProduto.Size = new System.Drawing.Size(95, 23);
+            this.btnPesquisarProduto.TabIndex = 11;
+            this.btnPesquisarProduto.Text = "Pesquisar";
+            this.btnPesquisarProduto.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnVoltar
             // 
-            this.button3.Location = new System.Drawing.Point(850, 417);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Voltar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnVoltar.Location = new System.Drawing.Point(850, 417);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(95, 23);
+            this.btnVoltar.TabIndex = 17;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
             // 
             // excluirProdutoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 479);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnPesquisarProduto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNomeProduto);
             this.Name = "excluirProdutoView";
             this.Text = "excluirProdutoView";
             this.Load += new System.EventHandler(this.excluirProdutoView_Load);
@@ -202,19 +202,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFibra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtSodio;
+        private System.Windows.Forms.TextBox txtGordura;
+        private System.Windows.Forms.Button btnExcluirProduto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCarboidratos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.Button btnPesquisarProduto;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

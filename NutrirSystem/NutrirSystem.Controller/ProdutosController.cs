@@ -10,8 +10,16 @@ namespace NutrirSystem.Controller
 {
     public class ProdutosController
     {
-        private ProdutosModel modelProdutos;
+        private ProdutosModel modelProdutos = new ProdutosModel();
 
+        public bool produtoExiste(string nomeProd)
+        {
+            return (modelProdutos.produtoExiste(nomeProd));
+        }
 
+        public void inserirProduto(ProdutosClinica prod)
+        {
+            modelProdutos.insereProduto(prod);
+        }
     }
 }

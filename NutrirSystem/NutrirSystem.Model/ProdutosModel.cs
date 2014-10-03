@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutrirSystem.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,25 @@ namespace NutrirSystem.Model
             : base()
         { }
 
+
+        public bool produtoExiste(string nomeProd)
+        {
+            return banco.ProdutosClinica.Any(_item => _item.nome == nomeProd);
+        }
+
+        public void insereProduto(ProdutosClinica produto)
+        {
+            produto.idProdutosClinica = proximoId();
+
+            banco.ProdutosClinica.Add(produto);
+
+            banco.SaveChanges();
+        }
+
+        public decimal proximoId()
+        {
+            return (banco.ProdutosClinica.Max(_item => _item.idProdutosClinica)) + 1;
+        }
 
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NutrirSystem.Controller;
+using NutrirSystem.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace View.ProdutosView
 {
     public partial class cadastrarProdutoView : Form
     {
+        ProdutosController prodControl = new ProdutosController();
+
         public cadastrarProdutoView()
         {
             InitializeComponent();
@@ -25,15 +29,33 @@ namespace View.ProdutosView
                         "Validação dos Campos", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtNomeProduto.Focus();
             }
+            else if (produtoExiste())
+            {
+                MessageBox.Show("Produto já existe na base de dados. Não é possível inserí-lo!",
+                    "Produto Existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ProdutosClinica prod = new ProdutosClinica();
+
+                prod.nome = txtNomeProduto.Text;
+                prod.carboidratos = txtCarboidratos.Text;
+                prod.fibra = txtFibra.Text;
+                prod.gordura = txtGordura.Text;
+                prod.sodio = txtSodio.Text;
+
+                prodControl.inserirProduto(prod);
+
+                MessageBox.Show("Produto cadastrado no banco com sucesso", "Inserção concluída",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
         private bool camposPreenchidos()
         {
             if (txtNomeProduto.Text == "")
-            {
                 return false;
-            }
             else
             {
                 if ((txtCarboidratos.Text == "") || (txtFibra.Text == "") || (txtGordura.Text == "") || (txtSodio.Text == ""))
@@ -41,8 +63,16 @@ namespace View.ProdutosView
                 else
                     return true;
             }
+        }
 
+        private bool produtoExiste()
+        {
+            return (prodControl.produtoExiste(txtNomeProduto.Text));
+        }
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
