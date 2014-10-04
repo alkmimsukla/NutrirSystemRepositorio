@@ -181,6 +181,9 @@
     <EmbeddedResource Include="PacienteView\visualizarPacienteView.resx">
       <DependentUpon>visualizarPacienteView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosView\alterarProdutoView.resx">
+      <DependentUpon>alterarProdutoView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProdutosView\cadastrarProdutoView.resx">
       <DependentUpon>cadastrarProdutoView.cs</DependentUpon>
     </EmbeddedResource>
