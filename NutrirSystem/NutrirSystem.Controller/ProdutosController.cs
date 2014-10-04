@@ -21,5 +21,15 @@ namespace NutrirSystem.Controller
         {
             modelProdutos.insereProduto(prod);
         }
+
+        public ProdutosClinica pesquisarProduto(string nome)
+        {
+            return modelProdutos.pesquisarProduto(nome);
+        }
+
+        public void excluirProduto(string nome)
+        {
+            modelProdutos.excluirProduto(nome);
+        }
     }
 }

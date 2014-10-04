@@ -32,6 +32,16 @@ namespace NutrirSystem.Model
         {
             return (banco.ProdutosClinica.Max(_item => _item.idProdutosClinica)) + 1;
         }
+        
+        public ProdutosClinica pesquisarProduto(string nome)
+        {
+            return banco.ProdutosClinica.Where(item => item.nome == nome).SingleOrDefault();
+        }
 
+        public void excluirProduto(string nome)
+        {
+            banco.ProdutosClinica.Remove(banco.ProdutosClinica.Where(item => item.nome == nome).SingleOrDefault());
+            banco.SaveChanges();
+        }
     }
 }
