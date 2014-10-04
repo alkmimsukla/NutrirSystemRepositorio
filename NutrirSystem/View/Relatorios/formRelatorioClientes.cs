@@ -41,7 +41,7 @@ namespace View.Relatorios
 
             filtros = new bool[4] {true, true, true, true };
         }
-
+             
         private void button1_Click(object sender, EventArgs e)
         {
             

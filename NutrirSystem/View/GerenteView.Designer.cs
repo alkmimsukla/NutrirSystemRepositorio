@@ -33,6 +33,7 @@
             this.btnAlterarFuncionario = new System.Windows.Forms.Button();
             this.btSair = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrarFuncionario
@@ -85,11 +86,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnGerarRelatorio
+            // 
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(513, 12);
+            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(78, 67);
+            this.btnGerarRelatorio.TabIndex = 5;
+            this.btnGerarRelatorio.Text = "Gerar Relatórios";
+            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
+            // 
             // GerenteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 470);
+            this.Controls.Add(this.btnGerarRelatorio);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btSair);
             this.Controls.Add(this.btnAlterarFuncionario);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button btnAlterarFuncionario;
         private System.Windows.Forms.Button btSair;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGerarRelatorio;
     }
 }

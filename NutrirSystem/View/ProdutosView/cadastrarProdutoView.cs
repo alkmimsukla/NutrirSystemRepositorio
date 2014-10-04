@@ -48,6 +48,12 @@ namespace View.ProdutosView
 
                 MessageBox.Show("Produto cadastrado no banco com sucesso", "Inserção concluída",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtCarboidratos.Text = "";
+                txtFibra.Text = "";
+                txtGordura.Text = "";
+                txtNomeProduto.Text = "";
+                txtSodio.Text = "";
             }
 
         }

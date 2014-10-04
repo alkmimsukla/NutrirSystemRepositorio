@@ -33,6 +33,10 @@
             this.btnRemoverPaciente = new System.Windows.Forms.Button();
             this.btSair = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnVisualizarProduto = new System.Windows.Forms.Button();
+            this.btnRemoverProduto = new System.Windows.Forms.Button();
+            this.btnAlterarProduto = new System.Windows.Forms.Button();
+            this.btnCadastrarProduto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadPaciente
@@ -85,11 +89,55 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnVisualizarProduto
+            // 
+            this.btnVisualizarProduto.Location = new System.Drawing.Point(349, 117);
+            this.btnVisualizarProduto.Name = "btnVisualizarProduto";
+            this.btnVisualizarProduto.Size = new System.Drawing.Size(83, 73);
+            this.btnVisualizarProduto.TabIndex = 8;
+            this.btnVisualizarProduto.Text = "Visualizar Produto";
+            this.btnVisualizarProduto.UseVisualStyleBackColor = true;
+            this.btnVisualizarProduto.Click += new System.EventHandler(this.btnVisualizarProduto_Click);
+            // 
+            // btnRemoverProduto
+            // 
+            this.btnRemoverProduto.Location = new System.Drawing.Point(230, 117);
+            this.btnRemoverProduto.Name = "btnRemoverProduto";
+            this.btnRemoverProduto.Size = new System.Drawing.Size(83, 73);
+            this.btnRemoverProduto.TabIndex = 7;
+            this.btnRemoverProduto.Text = "Remover Produto";
+            this.btnRemoverProduto.UseVisualStyleBackColor = true;
+            this.btnRemoverProduto.Click += new System.EventHandler(this.btnRemoverProduto_Click);
+            // 
+            // btnAlterarProduto
+            // 
+            this.btnAlterarProduto.Location = new System.Drawing.Point(118, 117);
+            this.btnAlterarProduto.Name = "btnAlterarProduto";
+            this.btnAlterarProduto.Size = new System.Drawing.Size(83, 73);
+            this.btnAlterarProduto.TabIndex = 6;
+            this.btnAlterarProduto.Text = "Alterar Produto";
+            this.btnAlterarProduto.UseVisualStyleBackColor = true;
+            this.btnAlterarProduto.Click += new System.EventHandler(this.btnAlterarProduto_Click);
+            // 
+            // btnCadastrarProduto
+            // 
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(13, 117);
+            this.btnCadastrarProduto.Name = "btnCadastrarProduto";
+            this.btnCadastrarProduto.Size = new System.Drawing.Size(83, 73);
+            this.btnCadastrarProduto.TabIndex = 5;
+            this.btnCadastrarProduto.Text = "Cadastrar Produto";
+            this.btnCadastrarProduto.UseVisualStyleBackColor = true;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
+            // 
             // SecretariaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 422);
+            this.Controls.Add(this.btnVisualizarProduto);
+            this.Controls.Add(this.btnRemoverProduto);
+            this.Controls.Add(this.btnAlterarProduto);
+            this.Controls.Add(this.btnCadastrarProduto);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btSair);
             this.Controls.Add(this.btnRemoverPaciente);
@@ -110,5 +158,9 @@
         private System.Windows.Forms.Button btnRemoverPaciente;
         private System.Windows.Forms.Button btSair;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVisualizarProduto;
+        private System.Windows.Forms.Button btnRemoverProduto;
+        private System.Windows.Forms.Button btnAlterarProduto;
+        private System.Windows.Forms.Button btnCadastrarProduto;
     }
 }

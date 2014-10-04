@@ -31,5 +31,16 @@ namespace NutrirSystem.Controller
         {
             modelProdutos.excluirProduto(nome);
         }
+
+        public void alterarProduto(string nomeProduto, string sodio, string carboidratos, string gordura, string fibra, ProdutosClinica prod)
+        {
+            prod.nome = nomeProduto;
+            prod.sodio = sodio;
+            prod.gordura = gordura;
+            prod.fibra = fibra;
+            prod.carboidratos = carboidratos;
+
+            modelProdutos.alteraProduto(prod);
+        }
     }
 }

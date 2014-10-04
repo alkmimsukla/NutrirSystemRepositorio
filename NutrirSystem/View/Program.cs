@@ -19,7 +19,7 @@ namespace View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProdutosView.alterarProdutoView());
+            Application.Run(new LoginView());
         }
     }
 }

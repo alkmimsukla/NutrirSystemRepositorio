@@ -46,5 +46,25 @@ namespace View
         {
 
         }
+
+        private void btnCadastrarProduto_Click(object sender, EventArgs e)
+        {
+            new View.ProdutosView.cadastrarProdutoView().Show();
+        }
+
+        private void btnAlterarProduto_Click(object sender, EventArgs e)
+        {
+            new View.ProdutosView.alterarProdutoView().Show();
+        }
+
+        private void btnRemoverProduto_Click(object sender, EventArgs e)
+        {
+            new View.ProdutosView.excluirProdutoView().Show();
+        }
+
+        private void btnVisualizarProduto_Click(object sender, EventArgs e)
+        {
+            new View.ProdutosView.visualizarProduto().Show();
+        }
     }
 }

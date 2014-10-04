@@ -77,9 +77,12 @@ namespace View.ProdutosView
         private void btnExcluirProduto_Click(object sender, EventArgs e)
         {
             controller.excluirProduto(txtNomeProduto.Text);
+            
             MessageBox.Show("Produto Excluído com sucesso!",
                    "Produto Excluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             panel_Dados_Produto_Excluido.Hide();
+            
             txtNomeProduto.Text = "";
         }
     }

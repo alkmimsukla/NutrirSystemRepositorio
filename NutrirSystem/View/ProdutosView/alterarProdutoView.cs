@@ -16,15 +16,17 @@ namespace View.ProdutosView
     {
         public alterarProdutoView()
         {
-            panel_ALteracao.Hide();
             InitializeComponent();
+            panel_ALteracao.Hide();
         }
 
         ProdutosController controller = new ProdutosController();
+        ProdutosClinica produto;
 
         private void btnPesquisarProduto_Click(object sender, EventArgs e)
         {
             ProdutosClinica pesquisado = controller.pesquisarProduto(txtNomeProduto.Text);
+            produto = pesquisado;
 
             if (pesquisado != null)
             {
@@ -35,11 +37,14 @@ namespace View.ProdutosView
                 MessageBox.Show("Produto inexistente!",
                     "Produto Não Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNomeProduto.Text = "";
+                txtNomeProduto.Focus();
             }
         }
 
         private void exibirDadosProduto(ProdutosClinica pesquisado)
         {
+            panel_ALteracao.Show();
+
             txtFibra_alteracao.Text = pesquisado.fibra;
             txtGordura_alteracao.Text = pesquisado.gordura;
             txtSodio_alteracao.Text = pesquisado.sodio;
@@ -50,5 +55,23 @@ namespace View.ProdutosView
         {
             panel_ALteracao.Hide();
         }
+
+        private void btnAlterarProduto_Click(object sender, EventArgs e)
+        {
+            controller.alterarProduto(txtNomeProduto.Text, txtSodio_alteracao.Text, txtCarboidratos_alteracao.Text,
+                txtGordura_alteracao.Text, txtFibra_alteracao.Text, produto);
+
+            MessageBox.Show("Produto alterado com sucesso!", "Alteração de Produto", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
+            txtNomeProduto.Text = "";
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
     }
 }

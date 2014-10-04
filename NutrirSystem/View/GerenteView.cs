@@ -44,5 +44,10 @@ namespace View
         {
             new View.formVisFunc().Show();
         }
+
+        private void btnGerarRelatorio_Click(object sender, EventArgs e)
+        {
+            new View.Relatorios.formRelatorioClientes().Show();
+        }
     }
 }

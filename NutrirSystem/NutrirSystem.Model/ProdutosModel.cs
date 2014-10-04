@@ -43,5 +43,17 @@ namespace NutrirSystem.Model
             banco.ProdutosClinica.Remove(banco.ProdutosClinica.Where(item => item.nome == nome).SingleOrDefault());
             banco.SaveChanges();
         }
+
+        public void alteraProduto(ProdutosClinica prod)
+        {
+            banco.ProdutosClinica.Attach(prod);
+            banco.Entry(prod).Property(_item => _item.nome).IsModified = true;
+            banco.Entry(prod).Property(_item => _item.fibra).IsModified = true;
+            banco.Entry(prod).Property(_item => _item.carboidratos).IsModified = true;
+            banco.Entry(prod).Property(_item => _item.sodio).IsModified = true;
+            banco.Entry(prod).Property(_item => _item.gordura).IsModified = true;
+
+            banco.SaveChanges();
+        }
     }
 }

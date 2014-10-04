@@ -141,6 +141,7 @@
             this.btnAlterarProduto.TabIndex = 0;
             this.btnAlterarProduto.Text = "Alterar";
             this.btnAlterarProduto.UseVisualStyleBackColor = true;
+            this.btnAlterarProduto.Click += new System.EventHandler(this.btnAlterarProduto_Click);
             // 
             // txtGordura_alteracao
             // 
@@ -157,6 +158,7 @@
             this.btnVoltar.TabIndex = 23;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnPesquisarProduto
             // 
