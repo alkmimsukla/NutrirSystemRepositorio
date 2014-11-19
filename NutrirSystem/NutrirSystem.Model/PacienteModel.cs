@@ -69,5 +69,10 @@ namespace NutrirSystem.Model
             banco.Pessoa.Remove(removido);
             banco.SaveChanges();
         }
+
+        public List<Paciente> buscarTodosPacientes()
+        {
+            return banco.Paciente.ToList();
+        }
     }
 }

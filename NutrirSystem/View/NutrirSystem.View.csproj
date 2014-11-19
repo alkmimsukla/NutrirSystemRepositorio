@@ -86,6 +86,12 @@
     <Compile Include="PacienteView\visualizarPacienteView.Designer.cs">
       <DependentUpon>visualizarPacienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="PagamentosView\RegistrarPagamentoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagamentosView\RegistrarPagamentoView.Designer.cs">
+      <DependentUpon>RegistrarPagamentoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProdutosView\alterarProdutoView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PacienteView\visualizarPacienteView.resx">
       <DependentUpon>visualizarPacienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagamentosView\RegistrarPagamentoView.resx">
+      <DependentUpon>RegistrarPagamentoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProdutosView\alterarProdutoView.resx">
       <DependentUpon>alterarProdutoView.cs</DependentUpon>

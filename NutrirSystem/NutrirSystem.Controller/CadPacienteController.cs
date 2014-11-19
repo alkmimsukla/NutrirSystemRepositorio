@@ -62,5 +62,10 @@ namespace NutrirSystem.Controller
         {
             modelPaciente.excluirPaciente(cpf);
         }
+
+        public List<Paciente> buscarTodosPacientes()
+        {
+            return modelPaciente.buscarTodosPacientes();
+        }
     }
 }

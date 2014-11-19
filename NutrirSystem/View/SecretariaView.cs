@@ -66,5 +66,10 @@ namespace View
         {
             new View.ProdutosView.visualizarProduto().Show();
         }
+
+        private void btRegistrarPagamento_Click(object sender, EventArgs e)
+        {
+            new View.PagamentosView.RegistrarPagamentoView().Show();
+        }
     }
 }

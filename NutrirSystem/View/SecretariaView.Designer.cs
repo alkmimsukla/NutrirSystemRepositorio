@@ -37,6 +37,7 @@
             this.btnRemoverProduto = new System.Windows.Forms.Button();
             this.btnAlterarProduto = new System.Windows.Forms.Button();
             this.btnCadastrarProduto = new System.Windows.Forms.Button();
+            this.btRegistrarPagamento = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadPaciente
@@ -129,11 +130,22 @@
             this.btnCadastrarProduto.UseVisualStyleBackColor = true;
             this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
+            // btRegistrarPagamento
+            // 
+            this.btRegistrarPagamento.Location = new System.Drawing.Point(13, 208);
+            this.btRegistrarPagamento.Name = "btRegistrarPagamento";
+            this.btRegistrarPagamento.Size = new System.Drawing.Size(83, 73);
+            this.btRegistrarPagamento.TabIndex = 9;
+            this.btRegistrarPagamento.Text = "Registrar Pagamento";
+            this.btRegistrarPagamento.UseVisualStyleBackColor = true;
+            this.btRegistrarPagamento.Click += new System.EventHandler(this.btRegistrarPagamento_Click);
+            // 
             // SecretariaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 422);
+            this.Controls.Add(this.btRegistrarPagamento);
             this.Controls.Add(this.btnVisualizarProduto);
             this.Controls.Add(this.btnRemoverProduto);
             this.Controls.Add(this.btnAlterarProduto);
@@ -162,5 +174,6 @@
         private System.Windows.Forms.Button btnRemoverProduto;
         private System.Windows.Forms.Button btnAlterarProduto;
         private System.Windows.Forms.Button btnCadastrarProduto;
+        private System.Windows.Forms.Button btRegistrarPagamento;
     }
 }

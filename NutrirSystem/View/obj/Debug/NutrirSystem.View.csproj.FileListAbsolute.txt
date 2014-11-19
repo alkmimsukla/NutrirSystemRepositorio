@@ -124,3 +124,9 @@ C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\bin
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.exe
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.pdb
 C:\Users\s.alkmim\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.alterarProdutoView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.PagamentosView.RegistrarPagamentoView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.alterarProdutoView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.cadastrarProdutoView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.excluirProdutoView.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.ProdutosView.visualizarProduto.resources
+C:\Users\Família\Documents\GitHub\NutrirSystemRepositorio\NutrirSystem\View\obj\Debug\View.Relatorios.formRelatorioClientes.resources

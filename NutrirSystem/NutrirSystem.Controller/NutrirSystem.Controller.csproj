@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="CadFuncController.cs" />
     <Compile Include="CadPacienteController.cs" />
+    <Compile Include="ConsultaController.cs" />
     <Compile Include="ConvenioController.cs" />
     <Compile Include="LoginController.cs" />
     <Compile Include="ProdutosController.cs" />
