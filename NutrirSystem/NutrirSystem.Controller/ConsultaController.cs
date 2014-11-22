@@ -9,6 +9,7 @@ namespace NutrirSystem.Controller
     public class ConsultaController
     {
         ConsultaModel model;
+        PagamentoModel modelPagamento;
 
         public ConsultaController() 
         {
@@ -17,6 +18,16 @@ namespace NutrirSystem.Controller
         public List<NutrirSystem.Data.Consulta> listarConsultasPaciente(decimal cpf)
         {
             return model.listarConsultasPaciente(cpf);
+        }
+
+        public void salvarPagamento(Data.Pagamento pagamento)
+        {
+            model.salvarPagamento(pagamento);
+        }
+
+        public Data.Consulta buscarConsulta(decimal idConsulta)
+        {
+            return model.buscarConsulta(idConsulta);
         }
     }
 }

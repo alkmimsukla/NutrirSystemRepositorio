@@ -15,7 +15,7 @@ namespace View.PagamentosView
 {
     public partial class RegistrarPagamentoView : Form
     {
-        
+        ConsultaController controller;
 
         public RegistrarPagamentoView()
         {
@@ -27,17 +27,17 @@ namespace View.PagamentosView
             CadPacienteController pacienteController = new CadPacienteController();
             List<Paciente> listaPacientes = pacienteController.buscarTodosPacientes();
 
-            List<KeyValuePair<string, decimal>> dic = new List<KeyValuePair<string,decimal>>();
-
+            var dataSource = new List<Paciente>();
             foreach (Paciente p in listaPacientes)
             {
-                dic.Add(new KeyValuePair<string,decimal> (p.nome, p.cpf));
+                dataSource.Add(new Paciente() { cpf = p.cpf, nome = p.nome });
             }
 
-            comboboxPaciente.DataSource = dic;
-            comboboxPaciente.DisplayMember = "SELECIONE O PACIENTE";
-            comboboxPaciente.ValueMember = null;
-            
+            comboboxPaciente.DataSource = dataSource;
+            comboboxPaciente.DisplayMember = "nome";
+            comboboxPaciente.ValueMember = "cpf";
+            this.comboboxPaciente.DropDownStyle = ComboBoxStyle.DropDownList;
+
             groupBoxCartao.Hide();
 
         }
@@ -49,25 +49,113 @@ namespace View.PagamentosView
 
         private void comboboxPaciente_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            
-
+            comboboxConsulta.DataSource = null;
             if (comboboxPaciente.SelectedValue != null)
             {
                 ConsultaController consultaController = new ConsultaController();
                 List<Consulta> consultas = consultaController.listarConsultasPaciente((decimal)comboboxPaciente.SelectedValue);
 
-                List<KeyValuePair<DateTime, decimal>> dic = new List<KeyValuePair<DateTime, decimal>>();
+                var dataSource = new List<Consulta>();
 
                 foreach (Consulta c in consultas)
                 {
-                    dic.Add(new KeyValuePair<DateTime, decimal>(c.DataHora, c.idConsulta));
+                    dataSource.Add(new Consulta() { DataHora = c.DataHora, idConsulta = c.idConsulta });
                 }
 
-                comboboxConsulta.DataSource = dic;
-                comboboxConsulta.DisplayMember = "Selecione uma consulta";
-                comboboxConsulta.ValueMember = null;
+                comboboxConsulta.DataSource = dataSource;
+                comboboxConsulta.DisplayMember = "DataHora";
+                comboboxConsulta.ValueMember = "idConsulta";
+                
+                this.comboboxConsulta.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            }
+        }
+
+        private void radioButtonCartao_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBoxCartao.Show();
+        }
+
+        private void radioButtonDinheiro_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBoxCartao.Hide();
+        }
+
+        private void textBoxNumParcelas_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxvalorConsulta.Text != null && textBoxNumParcelas.Text != null )
+            {
+                double valorParcela = double.Parse(textBoxvalorConsulta.Text) / double.Parse(textBoxNumParcelas.Text);
+                labelValorParcelaExibicao.Text = valorParcela.ToString();
+            }
+
+            else
+            {
+                labelValorParcelaExibicao.Text = "";
+            }
+        }
+
+        private void textBoxvalorConsulta_TextChanged(object sender, EventArgs e)
+        {
+            labelValorParcelaExibicao.Text = textBoxvalorConsulta.Text;
+        }
+
+        private Pagamento construirPagamento()
+        {
+            if (comboboxPaciente.SelectedValue != null && comboboxConsulta.SelectedValue != null
+                && textBoxvalorConsulta.Text != null && (radioButtonCartao.Checked || radioButtonDinheiro.Checked))
+            {
+                Pagamento novo = new Pagamento();
+
+                novo.Data = DateTime.Now;
+                novo.Consulta = controller.buscarConsulta((decimal)comboboxConsulta.SelectedValue);
+                novo.statusPagamento = 1; //pago;
+                novo.valor = decimal.Parse(textBoxvalorConsulta.Text);
+                novo.formaPagamento = 0; //dinheiro.
+
+                if (radioButtonCartao.Checked)
+                {
+                    novo.formaPagamento = 1; //cartão
+                    if (textBoxBandeira.Text != null &&
+                        textBoxNomeTitular.Text != null &&
+                        textBoxNumParcelas.Text != null)
+                    {
+                        novo.CartaoCredito = new CartaoCredito();
+                        novo.CartaoCredito.Bandeira = int.Parse(textBoxBandeira.Text);
+                        novo.CartaoCredito.numParc = decimal.Parse(textBoxNumParcelas.Text);
+                        novo.CartaoCredito.Titular = textBoxNomeTitular.Text;
+                        MessageBox.Show("Pagamento efetuado!");
+                        return novo;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Preencha os dados do cartão para registrar o pagamento!");
+                        return null;
+                    }
+                }
+
+                MessageBox.Show("Pagamento efetuado!");
+                return novo;
                 
             }
+
+            else
+            {
+                MessageBox.Show("Preencha os dados para registrar o pagamento!");
+                return null;
+            }
+        }
+
+        private void btRegistrarPgt_Click(object sender, EventArgs e)
+        {
+            Pagamento p = construirPagamento();
+            if(p!= null)  controller.salvarPagamento(p);
+        }
+
+        private void textBoxBandeira_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

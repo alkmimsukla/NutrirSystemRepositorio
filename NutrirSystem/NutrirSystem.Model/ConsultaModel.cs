@@ -14,5 +14,16 @@ namespace NutrirSystem.Model
         {
             return banco.Consulta.Where(item => item.Paciente_cpf == cpf).ToList();
         }
+
+        public void salvarPagamento(Pagamento pagamento)
+        {
+            banco.Pagamento.Add(pagamento);
+            banco.SaveChanges();
+        }
+
+        public Consulta buscarConsulta(decimal idConsulta)
+        {
+            return banco.Consulta.Where(item => item.idConsulta == idConsulta).SingleOrDefault();
+        }
     }
 }

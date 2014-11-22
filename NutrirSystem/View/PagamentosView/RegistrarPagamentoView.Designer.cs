@@ -102,6 +102,7 @@
             this.textBoxvalorConsulta.Name = "textBoxvalorConsulta";
             this.textBoxvalorConsulta.Size = new System.Drawing.Size(100, 20);
             this.textBoxvalorConsulta.TabIndex = 5;
+            this.textBoxvalorConsulta.TextChanged += new System.EventHandler(this.textBoxvalorConsulta_TextChanged);
             // 
             // labelTipoPgt
             // 
@@ -122,6 +123,7 @@
             this.radioButtonCartao.TabStop = true;
             this.radioButtonCartao.Text = "Cartão";
             this.radioButtonCartao.UseVisualStyleBackColor = true;
+            this.radioButtonCartao.CheckedChanged += new System.EventHandler(this.radioButtonCartao_CheckedChanged);
             // 
             // radioButtonDinheiro
             // 
@@ -133,6 +135,7 @@
             this.radioButtonDinheiro.TabStop = true;
             this.radioButtonDinheiro.Text = "Dinheiro";
             this.radioButtonDinheiro.UseVisualStyleBackColor = true;
+            this.radioButtonDinheiro.CheckedChanged += new System.EventHandler(this.radioButtonDinheiro_CheckedChanged);
             // 
             // labelValorParcelaExibicao
             // 
@@ -158,6 +161,7 @@
             this.textBoxNumParcelas.Name = "textBoxNumParcelas";
             this.textBoxNumParcelas.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumParcelas.TabIndex = 5;
+            this.textBoxNumParcelas.TextChanged += new System.EventHandler(this.textBoxNumParcelas_TextChanged);
             // 
             // labelNumParcelas
             // 
@@ -190,6 +194,7 @@
             this.textBoxBandeira.Name = "textBoxBandeira";
             this.textBoxBandeira.Size = new System.Drawing.Size(100, 20);
             this.textBoxBandeira.TabIndex = 1;
+            this.textBoxBandeira.TextChanged += new System.EventHandler(this.textBoxBandeira_TextChanged);
             // 
             // labelBandeira
             // 
@@ -208,6 +213,7 @@
             this.btRegistrarPgt.TabIndex = 10;
             this.btRegistrarPgt.Text = "Registrar";
             this.btRegistrarPgt.UseVisualStyleBackColor = true;
+            this.btRegistrarPgt.Click += new System.EventHandler(this.btRegistrarPgt_Click);
             // 
             // btVoltar
             // 
